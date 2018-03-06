@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>美妆/个护</title>
+		<!--引入公共样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+		<!--引入iconfont图标样式-->
+		<link rel="stylesheet" type="text/css" href="../../iconfont3/iconfont.css"/>
+		<!--引入swiper-->
+		<link rel="stylesheet" type="text/css" href="../../js/swiper.min.css"/>
+		<script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入iscroll-->
+		<script src="../../js/iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入jquery-->
+		<script src="../../libs/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入rem-->
+		<script src="../../js/rem1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入angular-->
+		<script src="../../libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入angular-router-->
+		<script src="../../libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="../../libs/angular-route1.4.5.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入自写样式-->
+		
+		<link rel="stylesheet" type="text/css" href="../../css/home_meizhuang.css"/>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="../../css/animate.css" />
+	</head>
+	<body ng-app="app" ng-controller="ct1"  class="animated fadeInRight">
+		<!--头部-->
+		<header>
+			<span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span>
+			<span>美妆</span>
+			<span class="">···</span>
+		</header>
+		
+		<!--轮播内容-->
+		<div class="swiper-container" id="nvxie_swp">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/美美妆_90.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/美美妆_90.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/美美妆_90.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/美美妆_90.png" alt="" />
+				</div>
+			</div>
+			<!--分页器-->
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		<!--22点快抢-->
+		<div id="nvxie_kq">
+			<div>
+				<b>22点快抢    · 距结束</b>
+				<!--倒计时部分-->
+				<span>{{date1|date:'HH':"UTC"}}</span>： 
+				<span>{{date1|date:'mm':"UTC"}}</span>：
+				<span>{{date1|date:'ss':"UTC"}}</span>
+			</div>
+			
+			<div>
+				<a>MORE<span>▶</span></a>
+			</div>
+		</div>
+		<!--左滑     上-->
+		<div class="swiper-container" id="nvxie_zuohua">
+			<div class="swiper-wrapper footbox">
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_91.png" alt="" /><p>懒人一字眉印章</p><p>￥9.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_92.png" alt="" /><p>超美！九色眼影</p><p>￥19.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_93.png" alt="" /><p>持久不脱妆的红酒</p><p>￥8.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_94.png" alt="" /><p>懒人一字眉印章</p><p>￥10.80</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_95.png" alt="" /><p>超美！九色眼影</p><p>￥15.60</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_96.png" alt="" /><p>持久不脱妆的红酒</p><p>￥7.80</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_97.png" alt="" /><p>懒人一字眉印章</p><p>￥8.80</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_98.png" alt="" /><p>英伦粗跟混百搭</p><p>￥14.60</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/美美妆_99.png" alt="" /><p>持久不脱妆的红酒</p><p>￥6.60</p></div>
+			</div>
+		</div>
+		
+		<!--面膜-->
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>面膜</span>
+				<span>补水保湿    打造婴儿肌</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_94.png"/>
+				<span>爆款补货</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>套装</span>
+				<span>全套护理    立省100</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_95.png"/>
+				<span>省心省钱</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>口红</span>
+				<span>元气满满    撩欧巴</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_96.png"/>
+				<span>出门必备</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>底妆</span>
+				<span>秒变无暇美肌</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_97.png"/>
+				<span>低至19元</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>个人护理</span>
+				<span>get女神小心机</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_98.png"/>
+				<span>秋冬必备</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>基础护肤</span>
+				<span>护肤到位    颜值上线</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_99.png"/>
+				<span>1折起购</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>潮流彩妆</span>
+				<span>明星妆容    回头率100%</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/美美妆_95.png"/>
+				<span>时尚弄潮儿</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		
+		<!--双十二大促狂欢-->
+		<div id="nvxie_xianshi1">
+			<div class="xianshi">
+				<span>双十二大促狂欢</span>
+			</div>
+			<div class="fig">
+				<figure>
+					<img src="../../images/iconpage/美美妆_29-11.png"/>
+					<figcaption>买一送一</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_29-12.png"/>
+					<figcaption>N元任选</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_29-13.png"/>
+					<figcaption>必抢清单</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_29-14.png"/>
+					<figcaption>全球精选</figcaption>
+				</figure>
+			</div>
+		</div>
+		
+		<!--流行元素-->
+		<div class="liuxing">
+			<span class="iconfont icon-favoritesfilling"></span>
+			<span>流行元素</span>
+		</div>
+		<div class="nvxie_liuxing">
+			<article>
+				<!--第1排内容-->
+				<figure>
+					<img src="../../images/iconpage/美美妆_43.png"/>
+					<figcaption>懒人鞋5折起</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-16.png"/>
+					<figcaption>心机长腿靴子</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-17.png"/>
+					<figcaption>新品特惠鞋榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-18.png"/>
+					<figcaption>冬季新款</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-19.png"/>
+					<figcaption>店长推荐</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-20.png"/>
+					<figcaption>火热预定</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-21.png"/>
+					<figcaption>火爆销售</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-22.png"/>
+					<figcaption>2018年新款</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-23.png"/>
+					<figcaption>上班一族</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-20.png"/>
+					<figcaption>贵妇气质</figcaption>
+				</figure>
+				
+				<!--第2排内容-->
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-21.png"/>
+					<figcaption>爆款30元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-23.png"/>
+					<figcaption>美靴达人</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-22.png"/>
+					<figcaption>显高靴子直击</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-21.png"/>
+					<figcaption>疯抢增高暖靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-20.png"/>
+					<figcaption>冬季新品靴子</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-19.png"/>
+					<figcaption>爆款39元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-18.png"/>
+					<figcaption>显高美鞋</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-17.png"/>
+					<figcaption>新品快抢榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-16.png"/>
+					<figcaption>保暖雪地靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43.png"/>
+					<figcaption>本季必火美靴</figcaption>
+				</figure>
+					
+				<!--第3排内容-->
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-17.png"/>
+					<figcaption>明星款鞋靴榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-20.png"/>
+					<figcaption>热销59元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-23.png"/>
+					<figcaption>人气疯抢鞋靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-19.png"/>
+					<figcaption>热卖精选</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-17.png"/>
+					<figcaption>高颜值短靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-23.png"/>
+					<figcaption>超值雪地靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-18.png"/>
+					<figcaption>39元保暖美靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43.png"/>
+					<figcaption>毛毛靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-16.png"/>
+					<figcaption>厚底精选靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/美美妆_43-19.png"/>
+					<figcaption>粗跟美鞋</figcaption>
+				</figure>
+			</article>
+		</div>
+		
+		
+		
+		
+		<!--回到顶部-->
+		
+		<span class="iconfont icon-up"></span>
+		
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var app=angular.module("app",["ngRoute"])
+	    app.controller("ct1",["$scope","$timeout","$interval",function($scope,$timeout,$interval){
+	    //	倒计时	
+		$scope.future = new Date("2017/12/15 10:00:00").getTime();
+		djs()
+		$time = $interval(djs,1000)	
+		function djs() {
+			$scope.now = new Date().getTime();//现在的系统时间
+			$scope.date1 = $scope.future-$scope.now
+//			console.log($scope.date)
+		}
+		
+		
+		$timeout(function(){
+			//轮播初始化
+			var swp = new Swiper("#nvxie_swp",{
+				autoplay:1000,
+				loop:true,
+				speed:1000,
+				pagination:".swiper-pagination",
+				paginationClickable :true
+			})	
+			
+	        //左滑初始化
+			var swp= new Swiper("#nvxie_zuohua",{
+				slidesPerView :3.5,
+				//阻止反弹
+				resistanceRatio:false
+			})
+			
+			//底部左滑
+			var liuxing_isc=new IScroll(".nvxie_liuxing",{
+				scrollX:true,
+				bounce:false
+			})
+		},200)
+			
+		//回到顶部
+		$(window).scroll(function(){
+			var sc = $(window).scrollTop();
+			if(sc > 0){
+				$(".icon-up").css("display","block");
+			}else{
+				$(".icon-up").css("display","none");
+			}
+		})
+		$(".icon-up").click(function(){
+			$("body,html").animate({
+				scrollTop: 0
+			},200);
+		})
+	}])
+	</script>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>男友</title>		
+		<!--引入公共样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+		<!--引入iconfont图标样式-->
+		<link rel="stylesheet" type="text/css" href="../../iconfont3/iconfont.css"/>
+		<!--引入swiper-->
+		<link rel="stylesheet" type="text/css" href="../../js/swiper.min.css"/>
+		<script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入iscroll-->
+		<script src="../../js/iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入jquery-->
+		<script src="../../libs/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入rem-->
+		<script src="../../js/rem1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入angular-->
+		<script src="../../libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入angular-router-->
+		<!--引入自写样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/home_nanyou.css"/>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<!--爱心-->
+		<link rel="stylesheet" href="../../css/aixin.css" />
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<script src="../../js/aixin.js"></script>
+	</head>
+	<body ng-app="app" ng-controller="ct1"  class="animated fadeInRight">
+		<!--头部-->
+		<header>
+			<span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span>
+			<span>男友</span>
+			<span class="">···</span>
+		</header>
+		
+		<!--轮播内容-->
+		<div class="swiper-container" id="nvxie_swp">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/男友_02.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/男友_02.png" alt="" />
+				</div>
+			</div>
+			<!--分页器-->
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		<!--网格-->
+		<div id="gezi">
+			<img src="../../images/iconpage/男友_19.png" alt="" class="figure_left"/>
+			<div class="figure_right">
+				<div class="figure_right_div">
+					<span>
+						<p>买一送一</p>
+						<p>每日10点  新衣疯抢</p>
+						<p>GO<i class="iconfont icon-more"></i></p>
+					</span>
+					<div><img src="../../images/iconpage/男友_19-09.png" alt="" /></div>
+				</div>
+				<div class="figure_right_div2">
+					<div>
+						<img src="../../images/iconpage/男友_23.png" alt="" />
+						<p>爆款热卖ing</p>
+					</div>
+					<div>
+						<img src="../../images/iconpage/男友_16.png" alt="" />
+						<p>￥19抢购</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--上衣-->
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>上衣</span>
+				<span>潮衣5折   一件变帅不是梦</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/男友_05.png"/>
+				<span>39元起</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>潮鞋</span>
+				<span>满分男神  流行搭配轻松GET</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/男友_08.png"/>
+				<span>半价开卖</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>加绒裤装</span>
+				<span>平价基本款   秒变大长腿</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/男友_10.png"/>
+				<span>秋款上新</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>棉衣棉服</span>
+				<span>整个冬天都有型，超省钱</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/男友_12.png"/>
+				<span>又暖又帅</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>羽绒服</span>
+				<span>寒冬扫货，爆款直通车</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/男友_14.png"/>
+				<span>又暖又帅</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>毛衣开衫</span>
+				<span>秋冬暖意经    5折帅炸天</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/男友_16.png"/>
+				<span>朝男秘籍</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		
+		<!--00点快抢-->
+		<div id="nvxie_kq">
+			<div>
+				<b>22点快抢    · 距结束</b>
+				<!--倒计时部分-->
+				<span>{{date1|date:'HH':"UTC"}}</span>： 
+				<span>{{date1|date:'mm':"UTC"}}</span>：
+				<span>{{date1|date:'ss':"UTC"}}</span>
+			</div>
+			
+			<div><a>MORE<span>▶</span></a></div>
+		</div>
+		<!--左滑     上-->
+		<div class="swiper-container" id="nvxie_zuohua">
+			<div class="swiper-wrapper footbox">
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19.png" alt="" /><p>冬季款港风复古...</p><p>￥139</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19-09.png" alt="" /><p>2017秋冬新款...</p><p>￥59.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_23.png" alt="" /><p>宾兽加绒  可...</p><p>￥59.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19-09.png" alt="" /><p>男人高领加厚</p><p>￥55.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19.png" alt="" /><p>冬季款港风复古...</p><p>￥45.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_23.png" alt="" /><p>2017秋冬新款...</p><p>￥35.80</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19-09.png" alt="" /><p>加厚过冬款防水</p><p>￥88.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19.png" alt="" /><p>宾兽加绒  可...</p><p>￥48.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/男友_19-09.png" alt="" /><p>绣花百搭靴</p><p>￥66.00</p></div>
+			</div>
+		</div>
+		
+		<!--限时折扣-->
+		<div id="nvxie_xianshi1">
+			<div class="xianshi">
+				<span></span>
+				<span>◆</span>
+				<span>限时折扣</span>
+				<span>◆</span>
+				<span></span>
+			</div>
+			<div class="fig">
+				<figure>
+					<img src="../../images/iconpage/男友_28.png"/>
+					<figcaption>新品特价</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_30.png"/>
+					<figcaption>99元2双</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_32.png"/>
+					<figcaption>省钱秘籍</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_32-14.png"/>
+					<figcaption>限时快抢</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_30.png"/>
+					<figcaption>女神养成</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_32-14.png"/>
+					<figcaption>流行趋势</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_32.png"/>
+					<figcaption>品牌直降</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/男友_28.png"/>
+					<figcaption>百丽开业特惠</figcaption>
+				</figure>
+			</div>
+		</div>
+		
+		<!--左滑     直播-->
+		<div class="underwear_live">
+			<div class="underwear_live_top">
+				<span>男友购物台</span>
+				<span>更多直播   > </span>
+			</div>
+			<div class="live">
+				<ul>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--回到顶部-->
+		
+		<span class="iconfont icon-up"></span>
+		
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		var app=angular.module("app",[])
+	    app.controller("ct1",["$scope","$timeout","$interval",function($scope,$timeout,$interval){
+	    //	倒计时	
+		$scope.future = new Date("2017/12/15 10:00:00").getTime();
+		djs()
+		$time = $interval(djs,1000)	
+		function djs() {
+			$scope.now = new Date().getTime();//现在的系统时间
+			$scope.date1 = $scope.future-$scope.now
+//			console.log($scope.date)
+		}
+		
+		$timeout(function(){
+			//轮播初始化
+			var swp = new Swiper("#nvxie_swp",{
+				autoplay:1000,
+				loop:true,
+				speed:1000,
+				pagination:".swiper-pagination",
+				paginationClickable :true
+			})	
+			
+			//左滑初始化
+			var swp= new Swiper("#nvxie_zuohua",{
+				slidesPerView :3.5,
+				//阻止反弹
+				resistanceRatio:false
+			})
+			
+			//底部左滑
+			var live=new IScroll(".live",{
+				scrollX:true,
+				bounce:false
+			})
+		},200)
+			
+	    //回到顶部
+		$(window).scroll(function(){
+			var sc = $(window).scrollTop();
+			if(sc > 0){
+				$(".icon-up").css("display","block");
+			}else{
+				$(".icon-up").css("display","none");
+			}
+		})
+		$(".icon-up").click(function(){
+			$("body,html").animate({
+				scrollTop: 0
+			},200);
+		})
+	}])
+	</script>
+</html>

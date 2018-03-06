@@ -1,0 +1,789 @@
+@charset "utf-8";
+//清空默认样式
+*{font-family: "微软雅黑";}
+$wi:100%;//宽100%;
+$b:1px solid blue;//边框
+$f:flex;//弹性盒
+$co:column;//改变方向
+$ar:space-around;//两端留白对齐
+$be:space-between;//两端对齐
+$c:center;//居中
+$w:wrap;//换行
+$r:right;//右边
+$l:left;//左边
+$bai:#fff;//白色
+$h:#f2f2f2;//灰
+$h1:#FAFAFA;//灰
+//设置body的高100%
+.home_box,html,body{
+    height:$wi;
+    overflow: hidden;
+}
+//测试sass
+//body{background:red}
+//最外层盒子
+
+//弹性盒垂直
+.colm{
+    flex-direction: $co;
+    display: $f;
+    justify-content: $ar;
+    align-items: $c;
+}
+//弹性盒水平
+.dis{
+    display: $f;
+    justify-content: $ar;
+    align-items: $c;
+}
+a{
+    text-decoration: none;
+}
+//弹性盒换行
+.dis1{
+    display: $f;
+    justify-content: $ar;
+    align-items: $c;
+    flex-wrap:$w;
+}
+//.bor
+.bo{
+    border-bottom:.08rem solid #efefef;
+}
+//.bor
+.bo1{
+    border-top:.08rem solid #efefef;
+}
+//大盒子 start
+.home_box{
+    display: flex;
+    flex-direction:column;
+}
+//大盒子 end
+//中间盒子部分 start
+main{
+    flex-grow: 1;
+    overflow: hidden;
+    //border:1px solid red;
+    //div{
+    //    height:11rem;
+    //    border:1px solid red
+    //}
+}
+//中间盒子部分 end
+//iscroll 下拉大盒子绝对定位
+.home_main{
+    width:$wi;
+    height:12.95rem;
+//    border:.02rem solid #000;
+    overflow: hidden;
+    position: absolute;
+    top:-6.7rem;
+    left:0;
+}
+//body相对定位
+body{
+    position: relative;
+}
+//闪图部分
+.home_strator{
+    width:$wi;
+    height:6.67rem;
+    img{
+        width:$wi;
+        height:6.67rem;
+        display: block;
+    }
+    //display: none;
+}
+//下拉的第一个子元素
+.home_child{
+    //height:120%
+}
+//最外层容器
+.home_container{
+    height:6rem;
+    width:$wi
+}
+
+
+//头部 start
+.home_navone{
+    width:100%;
+    height:.46rem;
+    //border:$b;
+    @extend .dis;
+    position: fixed;
+    justify-content:center;
+    z-index: 22;
+    p{
+        //border:$b;
+        margin:0;
+        padding: 0;
+        @extend .dis;
+    }
+    p{
+        span{
+            font-size:20px;
+            color: #fff;
+        }
+
+    }
+
+    p:nth-child(1){
+        position: relative;
+        //input样式
+        input{
+            width:3rem;
+            height:.3rem;
+            -webkit-border-radius: .04rem;
+            -moz-border-radius: .04rem;
+            border-radius: .04rem;
+            background:rgba(255,255,255,.6);
+            //background:pink;
+            outline: none;
+            border:none;
+            color:#9e9c9f;
+            font-size:.12rem;
+            text-indent:3em;
+        }
+        //    span小图标定位
+        span:nth-of-type(1){
+            position: absolute;
+            left: .08rem;
+            top:22%;
+        }
+        span{
+            font-size:18px;
+            color: #979491;
+            position: absolute;
+        }
+        span:nth-of-type(2){
+            right: .1rem;
+            top:15%;
+        }
+    }
+    p:nth-child(2){
+        width:.4rem;
+        height:.3rem;
+        justify-content:flex-end;
+    }
+}
+input::-webkit-input-placeholder{
+    text-indent: 3em;
+    color:#9e9c9f
+}
+//头部 end
+//轮播 加下拉盒子
+.home_banner{
+    overflow: hidden;
+    //border:$b;
+    ul>li{
+        width:$wi;
+    }
+    img{
+        height:1.7rem;
+    }
+    .swiper-pagination-bullets{
+        left:-33%;
+        bottom:6%;
+    }
+    .swiper-pagination-bullet{
+        width:6px;
+        height:6px;
+    }
+    .swiper-pagination-bullet{
+        background:#fff;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active{
+        background:#ff596a
+    }
+}
+//轮播结束
+//直播热卖start
+.home_direct{
+    height:.7rem;
+    //border:$b;
+    @extend  .dis;
+    width:3.56rem;
+    //border:$b;
+    margin:0 auto;
+    align-items: flex-end;
+    justify-content: space-between;
+    aside{
+        box-sizing: border-box;
+        width:1.73rem;
+        height:.6rem;
+        //border:$b;
+        -webkit-border-radius: .04rem;
+        -moz-border-radius: .04rem;
+        border-radius: .04rem;
+        @extend  .dis;
+        justify-content:space-between;
+        div:nth-child(1){
+            padding:.06rem;
+            height:.4rem;
+            line-height: .2rem;
+            p:nth-child(1){
+                span:nth-child(1){
+                    color:#d652cd;
+                    font-size: .2rem;
+                }
+                span:nth-child(2){
+                    margin-left:.06rem;
+                    font-size: .16rem;
+                }
+            }
+
+            p:nth-child(2){
+                font-size:.1rem;
+                color: #a6a2a4;
+            }
+        }
+        p{
+            margin:0;padding: 0;
+        }
+        div{
+            height:.6rem;
+            //border:1px solid red;
+            img{
+                width:.8rem;
+                height:$wi;
+            }
+
+        }
+
+    }
+    aside:nth-child(1){
+        background: -webkit-linear-gradient(left,#fed7d7, #fff7e7,#fffbe7);
+        img{
+            width:.67rem;
+            height:$wi;
+        }
+    }
+    aside:nth-child(2){
+        background: -webkit-linear-gradient(left,#ded7ff, #ffebde,#ffebcc);
+        div:nth-child(1){
+            p:nth-child(1){
+                span:nth-child(1){
+                    color:#ff770b;
+
+                }
+
+            }
+        }
+    }
+}
+//直播热卖end
+//.home_icon 10个小图标start
+.home_icon{
+    height:2rem;
+    @extend .bo;
+    @extend .dis1;
+    padding-top:.1rem;
+    box-sizing:border-box;
+    a{
+        //border:$b;
+        width:.66rem;
+        height:.86rem;
+        text-align: center;
+        text-decoration: none;
+        color:#636463;
+        p{
+            margin:0;
+            padding:0;
+            margin-top:.04rem;
+            font-size: .14rem;
+        }
+        img{
+            width:.56rem;
+            height:.56rem
+        }
+    }
+}
+//.home_icon 10个小图标end
+
+//home_fashion 潮流时尚start
+.home_fashion{
+    height:.4rem;
+    //text-indent:1em;
+    //border:$b;
+    padding-left:.1rem;
+    @extend .dis;
+    justify-content:flex-start;
+    //字体样式
+    color: #686b68;
+    font-size: .16rem;
+    //font-weight:600;
+
+}
+//内容
+.home_fcontent{
+    height:1.1rem;
+    @extend .bo;
+    @extend  .dis;
+    //border:$b;
+
+    aside{
+        width:$wi;
+        height:$wi;
+        @extend  .dis;
+        //border:$b;
+        justify-content:center;
+        //-webkit-border-radius: .08rem;
+        //-moz-border-radius: .08rem;
+
+    }
+
+    div:nth-child(1){
+        width:1.96rem;
+        height:1.1rem;
+        img{
+            width:1.96rem;
+            height:1.1rem;
+            border-radius:.04rem 0 0 .04rem;
+            display: block;
+        }
+        position: relative;
+    }
+    div:nth-child(1):after{
+        content:"";
+        width:0;
+        height:0;
+        position: absolute;
+        right:-1%;
+        top:36%;
+        border-left:.1rem solid transparent;
+        border-top:.1rem solid transparent;
+        border-right:.1rem solid #ce8273;
+        border-bottom:.1rem solid transparent;
+        //border-radius: .1rem;
+    }
+    div:nth-child(2){
+        border-radius:0 .04rem .04rem 0;
+        background:#ce8273;
+        width:1.58rem;
+        height:1.1rem;
+        @extend .colm;
+        justify-content:center;
+        line-height:.26rem;
+        >p{
+            margin:0;padding: 0;
+        }
+        >p:nth-child(1){
+            @extend .dis;
+            span{
+                font-size: .18rem;
+                color:#fff;
+            }
+            span:nth-child(2){
+                margin-left: .04rem;
+                margin-right:.04rem;
+                margin-bottom:.02rem;
+            }
+        }
+        ul{
+            margin-left: .12rem;
+//          border:$b;
+            height:.5rem;
+//          margin-top:.1rem
+        }
+        ul>li{
+             height:.5rem;
+            p{
+                
+            button{
+                width:.36rem;
+                height:.16rem;
+                -webkit-border-radius: .2rem;
+                -moz-border-radius: .2rem;
+                border-radius: .2rem;
+                background:#ffe8af;
+                font-size: .12rem;
+                border:none;
+                color: #ce8273
+            }
+            span{
+                font-size:.14rem;
+                color: #fff;
+                margin-left:.1rem;
+            }
+        }
+        }
+
+    }
+}
+//.home_fashion 潮流时尚end
+//home_ketang 穿搭课堂start
+.home_ketang{
+    height:.4rem;
+    padding-left:.1rem;
+    @extend .dis;
+    justify-content:space-around;
+    //字体样式
+    color: #686b68;
+    font-size: .16rem;
+    //font-weight:600;
+    div{
+        width:49.6%;
+    }
+    div:nth-child(2){
+        height:.3rem;
+        line-height: .3rem;
+        text-align: right;
+        span:nth-child(2){
+            font-size:.2rem;
+        }
+        span:nth-child(1){
+            color: #9d9c9d;
+        }
+    }
+}
+//内容isc
+.home_both{
+    width:97.6%;
+    height:2.4rem;
+    overflow: hidden;
+    margin-left: .06rem;
+    aside{
+        width:170%;
+        height:2.3rem;
+        //border:$b;
+        @extend .dis;
+
+    }
+    a{
+        @extend .colm;
+        align-items: flex-start;
+        width:1.06rem;
+        height:2.4rem;
+        text-decoration:none;
+        margin:0;
+        padding:0;
+        margin-left:.01rem;
+        p{
+            margin:0;padding: 0;
+            color: #4c4b4c;
+            font-size:.16rem;
+            img{
+                width:1rem;
+                height:2rem;
+            }
+        }
+
+    }
+}
+//底部导航 isc
+.home_btm{
+    //border:$b;
+    width:98%;
+    height:.6rem;
+    overflow: hidden;
+    margin-left: .06rem;
+    aside{
+        width:141%;
+        height:.6rem;
+        //border:$b;
+        @extend .dis;
+    }
+    a{
+        @extend .dis;
+        width:1rem;
+        height:.4rem;
+        //border:$b;
+        border-radius: .04rem;
+        text-decoration:none;
+        margin:0;
+        padding:0;
+        margin-left:.01rem;
+        span{
+            color: #4c4b4c;
+            font-size:.16rem;
+            img{
+                width:.38rem;
+                height:.36rem;
+            }
+        }
+        span:nth-child(1){
+            margin-left:.04rem;
+        }
+
+    }
+    a:nth-of-type(odd){
+        background: -webkit-linear-gradient(left, #EFEFEF,#EFF4EC);
+         margin-left:0;
+     }
+    a:nth-of-type(even){
+        background:#fff7ef;
+        margin-left:0;
+        img{
+            width:.38rem;
+            height:.38rem;
+        }
+        //border:$b
+    }
+}
+//穿搭课堂 end
+//home_bimai 闭买清单 start
+.home_bimai{
+    //border:$b;
+    //@extend .bo;
+    width:99%;
+    height:1.5rem;
+    overflow: hidden;
+    margin-left: .06rem;
+    aside{
+        width:172%;
+        height:1.4rem;
+        //border:$b;
+        @extend .dis;
+
+        a{
+            width:2.06rem;
+            height:1.4rem;
+            img{
+                width:2.06rem;
+                height:1.4rem;
+            }
+        }
+    }
+
+}
+//home_bimai 闭买清单 end
+//home——color 一分钱 start
+.home_color{
+    color:#696a69;
+    @extend .bo1;
+}
+//home_color 一分钱 end
+//1分拼团 content start
+.home_groups{
+//    border:$b;
+    height:1.26rem;
+    @extend .bo;
+    @extend  .dis;
+    a{
+        @extend .colm;
+//        border:$b;
+          padding: .05rem 0;
+        img{
+            width:.78rem;
+            height:.78rem
+        }
+        p{
+            color: #555655;
+            margin-top:.09rem
+        }
+    }
+}
+//1分拼团 content end
+//今日必买
+.home_day{
+    height:3rem;
+    width:3.66rem;
+    margin:0 auto;
+    .swiper-pagination-bullet{
+        background:#d9d9d9;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet-active{
+        background:#343434
+    }
+    li{
+        @extend .dis1;
+        //border:$b;
+        width:$wi;
+        height:2.56rem;
+    }
+
+        .home_span{
+            @extend  .dis;
+            i{
+                font-style:normal;
+                display: block;
+                width:.18rem;
+                height:.18rem;
+                background:#323232;
+                -webkit-border-radius: .04rem;
+                -moz-border-radius: .04rem;
+                border-radius: .02rem;
+                color: #fff;
+                text-align: center;
+                line-height:.18rem;
+            }
+        }
+
+    aside{
+        @extend .dis;
+        justify-content:center;
+        //border:$b;
+        background:#f7f8fc;
+        width:1.76rem;
+        height:1.2rem;
+        border-radius: .04rem;
+        p{
+            //width:.8rem;
+            height:.94rem;
+            marign:0;padding: 0;
+            //border:$b;
+            line-height:.24rem;
+            span:nth-child(1){
+                color:#f5475c;
+                font-size: .18rem;
+                font-weight:600;
+            }
+            span:nth-child(2){
+                color:#a6a6a7;
+                font-size: .14rem;
+            }
+            span{
+                display: block;
+            }
+            button:nth-of-type(1){
+                background:#3db3ee;
+                background:none;
+                border:1px solid #fc869c;
+                font-size: .1rem;
+                width:.74rem;
+                height:.22rem;
+                color:#fff;
+                color:#fc869c;
+                //border:none;
+                border-radius: .2rem;
+                margin-top:.18rem;
+                padding:0;
+            }
+            img{
+                width:.7rem;
+                height:1rem
+            }
+        }
+        p:nth-child(2){
+            width:.7rem;
+            height:1rem
+        }
+    }
+
+//颜色 one
+    .home_asone{
+        p:nth-child(1){
+            span:nth-of-type(1){
+                color: #e986b6;
+            }
+            button{
+                background: -webkit-linear-gradient(left, #f754a5,#e056cd,#d45aea);
+                color:#fff;
+                border:none;
+            }
+        }
+    }
+//    two
+    .home_astwo{
+        p:nth-child(1){
+            span:nth-of-type(1){
+                color:#f67429
+            }
+            button{
+                background: -webkit-linear-gradient(left, #f1a11b,#f28241,#ef5f47);
+                color:#fff;
+                border:none;
+
+            }
+        }
+    }
+    .home_slide{
+        //background:red;
+       .home_asthree{
+           p:nth-child(1){
+               span:nth-of-type(1){
+                   color:#f67429
+               }
+               button{
+                   background: -webkit-linear-gradient(left, #f1a11b,#f28241,#ef5f47);
+                   color:#fff;
+                   border:none;
+
+               }
+           }
+       }
+       .home_asfour{
+           p:nth-child(1){
+               span:nth-of-type(1){
+                   color:#f67429
+               }
+               button{
+                   background: -webkit-linear-gradient(left, #3bb3ed,#24bfd2,#14c8bd);
+                   color:#fff;
+                   border:none;
+
+               }
+           }
+       }
+   }
+
+}
+
+
+
+
+//home_footimg 底部图片 start
+.home_footimg{
+    @extend  .bo;
+    @extend .bo1;
+    height:1.22rem;
+    //border:$b;
+    a{
+        display: block;
+        img{
+            width:$wi;
+            height:1.22rem;
+        }
+    }
+}
+    //home_footimg 底部图片 end
+
+
+
+//。foot 底部start
+.home_foot{
+    width:$wi;
+    height:0.5rem;
+    display: $f;
+    justify-content:$ar;
+    align-items: $c;
+    background: $bai;
+    position: relative;
+    border-top:1px solid #eeeeee;
+    //border:$b;
+    div{
+        flex-grow: 1;
+        height:0.45rem;
+        text-align: $c;
+        font-size:0.12rem;
+        margin-top:.03rem;
+        span{
+            display: block;
+        }
+        span:nth-child(1){
+            font-size:.24rem;
+        }
+        span:nth-child(2){
+            //color:  #e0dee0;
+            margin-top:.02rem;
+        }
+        div{
+//          color: #e0dee0;
+        }
+        img{
+            width:0.36rem;
+            height:0.3rem;
+            border-radius: 50%;
+        }
+    }
+}
+//跳转样式
+.home_active{
+    color: #ff596a
+}
+//底部 end

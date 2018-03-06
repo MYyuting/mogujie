@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>家居/食品</title>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<!--引入公共样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+		<!--引入iconfont图标样式-->
+		<link rel="stylesheet" type="text/css" href="../../iconfont3/iconfont.css"/>
+		
+		<!--引入swiper-->
+		<link rel="stylesheet" type="text/css" href="../../js/swiper.min.css"/>
+		<script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入iscroll-->
+		<script src="../../js/iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入jquery-->
+		<script src="../../libs/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入rem-->
+		<script src="../../js/rem1.js" type="text/javascript" charset="utf-8"></script>
+		<!--angular-->
+	    <script src="../../libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入自写样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/home_jiaju.css"/>
+		<!--爱心-->
+		<link rel="stylesheet" href="../../css/aixin.css" />
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<script src="../../js/aixin.js"></script>
+		
+	</head>
+	<body ng-app="app" ng-controller="ct1"  class="animated fadeInRight">
+		
+		<!--头部-->
+		<header>
+			<span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span>
+			<span>家居/食品</span>
+			<span class="">···</span>
+		</header>
+		
+		<!--轮播内容-->
+		<div class="swiper-container" id="nvxie_swp">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/家居食品_02.png" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="../../images/iconpage/家居食品_02.png" alt="" />
+				</div>
+			</div>
+			<!--分页器-->
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		<!--10点快抢-->
+		<div id="nvxie_kq">
+			<div>
+				<b>22点快抢    · 距结束</b>
+				<!--倒计时部分-->
+				<span>{{date1|date:'HH':"UTC"}}</span>： 
+				<span>{{date1|date:'mm':"UTC"}}</span>：
+				<span>{{date1|date:'ss':"UTC"}}</span>
+			</div>
+			<div><a>MORE<span>▶</span></a></div>
+		</div>
+		<!--左滑     上-->
+		<div class="swiper-container" id="nvxie_zuohua">
+			<div class="swiper-wrapper footbox">
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_05.png" alt="" /><p>仅5.6元/袋  板栗...</p><p>￥16.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_07.png" alt="" /><p>法丽兹抹茶味零食...</p><p>￥25.70</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_09.png" alt="" /><p>送挂绳vivo立体...</p><p>￥11.81</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_05.png" alt="" /><p>加厚保暖价格</p><p>￥50.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_07.png" alt="" /><p>仅5.6元/袋  板栗...</p><p>￥16.8</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_09.png" alt="" /><p>法丽兹抹茶味零食...</p><p>￥55.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_05.png" alt="" /><p>送挂绳vivo立体...</p><p>￥8.50</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_07.png" alt="" /><p>加厚保暖价格</p><p>￥42.80</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/家居食品_09.png" alt="" /><p>送挂绳vivo立体...</p><p>￥26.60</p></div>
+			</div>
+		</div>
+		
+		<!--家纺家饰-->
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>家纺家饰</span>
+				<span>热卖床品，买一送一</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_15.png"/>
+				<span>拼手速</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>家电数码</span>
+				<span>手机壳精选，9.9包邮</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_18.png"/>
+				<span>任你选</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>日用百货</span>
+				<span>热水袋   千款上新</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_20.png"/>
+				<span>1折起</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>保温杯/杯子</span>
+				<span>保暖加倍，N元任选</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_22.png"/>
+				<span>好品质</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>零食/方便面</span>
+				<span>继续嗨购，卖爆100...</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_24.png"/>
+				<span>美食1元秒</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>茶酒冲饮</span>
+				<span>美味3折起售</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_26.png"/>
+				<span>底价狂秒</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>生鲜/熟食</span>
+				<span>正当吃蟹时，底价...</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_28.png"/>
+				<span>热卖ing</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>保健品</span>
+				<span>大牌保健品5折起售</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/家居食品_30.png"/>
+				<span>品质精选</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		
+		<!--限时折扣-->
+		<div id="nvxie_xianshi1">
+			<div class="fig">
+				<figure>
+					<img src="../../images/iconpage/家居食品_32.png"/>
+					<figcaption>冬季新品</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_35.png"/>
+					<figcaption>19元3件</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_37.png"/>
+					<figcaption>9.9包邮</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_40.png"/>
+					<figcaption>29选5</figcaption>
+				</figure>
+			</div>
+		</div>
+		
+		<!--应季热销-->
+		<div id="nvxie_xianshi2">
+			<div class="fig">
+				<figure>
+					<img src="../../images/iconpage/家居食品_05.png"/>
+					<figcaption>温暖家纺</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_07.png"/>
+					<figcaption>暖手袋/宝</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_09.png"/>
+					<figcaption>收纳整理</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_15.png"/>
+					<figcaption>保温杯/水杯</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_18.png"/>
+					<figcaption>手机壳</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_20.png"/>
+					<figcaption>居家布艺</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_22.png"/>
+					<figcaption>家用电器</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_24.png"/>
+					<figcaption>情趣用品</figcaption>
+				</figure>
+			</div>
+		</div>
+    
+        <!--流行元素--必买清单-->
+		<div class="liuxing">
+			<span class="iconfont icon-favoritesfilling"></span>
+			<span>流行元素-必买清单</span>
+		</div>
+		<div class="nvxie_liuxing">
+			<article>
+				<!--第1排内容-->
+				<figure>
+					<img src="../../images/iconpage/家居食品_05.png"/>
+					<figcaption>懒人鞋5折起</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_07.png"/>
+					<figcaption>心机长腿靴子</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_09.png"/>
+					<figcaption>新品特惠鞋榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_15.png"/>
+					<figcaption>冬季新款</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_18.png"/>
+					<figcaption>店长推荐</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_20.png"/>
+					<figcaption>火热预定</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_22.png"/>
+					<figcaption>火爆销售</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_24.png"/>
+					<figcaption>2018年新款</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_26.png"/>
+					<figcaption>上班一族</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_28.png"/>
+					<figcaption>贵妇气质</figcaption>
+				</figure>
+				
+				<!--第2排内容-->
+				<figure>
+					<img src="../../images/iconpage/家居食品_05.png"/>
+					<figcaption>爆款30元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_07.png"/>
+					<figcaption>美靴达人</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_09.png"/>
+					<figcaption>显高靴子直击</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_15.png"/>
+					<figcaption>疯抢增高暖靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_18.png"/>
+					<figcaption>冬季新品靴子</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_20.png"/>
+					<figcaption>爆款39元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_22.png"/>
+					<figcaption>显高美鞋</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_24.png"/>
+					<figcaption>新品快抢榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_26.png"/>
+					<figcaption>保暖雪地靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_28.png"/>
+					<figcaption>本季必火美靴</figcaption>
+				</figure>
+					
+				<!--第3排内容-->
+				<figure>
+					<img src="../../images/iconpage/家居食品_05.png"/>
+					<figcaption>明星款鞋靴榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_07.png"/>
+					<figcaption>热销59元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_09.png"/>
+					<figcaption>人气疯抢鞋靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_15.png"/>
+					<figcaption>热卖精选</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_18.png"/>
+					<figcaption>高颜值短靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_20.png"/>
+					<figcaption>超值雪地靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_22.png"/>
+					<figcaption>39元保暖美靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_24.png"/>
+					<figcaption>毛毛靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_26.png"/>
+					<figcaption>厚底精选靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/家居食品_28.png"/>
+					<figcaption>粗跟美鞋</figcaption>
+				</figure>
+			</article>
+		</div>
+		
+		
+		<!--左滑     直播-->
+		<div class="underwear_live">
+			<div class="underwear_live_top">
+				<span>食品家居购物台</span>
+				<span>更多直播   > </span>
+			</div>
+			<div class="live">
+				<ul>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--回到顶部-->
+		
+		<span class="iconfont icon-up"></span>
+		
+	</body>
+	<script type="text/javascript">
+		
+		
+	var app=angular.module("app",[])
+	    app.controller("ct1",["$scope","$timeout","$interval",function($scope,$timeout,$interval){
+	  //	倒计时	
+		$scope.future = new Date("2017/12/15 10:00:00").getTime();
+		djs()
+		$time = $interval(djs,1000)	
+		function djs() {
+			$scope.now = new Date().getTime();//现在的系统时间
+			$scope.date1 = $scope.future-$scope.now
+//			console.log($scope.date)
+		}
+		
+		
+		$timeout(function(){
+			//轮播初始化
+			var swp = new Swiper("#nvxie_swp",{
+				autoplay:1000,
+				loop:true,
+				speed:1000,
+				pagination:".swiper-pagination",
+				paginationClickable :true
+			})	
+			
+	        //左滑初始化
+			var swp= new Swiper("#nvxie_zuohua",{
+				slidesPerView :3.5,
+				//阻止反弹
+				resistanceRatio:false
+			})
+			
+			//底部左滑
+			var liuxing_isc=new IScroll(".nvxie_liuxing",{
+				scrollX:true,
+				bounce:false
+			})
+			//底部左滑
+			var live=new IScroll(".live",{
+				scrollX:true,
+				bounce:false
+			})
+		},200)
+			
+		//回到顶部
+		$(window).scroll(function(){
+			var sc = $(window).scrollTop();
+			if(sc > 0){
+				$(".icon-up").css("display","block");
+			}else{
+				$(".icon-up").css("display","none");
+			}
+		})
+		$(".icon-up").click(function(){
+			$("body,html").animate({
+				scrollTop: 0
+			},200);
+		})
+	}])
+	</script>
+</html>

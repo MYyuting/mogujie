@@ -1,0 +1,211 @@
+dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+.car_posi {
+  width: 1.6rem;
+  height: .4rem;
+  line-height: .4rem;
+  border-radius: .02rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: .18rem;
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  z-index: 444;
+  text-align: center;
+  display: none; }
+
+.cart_header {
+  height: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.1rem;
+  border: 1px solid #ccc; }
+  .cart_header .saying {
+    margin-left: 0.1rem; }
+  .cart_header span:nth-child(2) {
+    font-size: .18rem;
+    text-align: center;
+    font-weight: bold; }
+  .cart_header span {
+    width: 40%; }
+  .cart_header span:nth-child(3) {
+    text-align: right;
+    font-size: .18rem; }
+    .cart_header span:nth-child(3) i {
+      font-size: .2rem; }
+
+.dui, .dui1, .quanxuan {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.18rem;
+  border: 2px solid #ccc;
+  color: #fff;
+  background: #fff; }
+
+.shop_hd {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.1rem;
+  align-items: center;
+  height: 0.5rem;
+  border-bottom: 1px solid #ccc; }
+  .shop_hd .shop_hdtit {
+    font-size: 0.18rem; }
+    .shop_hd .shop_hdtit i {
+      display: inline-block;
+      height: 0.2rem;
+      line-height: 0.2rem;
+      font-size: 0.12rem;
+      font-style: normal;
+      vertical-align: top;
+      background: #FFAB22;
+      padding: 1px; }
+
+.lijuan {
+  color: #FF3D62; }
+
+s {
+  color: #ccc; }
+
+.shop_bd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem; }
+  .shop_bd a {
+    display: inline-block;
+    padding: 0 0.1rem; }
+    .shop_bd a img {
+      width: 1rem;
+      height: 1.3rem; }
+  .shop_bd dl {
+    height: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0; }
+    .shop_bd dl dt, .shop_bd dl dd {
+      margin: 0;
+      padding: 0; }
+
+.sty {
+  border-color: #FF3D62;
+  background-color: #FF3D62; }
+
+.shop_item {
+  border-bottom: 0.1rem solid #eee; }
+  .shop_item:last-of-type {
+    border-bottom: 0; }
+
+.cart_all {
+  display: flex;
+  flex-direction: column; }
+  .cart_all .main {
+    height: 5.3rem;
+    flex-grow: 1;
+    overflow: hidden; }
+
+.fond_hd {
+  padding: 0.1rem; }
+
+.fond_bd {
+  padding: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  .fond_bd dl {
+    width: 47%;
+    box-sizing: border-box;
+    margin: 0.05rem;
+    border-radius: 5px;
+    background: #fff; }
+    .fond_bd dl a {
+      display: inline-block;
+      width: 100%; }
+      .fond_bd dl a img {
+        width: 100%; }
+    .fond_bd dl dt {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap; }
+      .fond_bd dl dt span {
+        background: #EFF3F7;
+        color: #738397;
+        padding: 2px;
+        margin: 0 3px 3px 0; }
+    .fond_bd dl dd {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.1rem;
+      margin-bottom: .08rem; }
+
+.icon-cart1 {
+  padding: 0 10px;
+  border: 1px solid lightpink;
+  color: lightpink;
+  font-size: 0.16rem;
+  border-radius: 3px; }
+
+.fondlovely {
+  padding-top: 0.2rem;
+  background: #eee; }
+  .fondlovely dt {
+    padding: 0.1rem; }
+    .fondlovely dt span {
+      font-size: 1px; }
+
+.selectedall {
+  height: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 0.1rem;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0.5rem;
+  left: 0;
+  z-index: 10; }
+  .selectedall div {
+    width: 40%; }
+  .selectedall div:nth-child(2) {
+    width: 59%;
+    text-align: right;
+    margin-right: .1rem; }
+
+.jiesuan {
+  display: inline-block;
+  height: 0.25rem;
+  line-height: 0.25rem;
+  text-align: center;
+  width: 0.6rem;
+  background: #FF5573;
+  color: #fff;
+  border: 1px solid #FF5573;
+  margin-right: .1rem; }
+
+.backtop {
+  font-size: 0.2rem;
+  color: #fff;
+  padding: 0.05rem;
+  border-radius: 50%;
+  background: deeppink;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 0.1rem;
+  transform: rotate(180deg);
+  display: none;
+  border: 1px solid red; }
+
+/*# sourceMappingURL=cart.css.map */

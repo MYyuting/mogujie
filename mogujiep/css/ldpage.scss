@@ -1,0 +1,84 @@
+@charset "utf-8";
+//清空默认样式
+*{margin:0;
+    padding:0;font-family: "微软雅黑";}
+$wi:100%;//宽100%;
+$b:1px solid blue;//边框
+$f:flex;//弹性盒
+$co:column;//改变方向
+$ar:space-around;//两端留白对齐
+$be:space-between;//两端对齐
+$c:center;//居中
+$w:wrap;//换行
+$r:right;//右边
+$l:left;//左边
+$bai:#fff;//白色
+$h:#f2f2f2;//灰
+$h1:#FAFAFA;//灰
+//设置body的高100%
+.home_box,html,body{
+    height:$wi;
+    overflow: hidden;
+}
+//测试sass
+//body{background:red}
+//最外层盒子
+
+//弹性盒垂直
+.colm{
+    flex-direction: $co;
+    display: $f;
+    justify-content: $ar;
+    align-items: $c;
+}
+//弹性盒水平
+.dis{
+    display: $f;
+    justify-content: $ar;
+    align-items: $c;
+}
+a{
+    text-decoration: none;
+}
+//弹性盒换行
+.dis1{
+    display: $f;
+    justify-content: $ar;
+    align-items: $c;
+    flex-wrap:$w;
+}
+//.bor
+.bo{
+    border-bottom:.08rem solid #efefef;
+}
+//.bor
+.bo1{
+    border-top:.08rem solid #efefef;
+}
+.ld_box{
+    width:$wi;
+    height:$wi;
+    background:#fff;
+    padding:.9rem 0 .2rem 0;
+    @extend .colm;
+    transition: all 5s;
+    img:nth-child(1){
+        width:$wi;
+        height:1.77rem
+    }
+    img:nth-child(2){
+        width:$wi;
+        height:.5rem
+    }
+}
+
+
+.ld_boxt{
+    width:$wi;
+    height:$wi;
+    display: none;
+    img{
+        width:$wi;
+        height:$wi;
+    }
+}

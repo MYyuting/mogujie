@@ -1,0 +1,53 @@
+{
+
+	"news2":[{
+		"images":"fl__18.png",
+		"smallnav":["面包服","连帽","加厚"],
+		"smallnav1":["秋冬季","韩版","新款"],
+		"money":"￥145.37",
+		"money1":"6783"
+	},{
+		"images":"fl__19.png",
+		"smallnav":["热卖","中长款"],
+		"smallnav1":["宽松显瘦","韩版","新款"],
+		"money":"￥174.57",
+		"money1":"1万"
+	},{
+		"images":"fl__22.png",
+		"smallnav":["热卖","连帽","长款"],
+		"smallnav1":["宽松","秋冬新款","韩系"],
+		"money":"￥159.34",
+		"money1":"6920"
+	},{
+		"images":"fl__23.png",
+		"smallnav":["棉服外套","毛领","连帽"],
+		"smallnav1":["加厚","中长款","收腰","宽松"],
+		"money":"￥187.6",
+		"money1":"1193"
+	},{
+		"images":"fl__26.png",
+		"smallnav":["军绿","连帽","夹棉"],
+		"smallnav1":["大口袋","中长款","宽松"],
+		"money":"￥145.37",
+		"money1":"6783"
+	},{
+		"images":"fl__27.png",
+		"smallnav":["大毛领连帽","宽松"],
+		"smallnav1":["时尚","金丝绒"],
+		"money":"￥178.0",
+		"money1":"1万"
+	},{
+		"images":"fl__30.png",
+		"smallnav":["大毛领连帽","冬季","韩版"],
+		"smallnav1":["新款"],
+		"money":"￥156.4",
+		"money1":"1万"
+	},{
+		"images":"fl__31.png",
+		"smallnav":["过膝棉衣","大毛领"],
+		"smallnav1":["中长款","宽松","冬季"],
+		"money":"￥189.0",
+		"money1":"1045"
+	}]
+
+}

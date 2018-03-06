@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <!--轮播swiper样式-->
+	    <link rel="stylesheet" href="../js/swiper.min.css">
+	    <!--自己引入的css样式-->
+	    <link rel="stylesheet" href="../css/details.css">
+	    <!--jquery-->
+	    <script src="../js/zepto.js"></script>
+	    <!--iscroll 下拉刷新-->
+	    <script src="../js/iscroll-probe.js"></script>
+	    <!--swiper js部分-->
+	    <script src="../js/swiper.min.js"></script>
+	    <!--引入angular-->
+	    <script src="../libs/angular.min.js"></script>
+	    <!--angular路由-->
+	    <script src="../libs/angular-ui-router.js"></script>
+	    <!--rem自适应-->
+	    <script src="../js/rem1.js"></script>
+	    <!--字体图标-->
+	    <link rel="stylesheet" href="../iconfont3/iconfont.css" />
+	    <!--mine样式-->
+		<link rel="stylesheet" href="../css/mine.css" />
+		<link rel="stylesheet" href="../css/animate.css" />
+	</head>
+	<body ng-controller="myCtrl">
+		<div class="mb_mb" >
+		<!--蒙版-->
+		<div id="mb" > 
+			<!--蒙版头部-->
+			<div class="mb_top">
+				<img src="../images/details/mb.png" alt="" />
+				<div>
+					<p>{{price*num|number:2|currency:"￥"}}</p>
+					<p>库存:259 件</p>
+					<p>已选: <span>"苹果4/4S"挂链立体维尼熊"</span></p>
+				</div>
+				<i class="iconfont icon-close"></i>
+			</div>
+			<!--蒙版规格-->
+			<div class="gg">
+				<span>规格</span>
+				<ul>
+					<li class="active">苹果4/4S</li>
+					<li>苹果5/5S/SE</li>
+					<li>苹果5C</li>
+				</ul>
+			</div>
+			<!--蒙版颜色-->
+			<div class="mb_color">
+				<span>颜色</span>
+				<ul>
+					<li>挂链立体维尼熊</li>
+				</ul>
+			</div>
+			<!--数量-->
+			<div class="count">
+				<span>数量</span>
+				<div>
+					<button ng-click="jian($index)" ng-disabled="num==0">-</button>
+					<p>{{num}}</p>
+					<button ng-click="jia($index)">+</button>
+				</div>
+			</div>
+			<button class="sub">确定</button>
+		</div>
+		</div>
+		
+		<!--最大容器-->
+		<div class="big">
+		
+		<div id="box">
+				<!--头部-->
+				<header class="details_header">
+					<a href="javascript:;"><i class="iconfont icon-back" onClick="javascript :history.go(-1);"></i></a>
+					<div class="ul">
+						<a href="#sp" class="active">商品</a>
+						<a href="#pj">评价</a>
+						<a href="#xq">详情</a>
+						<a href="#tj">推荐</a>
+					</div>
+					<div class="font_si">
+						<i class="iconfont icon-cart"></i>
+						<span>···</span>
+					</div>
+				</header>
+			<main>
+				<section>
+				<!--头部下图片-->
+				<div class="logo" id="sp">
+					<a href="javascript:;"><img src="../images/details/details-logo.png" alt="" /></a>
+					<a href="javascript:;"><i class="iconfont icon-back"></i></a>
+				</div>
+				<!--商品信息-->
+				<div class="message">
+					<div class="message_left">
+						<u class="message_left_top">苹果5s手机壳苹果5苹果4s可爱卡通挂绳硅胶防摔全包女软韩国</u>
+						<p>
+							￥<u>19.80</u>
+							<span>
+								<span>￥28.29</span>
+								<span>7折</span>
+							</span>
+						</p>
+						<p>
+							免邮费
+						</p>
+					</div>
+					<div class="message_right">
+						<div>
+							<p><span>4.78</span><i class="iconfont icon-up"></i></p>
+							<p>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<!--<i class="iconfont icon-favorite1"></i>-->
+							</p>
+							<p>22评价</p>
+						</div>
+						<span style="display: block;font-size: 0.12rem; position: absolute;bottom: 0.1rem;right: 0.06rem;">
+							<i class="iconfont icon-skip1"></i>分享
+						</span>
+					</div>
+				</div>
+				<!--包邮72小时发货-->
+				<div class="message_bot">
+					 <span>
+					 	<i class="iconfont icon-selected i"></i>
+					 	72小时发货
+					 </span>
+					 <span>
+					 	<i class="iconfont icon-selected i"></i>
+					 	7天无理由换货
+					 </span>
+					 <span>
+					 	<i class="iconfont icon-selected i"></i>
+					 	退货补运费
+					 </span>
+					 <span>
+					 	<i class="iconfont icon-more"></i>
+					 </span>
+				</div>
+				<!--新人专享-->
+				<div class="exclusive">
+					<p>
+						<span>新用户专享</span>
+						新人专享-60元优惠券礼包
+					</p>
+					<p>
+						<a href="javascript:;">立即领取</a>
+						<a href="javascript:;"><i class="iconfont icon-more"></i></a>
+					</p>
+				</div>
+				<!--尺码-->
+				<div class="details_size">
+					<div>
+						<p>已选: <span>"挂链立体维尼熊"</span>,请选择  规格</p>
+						<a href="javascript:;"><i class="iconfont icon-more"></i></a>
+					</div>
+					<div>
+						<p>尺码表 & 商品参数</p>
+						<a href="javascript:;"><i class="iconfont icon-more"></i></a>
+					</div>
+				</div>
+				<!--评价-->
+				<div class="details_pj" id="pj">
+					<i class="iconfont icon-code"></i>
+					评价
+				</div>
+				<!--评价内容-->
+				<div class="pj_contents">
+					<div class="pj_contents_top">
+						<p>
+							<span>买家评价22</span>  |
+							<span>销量45</span>
+						</p>
+						<p>
+							<i class="iconfont icon-more"></i>
+						</p>
+					</div>
+					<div class="btn">
+						<div>有图片  9</div>
+						<div>质量很好   3</div>
+					</div>
+					<div class="tx">
+						<img src="../images/details/未标题-1.png" alt="" />
+						一***的
+					</div>
+					<div class="pl">
+						<p>很喜欢  质量很好</p>
+						<p>11月10日  21:05    颜色:挂链立体维尼熊  规格:苹果5/5S/SE  质量很好</p>
+					</div>
+				</div>
+				<!--小樱桃数码商城-->
+				<div class="details_sc">
+					<div class="details_sc_top">
+						<img src="../images/details/details-_03.png" alt="" />
+						<div>
+							<p>小樱桃数码商城</p>
+							<p>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<i class="iconfont icon-favoritesfilling"></i>
+								<i class="iconfont icon-favoritesfilling"></i>
+							</p>
+						</div>
+						<button>进店></button>
+					</div>
+					<ul>
+						<li>
+							<p>322298</p>
+							<p>总销量</p>
+						</li>
+						<li>
+							<p>26396</p>
+							<p>收藏数</p>
+						</li>
+						<li>
+							<p>描述相符 <span>4.72</span></p>
+							<p>质量满意 <span>4.68</span></p>
+						</li>
+					</ul>
+				</div>
+				<!--详情-->
+				<div class="details_xq" id="xq">
+					<i class="iconfont icon-pic"></i>
+					详情
+				</div>
+				<!--商家推荐-->
+				<div class="details_tj">
+					<div class="details_tj_top">商家推荐</div>
+					<ul>
+						<li>
+							<img src="../images/details/details-_07.png" alt="" />
+							<p>oppoa57手机壳女...</p>
+							<p>￥16.80</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_09.png" alt="" />
+							<p>oppor9s钢化膜op...</p>
+							<p>￥18.00</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_11.png" alt="" />
+							<p>纯色通用耳机苹果...</p>
+							<p>￥13.92</p>
+						</li>
+					</ul>
+				</div>
+				<!--text-->
+				<div class="details_text">
+					<p>采用进口硅胶材质，绿色环保无异味，如图做工精细，染色精准，全方位包裹手机，又防摔又萌萌嗒O(∩_∩)O</p>
+					<p>挂链长1.12M，斜跨大概在腰的位置。</p>
+					<span>整体款式</span>
+				</div>
+				<!--三张同样图片-->
+				<div class="logos">
+					<img src="../images/details/details-_16.png" alt="" />
+					<img src="../images/details/details-_18.png" alt="" />
+					<img src="../images/details/details-_20.png" alt="" />
+				</div>
+				<!--细节做工-->
+				<div class="xjzg">
+					细节做工
+				</div>
+				<!-- -->
+		        <div class="xjzg_imgs">
+		        	<img src="../images/details/details-_23.png" alt="" />
+		        	<img src="../images/details/details-_26.png" alt="" class="a"/>
+		        	<img src="../images/details/details-_28.png" alt=""  class="a"/>
+		        	<img src="../images/details/details-_30.png" alt=""  class="aa"/>
+		        	<img src="../images/details/details-_32.png" alt=""  class="aa"/>
+		        	<img src="../images/details/details-_34.png" alt=""  class="aa"/>
+		        </div>
+		        <!--服务说明-->
+		        <div class="details_fwsm">
+		        	<p>服务说明</p>
+		        	<p>默认中通快递，如有不到请练习客服，拍下24小时内发货。</p>
+		        	<p>包装展示</p>
+		        </div>
+		        <!--图片-->
+		        <div class="details_bz">
+		        	 <img src="../images/details/details-_36.png" alt=""  class="aa"/>
+		        </div>
+				<!--服务说明text-->
+				<div class="fwsm_text">
+					<div>
+						<span>价格说明</span>
+						<p>划线价格：划线价格并非指"原价",是"吊牌价"或"专柜价"或"厂商指导价"或其他有真实来源依据的价格。仅供您参考。</p>
+						<p>未划线价格：来挂线的价格是商品的实在销售标价。具体成交价格可能会因使用优惠券，积分等发生变化。最终以订单结算页价格为准。</p>
+					</div>
+					*此说明仅当出现价格比较式有效。具体情参见价格发布规范。若商家单独对划线价格进行说明的，咦商家的表述为准。
+				</div>
+				<!--推荐-->
+				<div class="details_tj2" id="tj">
+					<i class="iconfont icon-good"></i>
+					推荐
+				</div>
+				<!--热卖推荐-->
+				<div class="rmtj">
+					<div class="rmtj_top">热门推荐</div>
+					<ul>
+						<li>
+							<img src="../images/details/details-_39.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_41.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_43.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_48.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_49.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_50.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_54.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_55.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_58.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_59.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_60.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+						<li>
+							<img src="../images/details/details-_39.png" alt="" />
+							<p>纯色通用耳机pingguo...</p>
+							<p>￥13.92</p>
+						</li>
+					</ul>
+				</div>
+				</section>
+			</main>
+			<!--底部-->
+			<div class="details_footer">
+				<div>
+					<a href="javascript:;"><i class="iconfont icon-favorite1"></i>
+					<p>收藏</p></a>
+				</div>
+				<div>
+					<a href="javascript:;"><i class="iconfont icon-shouye"></i>
+					<p>小店</p></a>
+				</div>
+				<a href="javascript:;" class="a"><div class="div1">加入购物车</div></a>
+				<a href="javascript:;" class="a"><div class="div2">立即购买</div></a>
+			</div>
+		</div>
+		</div>
+		
+		
+	</body>
+	<script>
+		var App = angular.module("app",[]);
+		
+		App.controller("myCtrl",["$scope","$filter","$interval","$timeout",function($scope,$filter,$interval,$timeout){
+			
+//			//清除默认事件
+			$("#mb").click(function(e){
+				var e = event || window.event;
+				e.preventDefault()
+				e.stopPropagation()
+			})
+			
+			
+//			//点击#mb里面的×号隐藏mb
+			$("#mb .icon-close").click(function(e){
+				var e = event || window.event;
+				e.preventDefault()
+				e.stopPropagation()
+				$("#mb").css({"top":"10rem","transition":"2s"})
+				$("#box").css({"transform":"scale(1)"})
+				$(".mb_mb").hide(300)
+			})
+			
+			
+//			//点击确定订单按钮
+			$(".details_footer .div2").click(function(){
+				$("#mb").css({"top":"1.37rem"})
+				$(".mb_mb").show(300)
+				$("#box").css({"transform":"scale(0.9)"})
+			})
+			
+			
+//			//点击蒙版里面隐藏
+			$(".mb_mb").click(function(){
+				$("#box").css({"transform":"scale(1)"})
+				$(this).css({"display":"none"})
+			})
+			
+			$(".sub").click(function(){
+				console.log(1)
+				$(".mb_mb").hide(300)
+				$("#box").css({"transform":"scale(1)"})
+				window.location.href="../queren.html"
+			})
+			
+			//点击切换颜色
+			$(".gg ul li").click(function(){
+				$(this).addClass("active").siblings().removeClass("active")
+			})
+			
+			$timeout(function(){
+
+				//请注意使用id作为锚点的标志点，IScroll不支持那么作为锚点的标志点
+				if (location.hash) {
+				    window.scrollTo(0, 0);
+				}
+				//IScroll初始化
+				var myScroll = new IScroll('main', { click: false, zoom: true });
+				if (location.hash) {    
+				    setTimeout(function () {
+				    myScroll.scrollToElement(location.hash, 0);
+				     }, 50);
+				}
+				//关键代码
+				$('.details_header a[href^="#"]').on('click touchstart', function (e) {
+				    //阻止默认点击事件
+				    e.preventDefault();
+				    var target = this.hash;
+				    $target = $(target);
+//				    console.log(target)
+				var index=$(this).index()
+				$(".ul a").eq(index).addClass("active").siblings().removeClass("active")
+//				    if($('#'+target.substring(1)+'').css('display')=='block'){
+				        //利用IScroll的scrollToElement方法进行锚点点击效果
+				        myScroll.scrollToElement(target,0);
+//				    }
+				    return false
+				});  
+				     
+				document.addEventListener('touchmove', function (e) {
+				    e.preventDefault();
+				}, false);
+			},300)
+			
+			$scope.num=1
+			$scope.price=19.80
+			// 减
+			$scope.jian=function(index){
+					$scope.num--
+			}
+			//加
+			$scope.jia=function(index){
+					$scope.num++
+			}
+		}])
+	</script>
+</html>

@@ -1,0 +1,116 @@
+@charset "utf-8";
+//特卖
+*{
+    
+    margin: 0 ;
+    padding: 0;
+    list-style: none;
+     font-family: "微软雅黑";
+}
+//特卖大盒子
+.home_temai{
+//  border:1px solid red;
+    height:3.94rem;
+    overflow: hidden;
+}
+
+input::-webkit-input-placeholder{
+    text-indent: 1em;
+    color:#9E9C9F
+}
+.special_top{
+    width: 95%;
+    height: 0.51rem;
+//  border: 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    
+    a{
+        text-decoration: none;
+        color: #606060;
+        font-size: 14px;
+        
+    }
+    input{
+        width: 290px;
+        height: 0.3rem;
+        background: #f6f6f6;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        text-indent: 1em;
+        color:#919191
+    }
+}
+#special_fen{
+    width: 100%;
+//  border: 1px solid;
+    ul{
+        width: 100%;
+        height: 0.43rem;
+        border-bottom: 1px solid #F1F1F1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        li{
+            font-size: 16px;
+            float: left;
+            font-family: "微软雅黑";
+            text-align: center;
+            height: 0.43rem;
+            width: 90px;
+            line-height: 0.43rem;
+           
+        }
+    }
+    p{
+        font-size: 12px;
+        color: #919191;
+        margin-top: 18px;
+        margin-bottom: 10px;
+    }
+    .wai{
+        width: 90%;
+        height: 1.6rem;
+//      border: 1px solid;
+        position: relative;
+        margin: 0 auto;
+        div{
+            width: 100%;
+            height: 1.35rem;
+//          border: 1px solid;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            a{
+                font-size: 14px;
+                width: 72px;
+                height: 30px;
+                text-decoration: none;
+                color: #616161;
+                display: block;
+                background: #F6F6F6;
+                line-height: 30px;
+                text-align: center;
+            }
+            a:nth-child(4){
+                width: 80px;
+            }
+            a:nth-child(8){
+                margin-right: 8px;
+            }
+            a:nth-child(12){
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.special_acti{
+    border-bottom:1px solid #F94466 ;
+}

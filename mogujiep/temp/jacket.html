@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title>上衣</title>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<!--重置样式 reset.css-->
+		<link rel="stylesheet" href="../css/normalize.css">
+		<!--iscroll 下拉刷新-->
+		<script src="../js/iscroll-probe.js"></script>
+		<!--swiper js部分-->
+		<script src="../js/swiper.min.js"></script>
+		<!--引入angular-->
+		<script src="../libs/angular.min.js"></script>
+		<!--angular路由-->
+		<script src="../libs/angular-ui-router.js"></script>
+		<link rel="stylesheet" href="../css/animate.css" />
+		<!--rem自适应-->
+		<script src="../js/rem1.js"></script>
+
+		<!--jquery-->
+		<!--字体图标-->
+		<link rel="stylesheet" href="../iconfont3/iconfont.css" />
+		<!--jacket样式-->
+		<link rel="stylesheet" href="../css/jacket.css" />
+	</head>
+
+	<body ng-controller="myCtrl"  class="animated fadeInRight">
+		<!--头部-->
+		<header class="jacket_header">
+			<i class="iconfont icon-back" onClick="javascript :history.go(-1);"></i>
+			<a href="../index.html"><span>上衣</span></a>
+			<a href="javascript:;"><span>···</span></a>
+		</header>
+		<!--头部下图片-->
+		<article>
+			<a href="javascript:;"><img src="../images/sy/sy_09.png" alt="" class="figure_left" /></a>
+			<div class="figure_right">
+				<div class="figure_right_div">
+					<span>
+						<p>冬季抢新</p>
+						<p>每日10点  新衣疯抢</p>
+						<p>GO<i class="iconfont icon-more"></i></p>
+					</span>
+					<div>
+						<a href="javascript:;"><img src="../images/sy/sy_12.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="figure_right_div2">
+					<div>
+						<a href="javascript:;"><img src="../images/sy/sy_16.png" alt="" /></a>
+						<p>爆款热卖ing</p>
+					</div>
+					<div>
+						<a href="javascript:;"><img src="../images/sy/sy_18.png" alt="" /></a>
+						<p>￥19抢毛呢</p>
+					</div>
+				</div>
+			</div>
+		</article>
+		<!--菜单导航-->
+		<div class="nav">
+			<ul>
+				<li>
+					<div class="nav_left">
+						<span>爆款热卖</span>
+						<span>超值爆款  低至39元</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_24.png" alt="" />
+						<span>疯抢中...</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>新款毛呢</span>
+						<span>新款毛呢  冬季气质首选</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_30.png" alt="" />
+						<span>人气必备</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>棉服</span>
+						<span>人气热卖  御寒必备</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_33.png" alt="" />
+						<span>低至79元</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>毛衣</span>
+						<span>新款热卖  抢鲜购</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_36.png" alt="" />
+						<span>秒变韩范</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>新款羽绒</span>
+						<span>降温必备  不止七折</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_40.png" alt="" />
+						<span>新款尝鲜</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>加绒卫衣</span>
+						<span>万款抢新  低至39元</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_43.png" alt="" />
+						<span>时髦穿搭</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>冬季外套</span>
+						<span>百搭外套  超值嗨购</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_45.png" alt="" />
+						<span>正在抢购</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>内搭</span>
+						<span>时尚内搭  冬季必buy</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/sy/sy_48.png" alt="" />
+						<span>上新989+</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+			</ul>
+		</div>
+		<!--流行元素 iscroll-->
+		<div class="jacket_menu">
+			<div class="jacket_menu_top">
+				<span><i class="iconfont icon-favoritesfilling"></i>流行元素-爆款清单</span>
+			</div>
+			<div class="jacket_menu_content">
+				<ul>
+					<li><img src="../images/sy/sy_52.png" alt="" />
+						<p>学生党呢大衣</p>
+					</li>
+					<li><img src="../images/sy/sy_54.png" alt="" />
+						<p>温柔时髦贸易</p>
+					</li>
+					<li><img src="../images/sy/sy_56.png" alt="" />
+						<p>网红毛衣三折</p>
+					</li>
+					<li><img src="../images/sy/sy_61.png" alt="" />
+						<p>厚呢大衣</p>
+					</li>
+					<li><img src="../images/sy/sy_62.png" alt="" />
+						<p>羽绒服特价购</p>
+					</li>
+					<li><img src="../images/sy/sy_63.png" alt="" />
+						<p>显瘦内搭三折</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_03.png" alt="" />
+						<p>热销洋气棉服</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_05.png" alt="" />
+						<p>热销洋气棉服</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_07.png" alt="" />
+						<p>温暖内搭抢购</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_12.png" alt="" />
+						<p>棉服买一送一</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_13.png" alt="" />
+						<p>巨保暖长棉服</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_14.png" alt="" />
+						<p>必买棉服五折</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_18.png" alt="" />
+						<p>棉服立减百元</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_19.png" alt="" />
+						<p>棉服买一送一</p>
+					</li>
+					<li><img src="../images/sy/sy_y_1_20.png" alt="" />
+						<p>加厚大一三折</p>
+					</li>
+					<li><img src="../images/sy/sy_y_03.png" alt="" />
+						<p>百元棉服买送</p>
+					</li>
+					<li><img src="../images/sy/sy_y_05.png" alt="" />
+						<p>韩系大衣89起</p>
+					</li>
+					<li><img src="../images/sy/sy_y_07.png" alt="" />
+						<p>12月毛衣上新</p>
+					</li>
+					<li><img src="../images/sy/sy_y_12.png" alt="" />
+						<p>百元热卖棉服</p>
+					</li>
+					<li><img src="../images/sy/sy_y_13.png" alt="" />
+						<p>平价羽绒服</p>
+					</li>
+					<li><img src="../images/sy/sy_y_14.png" alt="" />
+						<p>高领毛衣热卖</p>
+					</li>
+					<li><img src="../images/sy/sy_y_18.png" alt="" />
+						<p>爆卖网红毛衣</p>
+					</li>
+					<li><img src="../images/sy/sy_y_19.png" alt="" />
+						<p>小个子棉服3折</p>
+					</li>
+					<li><img src="../images/sy/sy_y_20.png" alt="" />
+						<p>17年爆款棉服</p>
+					</li>
+					<li><img src="../images/sy/sy_y6_03.png" alt="" />
+						<p>御寒棉服99元</p>
+					</li>
+					<li><img src="../images/sy/sy_y6_05.png" alt="" />
+						<p>洋气高领毛衣</p>
+					</li>
+					<li><img src="../images/sy/sy_y6_07.png" alt="" />
+						<p>12月必买棉服</p>
+					</li>
+					<li><img src="../images/sy/sy_y6_12.png" alt="" />
+						<p>保暖外套99元</p>
+					</li>
+					<li><img src="../images/sy/sy_y6_13.png" alt="" />
+						<p>超值新款大衣</p>
+					</li>
+					<li><img src="../images/sy/sy_y6_14.png" alt="" />
+						<p>一周热销上衣</p>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+
+		<!--路由-->
+		<div class="jacket_tab">
+			<div ui-sref="wt" ng-class="{'active': data.current == 1}" ng-click="setCurrent(1)">
+				<span>外套</span>
+			</div>
+			<div ui-sref="wy" ng-class="{'active': data.current == 2}" ng-click="setCurrent(2)">
+				<span>卫衣</span>
+			</div>
+			<div ui-sref="zzs" ng-class="{'active': data.current == 3}" ng-click="setCurrent(3)">
+				<span>针织衫</span>
+			</div>
+			<div ui-sref="cs" ng-class="{'active': data.current == 4}" ng-click="setCurrent(4)">
+				<span>衬衫</span>
+			</div>
+			<div ui-sref="tx" ng-class="{'active': data.current == 5}" ng-click="setCurrent(5)">
+				<span>T恤</span>
+			</div>
+		</div>
+		<div>
+			<div ui-view>
+				
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = angular.module("myApp", ["ui.router"])
+
+		app.controller("myCtrl", ["$scope", "$http", "$timeout", function($scope, $http, $timeout) {
+
+			$timeout(function() {
+				//初始化iscroll
+				var Is = new IScroll(".jacket_menu_content", {
+					scrollX: "true",
+					bounce: false
+				})
+				//初始化iscroll
+				var wt = new IScroll(".wt", {
+					scrollX: "true",
+					bounce: false
+				})
+				
+			}, 200)
+
+			$scope.data = {
+				current: "1"
+			}
+			$scope.setCurrent = function(param) {
+				$scope.data.current = param;
+			}
+
+		}]);
+
+		app.controller("myCtrl2", ["$scope", "$http", "$timeout", function($scope, $http, $timeout) {
+			$timeout(function() {
+				var Is1 = new IScroll(".wy", {
+					scrollX: "true",
+					probeType:3
+				})
+			}, 400)
+		}]);
+		app.controller("myCtrl3", ["$scope", "$http", "$timeout", function($scope, $http, $timeout) {
+			$timeout(function() {
+				var Is2 = new IScroll(".zzs", {
+					scrollX: "true",
+					probeType:3
+				})
+			}, 400)
+		}]);
+		app.controller("myCtrl4", ["$scope", "$http", "$timeout", function($scope, $http, $timeout) {
+			$timeout(function() {
+				var Is3 = new IScroll(".cs", {
+					scrollX: "true",
+					probeType:3
+				})
+			}, 400)
+		}]);
+		app.controller("myCtrl5", ["$scope", "$http", "$timeout", function($scope, $http, $timeout) {
+			$timeout(function() {
+				var Is4 = new IScroll(".tx", {
+					scrollX: "true",
+					probeType:3
+				})
+			}, 400)
+		}]);
+		app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+			$urlRouterProvider.otherwise("/wt");
+			$stateProvider
+				.state("wt", {
+					url: "/wt",
+					templateUrl: "sy/wt.html",
+					controller: "myCtrl"
+				}).state("wy", {
+					url: "/wy",
+					templateUrl: "sy/wy.html",
+					controller: "myCtrl2"
+				}).state("zzs", {
+					url: "/zzs",
+					templateUrl: "sy/zzs.html",
+					controller: "myCtrl3"
+				}).state("cs", {
+					url: "/cs",
+					templateUrl: "sy/cs.html",
+					controller: "myCtrl4"
+				}).state("tx", {
+					url: "/tx",
+					templateUrl: "sy/tx.html",
+					controller: "myCtrl5"
+				})
+		}])
+	</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>引导页</title>
+    <link rel="stylesheet" href="css/ldpage.css">
+    <link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+    <script src="js/rem1.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <div class="ld_box">
+        <img src="images/home/引导页_02.png" alt="">
+        <img src="images/home/引导页_03.png" alt="">
+    </div>
+    <div class="ld_boxt">
+        <img src="images/home/引导1.jpg" alt="">
+    </div>
+</body>
+<script>
+    setTimeout(function () {
+        $(".ld_box").hide()
+        $(".ld_boxt").fadeIn(400)
+        setTimeout(function () {
+            window.location.href="index.html"
+        },1200)
+    },3000)
+
+</script>
+</html>

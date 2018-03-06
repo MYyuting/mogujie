@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>分类</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript" src="libs/jquery-3.1.1.js" ></script>
+		<!--<script src="js/zepto.min.js"></script>-->
+		<script type="text/javascript" src="js/iscroll-probe.js" ></script>
+		<script type="text/javascript" src="js/rem1.js" ></script>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/fl.css"/>
+		<link rel="stylesheet" type="text/css" href="iconfont3/iconfont.css"/>
+		<link rel="stylesheet" href="css/animate.css" />
+		<!--引入angular-->
+    	<script src="libs/angular.min.js"></script>
+	</head>
+	<body class="animated fadeInRight" ng-controller="mine">
+		<div class="artone"></div>
+		<div id="fl_head">
+			<span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span>
+			<input type="text" placeholder="冬款上新"/>
+			<p><i class="iconfont icon-filter"></i>筛选</p>
+		</div>
+		<div id="fl_fen">
+			
+			<ul>
+				<li class="fl_acti">综合</li>
+				<li>销量</li>
+				<li>新品</li>
+			</ul>
+			
+			<article class="top1">
+				<div>
+					<span>颜色 |</span>
+					<aside class="fl_isco fl_on1">
+						<ol>
+							<li>军绿色</li>
+							<li>驼色</li>
+							<li>咖啡色</li>
+							<li>酒红色</li>
+							<li>棕色</li>
+							<li>骚红</li>
+							<li>骚粉</li>
+							<li>骚绿</li>
+							<li>骚紫</li>
+							<li>骚蓝</li>
+							<li>骚黄</li>
+					   </ol>
+					</aside>
+				</div>
+				<div>
+					<span>材质 |</span>
+					<aside class="fl_isco fl_isco1 fl_on2">
+						<ol>
+							<li>复合</li>
+							<li>记忆布</li>
+							<li>羊羔毛</li>
+							<li>天鹅绒</li>
+							<li>醋纤</li>
+							<li>貂毛</li>
+							<li>毛线</li>
+							<li>皮革</li>
+							<li>成年羊</li>
+							<li>1151</li>
+							<li>11111</li>
+					   </ol>
+					</aside>
+				</div>
+			</article>
+			
+			<div class="top">
+				<div style="display: block;" class="fl_one">
+					<div class="fl_wai">
+						<div class="fl_one1" ng-repeat="item in obj1">
+							<img ng-src="images/fl-img/{{item.images}}"/>
+							<div>
+								<span ng-repeat="item1 in item.smallnav">{{item1}}</span>
+							</div>
+							<div>
+								<span  ng-repeat="item2 in item.smallnav1">{{item2}}</span>
+							</div>
+							<div class="fl_di">
+								<p>{{item.money}}</p>
+								<p>{{item.money1}} <i class="iconfont icon-favorite1"></i></p>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="fl_one">
+					<div class="fl_wai">
+						<div class="fl_one1" ng-repeat="item in obj">
+							<img ng-src="images/fl-img/{{item.images}}"/>
+							<div>
+								<span ng-repeat="item1 in item.smallnav">{{item1}}</span>
+							</div>
+							<div>
+								<span  ng-repeat="item2 in item.smallnav1">{{item2}}</span>
+							</div>
+							<div class="fl_di">
+								<p>{{item.money}}</p>
+								<p>{{item.money1}} <i class="iconfont icon-favorite1"></i></p>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="fl_one">
+					<div class="fl_wai">
+						<!--<div class="fl_one1">
+							<img src="images/fl-img/fl__03.png"/>
+							<div>
+								<span>热卖</span>
+								<span>热卖</span>
+								<span>妮子大衣</span>
+								<span>热卖</span>
+							</div>
+							<div>
+								<span>一粒扣</span>
+								<span>热卖</span>
+								<span>中长款</span>
+								<span>热卖</span>
+							</div>
+							<div class="fl_di">
+								<p>￥282.44</p>
+								<p>1928 <i class="iconfont icon-favorite1"></i></p>
+							</div>	
+						</div>
+							<img src="images/fl-img/fl__31.png"/>
+							<div>
+								<span>热卖</span>
+								<span>热卖</span>
+								<span>妮子大衣</span>
+								<span>热卖</span>
+							</div>
+							<div>
+								<span>一粒扣</span>
+								<span>热卖</span>
+								<span>中长款</span>
+								<span>热卖</span>
+							</div>
+							<div class="fl_di">
+								<p>￥282.44</p>
+								<p>1928 <i class="iconfont icon-favorite1"></i></p>
+							</div>	
+						</div>-->
+						<div class="fl_one1" ng-repeat="item in obj2">
+							<img ng-src="images/fl-img/{{item.images}}"/>
+							<div>
+								<span ng-repeat="item1 in item.smallnav">{{item1}}</span>
+							</div>
+							<div>
+								<span  ng-repeat="item2 in item.smallnav1">{{item2}}</span>
+							</div>
+							<div class="fl_di">
+								<p>{{item.money}}</p>
+								<p>{{item.money1}} <i class="iconfont icon-favorite1"></i></p>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		//angular
+    var app=angular.module("myApp",[])
+		//我的控制器
+	app.controller("mine",["$scope","$http","$timeout",function($scope,$http,$timeout){ 
+		
+		
+		$scope.obj={}
+		$http.get("json/classifyone.json").then(function(res){
+			console.log(res.data)
+			$scope.obj=res.data.news
+			console.log($scope.obj)
+		})
+		$scope.obj1={}
+		$http.get("json/classifyone1.json").then(function(res){
+			console.log(res.data)
+			$scope.obj1=res.data.news1
+			console.log($scope.obj1)
+		})
+		$scope.obj2={}
+		$http.get("json/classifyone2.json").then(function(res){
+			console.log(res.data)
+			$scope.obj2=res.data.news2
+			console.log($scope.obj2)
+		})
+		
+		
+	}]);	
+	</script>
+	<script type="text/javascript">
+//		document.addEventListener("touchstart",function(ev){
+//			ev.cancelBubble=false
+//			ev.preventDefault()
+//		},{passive:false})
+	$(".top").eq(0).show().siblings("div").hide();
+	$('#fl_fen ul>li').click(function(){
+		var index = $(this).index()
+//		$(this).css("color","#ff6600")
+		$("#fl_fen ul>li").eq(index).addClass("fl_acti").siblings().removeClass("fl_acti")
+		$(".top .fl_one").eq(index).fadeIn().siblings(".top div").fadeOut();
+		
+	})
+	$(".fl_on1 ol").on("click","li",function(){
+		var index=$(this).index()
+		$(".fl_on1 ol li").eq(index).addClass("fl_ac").siblings().removeClass("fl_ac")
+	})
+	$(".fl_on2 ol").on("click","li",function(){
+		var index=$(this).index()
+		$(".fl_on2 ol li").eq(index).addClass("fl_ac").siblings().removeClass("fl_ac")
+	})
+	setTimeout(function(){
+		var isc=new IScroll(".fl_isco",{
+			scrollX:true
+		})
+		var isc=new IScroll(".fl_isco1",{
+			scrollX:true
+		})
+	},300)
+	
+	</script>
+	
+</html>

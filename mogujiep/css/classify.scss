@@ -1,0 +1,187 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;list-style: none; font-family: "微软雅黑";}
+//头部
+a{
+    color:#000
+}
+.classify_header{
+    width: 100%;
+    height: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: #FFF;
+    z-index: 4;
+    p:nth-of-type(1){
+        width: 0.38rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0.1rem;
+        a{
+            color: #000;
+            text-align: center;
+        }
+        span{
+            font-size: 0.14rem;
+        }
+        i{
+            font-size: 0.24rem;
+            color: #666;
+        }
+    }
+    p:nth-of-type(2){
+        width: 70%;
+        position: relative;
+        input{
+            width: 100%;
+            height: 0.36rem;
+            background: #EFEFEF;
+            border: none;
+            border-radius: 0.06rem;
+            text-indent: 2em;
+            outline: none;
+        }
+        .icon-search{
+            position: absolute;
+            top: 0.1rem;
+            left: 0.1rem;
+        }
+        .icon-scanning{
+            position: absolute;
+            top: 0.06rem;
+            right: 0.1rem;
+            font-size: 0.2rem;
+        }
+    }
+    p:nth-of-type(3){
+        margin-right: 0.1rem;
+        i{
+            font-size: 0.24rem;
+            color: #666;
+        }
+    }
+}
+//初冬上新
+.classify_cdsx{
+    width: 100%;
+    height: 2.48rem;
+    margin-top: 0.6rem;
+    .classify_cdsx_top{
+        width: 100%;
+        height: 0.36rem;
+        position: relative;
+        p{
+            position: absolute;
+            bottom: 0;
+            left: 0.1rem;
+            font-weight: bold;
+        }
+    }
+    ul{
+        width: 100%;
+        height: 2.1rem;
+        border-bottom: 0.1rem solid #EFEFEF;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        li{
+            width: 25%;
+            text-align: center;
+            p{
+                font-size: 0.14rem;
+            }
+        }
+    }
+}
+//内容列表
+.nav{
+    width: 100%;
+    height: 4.78rem;
+    border-bottom: 0.1rem solid #EFEFEF;
+    ul{
+        width: 94%;
+        height: 100%;
+        margin: 0 auto;
+        li{
+            width: 100%;
+            height: 0.59rem;
+            border-bottom: 1px solid #F0F0F0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .jb{
+                background-image: -webkit-gradient(linear, left 0, right 0,from(rgb(226, 85, 218)), to(rgb(251, 154, 197)));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; 
+            }
+            .nav_left{
+                span:nth-child(1){
+                    font-weight: bold;
+                    font-size: 0.14rem;
+                }
+                span:nth-child(2){
+                    color: #666;
+                    font-size: 0.12rem;
+                    margin-left: 0.08rem;
+                }
+            }
+            .nav_right{
+                display: flex;
+                align-items: center;
+                width: 1.1rem;
+                height: 0.32rem;
+                background: #FFFBFF;
+                border-radius: 0.6rem;
+                padding-left: 0.08rem;
+                span{
+                    font-size: 0.12rem;
+                    color: #666;
+                }
+                img{
+                    width: 0.24rem;
+                    height: 0.24rem;
+                    margin-right: 0.08rem;
+                }
+                i{
+                    font-size: 0.18rem;
+                }
+            }
+        }
+    }
+} 
+.nav2{
+    height: 3.6rem;
+}
+//底部好店推荐
+.classify_hdtj{
+    width: 100%;
+    height: 0.56rem;
+    background: #EFEFEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #CCC;
+    i{
+        display: inline-block;
+        width: 0.16rem;
+        height: 0.16rem;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 0.16rem;
+        font-size: 0.12rem;
+    }
+    span{
+        color: #000;
+    }
+}
+
+.home_main1{
+//  border:1px solid red;
+    height:6.14rem;
+    overflow: hidden;
+}

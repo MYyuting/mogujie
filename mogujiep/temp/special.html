@@ -1,0 +1,45 @@
+ <!--头部-->
+<div class="special_box">
+    	<div class="special_head">
+    		<a href=""><i class="iconfont icon-search"></i></a>
+    		<h3>直播特卖</h3>
+    		<a href=""><i class="iconfont icon-kefu"></i></a>
+    	</div>
+    	<!--中间图片-->
+    	<div class="special_top"><a href=""><img src="images/sp-img/special_02.png"/></a></div>
+       <!--分页路由-->
+       <nav class="special_navone">
+       	
+			<div ui-sref=".{{item.uihot}}" 
+			 	ng-repeat="item in arr"
+			 	ng-click="zhi($index)"
+			 	 ng-class="{'special_active':$index==n}"
+			 	 >
+                <span>{{item.hot}}</span>
+            </div>
+            <!--<div ui-sref=".remen" class="special_active">
+                <span>最新</span>
+            </div>
+            <div ui-sref=".zuixin">
+                <span>最新</span>
+            </div>
+            <div ui-sref=".guanzhu">
+                <span>关注</span>
+            </div>
+            <div ui-sref=".meiz">
+                <span>美妆</span>
+            </div>
+            <div ui-sref=".chuand">
+                <span>穿搭</span>
+            </div>-->
+        </nav>
+        <article class="home_temai">
+        	<section>
+        		<div ui-view>
+				<!--直播内容二级路由 temp/special_temp/remen.html-->
+           		</div>
+        	</section>
+        </article>
+       
+    </div>
+

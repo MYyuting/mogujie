@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>分类跳转</title>
+	<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+    <!--重置样式 reset.css-->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!--轮播swiper样式-->
+    <link rel="stylesheet" href="../js/swiper.min.css">
+    <!--自己引入的css样式-->
+    <link rel="stylesheet" href="../css/index.css">
+    <!--iscroll 下拉刷新-->
+    <script src="../js/iscroll-probe.js"></script>
+    <!--swiper js部分-->
+    <script src="../js/swiper.min.js"></script>
+    <!--引入angular-->
+    <script src="../libs/angular.min.js"></script>
+    <!--angular路由-->
+    <script src="../libs/angular-ui-router.js"></script>
+    <!--rem自适应-->
+    <script src="../js/rem1.js"></script>
+    <!--jquery-->
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="../iconfont3/iconfont.css">
+    <link rel="stylesheet" href="classify_temp/classify/classsityall.css">
+    <link rel="stylesheet" href="../css/animate.css" />
+</head>
+<body ng-controller="myCtrl"  class="animated fadeInRight">
+<div class="pageall" ng-app="myApp" ng-controller="myCtrl">
+    <header>
+        <i class="iconfont icon-back" onClick="javascript :history.go(-1);"></i>
+        <span>全部类目</span>
+        <span></span>
+    </header>
+    <div class="sear">
+        <input type="search" placeholder="时尚套装">
+        <i class="iconfont icon-search"></i>
+    </div>
+    <div class="scroll_all">
+        <div class="scroll_left">
+            <ul>
+                <li ui-sref="zzlx" class="class_active">正在流行</li>
+                <li ui-sref="shyi">上衣</li>
+                <li ui-sref="kuzi">裤子</li>
+                <li ui-sref="qunzi">裙子</li>
+                <li ui-sref="neiyi">内衣</li>
+                <li ui-sref="nvxie">女鞋</li>
+                <li ui-sref="nanyou">男友</li>
+                <li ui-sref="baobao">包包</li>
+                <li ui-sref="yundong">运动</li>
+                <li ui-sref="peishi">配饰</li>
+                <li ui-sref="meizh">美妆</li>
+                <li ui-sref="gehu">个护</li>
+                <li ui-sref="jiaju">家具</li>
+                <li ui-sref="baihuo">百货</li>
+                <li ui-sref="muying">母婴</li>
+                <li ui-sref="shipin">食品</li>
+            </ul>
+        </div>
+        <div class="scroll_right">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script>
+    var app=angular.module("myApp",["ui.router"]);
+    app.controller("myCtrl",["$scope","$http","$timeout",function($scope,$http,$timeout){
+        $timeout(function(){
+            var scroll_left = new IScroll(".scroll_left",{
+                scrollY:true,
+                bounce:false,
+
+            })
+            var scroll_right = new IScroll(".scroll_right",{
+                scrollY:true,
+                bounce:false,
+            })
+        },500)
+    }]);
+    app.controller("zzlx_control",["$scope","$http","$timeout",function($scope,$http,$timeout){
+        $scope.arr = [];
+        $http.get("classify_temp/classify/classify.json").then(function(res){
+            $scope.arr1 = res.data.info[0].cont;
+            $scope.arr2 = res.data.info[1].cont;
+            $scope.arr3 = res.data.info[2].cont;
+            $scope.arr4 = res.data.info[3].cont;
+            $scope.arr5 = res.data.info[4].cont;
+            $scope.arr6 = res.data.info[5].cont;
+            $scope.arr7 = res.data.info[6].cont;
+            $scope.arr8 = res.data.info[7].cont;
+            $scope.arr9 = res.data.info[8].cont;
+            $scope.arr10 = res.data.info[9].cont;
+            $scope.arr11 = res.data.info[10].cont;
+            $scope.arr12 = res.data.info[11].cont;
+            $scope.arr13 = res.data.info[12].cont;
+            $scope.arr14 = res.data.info[13].cont;
+            $scope.arr15 = res.data.info[14].cont;
+            $scope.arr16 = res.data.info[15].cont;
+
+//            console.log( $scope.arr)
+        })
+    }]);
+    app.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+        $urlRouterProvider.otherwise("/zzlx");
+        $stateProvider
+            .state("zzlx",{
+                url:"/zzlx",
+                templateUrl:"classify_temp/classifyall/zzlx.html",
+                controller:"zzlx_control"
+            }).state("shyi",{
+            url:"/shyi",
+            templateUrl:"classify_temp/classifyall/shyi.html"
+        }).state("kuzi",{
+            url:"/kuzi",
+            templateUrl:"classify_temp/classifyall/kuzi.html"
+        }).state("qunzi",{
+            url:"/qunzi",
+            templateUrl:"classify_temp/classifyall/qunzi.html"
+        }).state("neiyi",{
+            url:"/neiyi",
+            templateUrl:"classify_temp/classifyall/neiyi.html"
+        }).state("nvxie",{
+            url:"/nvxie",
+            templateUrl:"classify_temp/classifyall/nvxie.html"
+        }).state("nanyou",{
+            url:"/nanyou",
+            templateUrl:"classify_temp/classifyall/nanyou.html"
+        }).state("baobao",{
+            url:"/baobao",
+            templateUrl:"classify_temp/classifyall/baobao.html"
+        }).state("yundong",{
+            url:"/yundong",
+            templateUrl:"classify_temp/classifyall/yundong.html"
+        }).state("peishi",{
+            url:"/peishi",
+            templateUrl:"classify_temp/classifyall/peishi.html"
+        }).state("meizh",{
+            url:"/meizh",
+            templateUrl:"classify_temp/classifyall/meizh.html"
+        }).state("gehu",{
+            url:"/gehu",
+            templateUrl:"classify_temp/classifyall/gehu.html"
+        }).state("jiaju",{
+            url:"/jiaju",
+            templateUrl:"classify_temp/classifyall/jiaju.html"
+        }).state("baihuo",{
+            url:"/baihuo",
+            templateUrl:"classify_temp/classifyall/baihuo.html"
+        }).state("muying",{
+            url:"/muying",
+            templateUrl:"classify_temp/classifyall/muying.html"
+        }).state("shipin",{
+            url:"/shipin",
+            templateUrl:"classify_temp/classifyall/shipin.html"
+        })
+    }])
+</script>
+<script>
+	$(".scroll_left ul").on("click","li",function(){
+		var index=$(this).index()
+		$(".scroll_left ul li").eq(index).addClass("class_active").siblings().removeClass("class_active")
+	})
+		
+</script>
+</html>
+
+
+
+

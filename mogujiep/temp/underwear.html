@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>女装/内衣</title>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<!--重置样式 reset.css-->
+		<!--<script src="../js/zepto.min.js"></script>-->
+		<link rel="stylesheet" href="../css/normalize.css">
+		<!--轮播swiper样式-->
+		<!--<link rel="stylesheet" href="../js/swiper.min.css">-->
+		<!--iscroll 下拉刷新-->
+		<script src="../js/iscroll-probe.js"></script>
+		<!--swiper js部分-->
+		<script src="../js/swiper.min.js"></script>
+		<!--引入angular-->
+		<script src="../libs/angular.min.js"></script>
+		<!--angular路由-->
+		<script src="../libs/angular-ui-router.js"></script>
+		<!--rem自适应-->
+		<script src="../js/rem1.js"></script>
+		<!--jquery-->
+		<script src="../libs/jquery-3.1.1.js"></script>
+		<!--字体图标-->
+		<link rel="stylesheet" href="../iconfont3/iconfont.css" />
+		<!--jacket样式-->
+		<link rel="stylesheet" href="../css/underwear.css" />
+		<!--爱心-->
+		<link rel="stylesheet" href="../css/aixin.css" />
+		<link rel="stylesheet" href="../css/animate.css" />
+		<script src="../js/aixin1.js"></script>
+		
+	</head>
+	<body  class="animated fadeInRight">
+		<!--头部-->
+		<header class="underwear_header">
+			<i class="iconfont icon-back" onClick="javascript :history.go(-1);"></i>
+			<a href="../index.html"><span>女装/内衣</span></a>
+			<a href="javascript:;"><span>···</span></a>
+		</header>
+		<!--logo-->
+		<div class="underwear_logo">
+			<a href="javascript:;"><img src="../images/ny/ny_02.png" alt="" /></a>
+		</div>
+		<!--直播-->
+		<div class="underwear_live">
+			<div class="underwear_live_top">
+				<span>女装内衣购物台</span>
+				<a href="javascript:;"><span>更多直播> </span></a>
+			</div>
+			<div class="live">
+				<ul>
+					<li><img src="../images/ny/ny_05.png" alt="" /></li>
+					<li><img src="../images/ny/ny_06.png" alt="" /></li>
+					<li><img src="../images/ny/ny_07.png" alt="" /></li>
+					<li><img src="../images/ny/ny_08.png" alt="" /></li>
+					<li><img src="../images/ny/ny_10.png" alt="" /></li>
+					<li><img src="../images/ny/ny_11.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+		<!--内容列表-->
+		<div class="nav">
+			<ul>
+				<li>
+					<div class="nav_left">
+						<span>爆款热卖</span>
+						<span>超值爆款  低至39元</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_09.png" alt="" />
+						<span>疯抢中...</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>新款毛呢</span>
+						<span>新款毛呢  冬季气质首选</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_12.png" alt="" />
+						<span>人气必备</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>棉服</span>
+						<span>人气热卖  御寒必备</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_16.png" alt="" />
+						<span>低至79元</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>毛衣</span>
+						<span>新款热卖  抢鲜购</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_18.png" alt="" />
+						<span>秒变韩范</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>新款羽绒</span>
+						<span>降温必备  不止七折</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_20.png" alt="" />
+						<span>新款尝鲜</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>加绒卫衣</span>
+						<span>万款抢新  低至39元</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_22.png" alt="" />
+						<span>时髦穿搭</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>冬季外套</span>
+						<span>百搭外套  超值嗨购</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_24.png" alt="" />
+						<span>正在抢购</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>内搭</span>
+						<span>时尚内搭  冬季必buy</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_26.png" alt="" />
+						<span>上新989+</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+			</ul>
+		</div>
+		<!--内容列表2-->
+		<div class="nav">
+			<ul>
+				<li>
+					<div class="nav_left">
+						<span>爆款热卖</span>
+						<span>超值爆款  低至39元</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_28.png" alt="" />
+						<span>疯抢中...</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>新款毛呢</span>
+						<span>新款毛呢  冬季气质首选</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_30.png" alt="" />
+						<span>人气必备</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>棉服</span>
+						<span>人气热卖  御寒必备</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_32.png" alt="" />
+						<span>低至79元</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>毛衣</span>
+						<span>新款热卖  抢鲜购</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_34.png" alt="" />
+						<span>秒变韩范</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>新款羽绒</span>
+						<span>降温必备  不止七折</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_36.png" alt="" />
+						<span>新款尝鲜</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>加绒卫衣</span>
+						<span>万款抢新  低至39元</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_38.png" alt="" />
+						<span>时髦穿搭</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>冬季外套</span>
+						<span>百搭外套  超值嗨购</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_40.png" alt="" />
+						<span>正在抢购</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+				<li>
+					<div class="nav_left">
+						<span>内搭</span>
+						<span>时尚内搭  冬季必buy</span>
+					</div>
+					<a href="javascript:;"><div class="nav_right">
+						<img src="../images/ny/ny_42.png" alt="" />
+						<span>上新989+</span>
+						<i class="iconfont icon-more"></i>
+					</div></a>
+				</li>
+			</ul>
+		</div>
+		<!--流行推荐-->
+		<div class="underwear_lxtj">
+			<div class="underwear_lxtj_top">——— •  流行推荐   • ———</div>
+			<div class="underwear_lxtj_bot">
+				<div>
+					<a href="javascript:;">
+					<img src="../images/ny/ny_00_03.png" alt="" />
+					<p>面包服</p>
+					</a>
+				</div>
+				<div>
+					<a href="javascript:;">
+					<img src="../images/ny/ny_00_05.png" alt="" />
+					<p>冬季套装</p>
+					</a>
+				</div>
+				<div>
+					<a href="javascript:;">
+					<img src="../images/ny/ny_00_07.png" alt="" />
+					<p>冬季内搭</p>
+					</a>
+				</div>
+				<div>
+					<a href="javascript:;">
+					<img src="../images/ny/ny_00_09.png" alt="" />
+					<p>长款呢大衣</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--流行元素 iscroll-->
+		<div class="jacket_menu">
+			<div class="jacket_menu_top">
+				<span><i class="iconfont icon-favoritesfilling"></i>流行元素-爆款清单</span>
+			</div>
+			<div class="jacket_menu_content">
+				<ul>
+					<li><a href="javascript:;"><img src="../images/sy/sy_52.png" alt="" />
+						<p>学生党呢大衣</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_54.png" alt="" />
+						<p>温柔时髦贸易</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_56.png" alt="" />
+						<p>网红毛衣三折</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_61.png" alt="" />
+						<p>厚呢大衣</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_62.png" alt="" />
+						<p>羽绒服特价购</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_63.png" alt="" />
+						<p>显瘦内搭三折</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_03.png" alt="" />
+						<p>热销洋气棉服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_05.png" alt="" />
+						<p>热销洋气棉服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_07.png" alt="" />
+						<p>温暖内搭抢购</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_12.png" alt="" />
+						<p>棉服买一送一</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_13.png" alt="" />
+						<p>巨保暖长棉服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_14.png" alt="" />
+						<p>必买棉服五折</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_18.png" alt="" />
+						<p>棉服立减百元</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_19.png" alt="" />
+						<p>棉服买一送一</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_1_20.png" alt="" />
+						<p>加厚大一三折</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_03.png" alt="" />
+						<p>百元棉服买送</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_05.png" alt="" />
+						<p>韩系大衣89起</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_07.png" alt="" />
+						<p>12月毛衣上新</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_12.png" alt="" />
+						<p>百元热卖棉服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_13.png" alt="" />
+						<p>平价羽绒服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_14.png" alt="" />
+						<p>高领毛衣热卖</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_18.png" alt="" />
+						<p>爆卖网红毛衣</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_19.png" alt="" />
+						<p>小个子棉服3折</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y_20.png" alt="" />
+						<p>17年爆款棉服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y6_03.png" alt="" />
+						<p>御寒棉服99元</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y6_05.png" alt="" />
+						<p>洋气高领毛衣</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y6_07.png" alt="" />
+						<p>12月必买棉服</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y6_12.png" alt="" />
+						<p>保暖外套99元</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y6_13.png" alt="" />
+						<p>超值新款大衣</p></a>
+					</li>
+					<li><a href="javascript:;"><img src="../images/sy/sy_y6_14.png" alt="" />
+						<p>一周热销上衣</p></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script>
+		var MyIs = new IScroll(".live",{
+			scrollX: "true",
+			probeType:3
+		})
+		var MyIs2 = new IScroll(".jacket_menu_content",{
+			scrollX: "true",
+			probeType:3
+		})
+		
+	</script>
+</html>

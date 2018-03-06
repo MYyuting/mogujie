@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>跳转</title>
+    <link rel="stylesheet" href="iconfont3/iconfont.css">
+    <link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/home_tiao.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--rem自适应-->
+    <script src="js/rem1.js"></script>
+    <script src="libs/angular.min.js"></script>
+    <script src="js/zan.js"></script>
+    <link rel="stylesheet" href="css/animate1.css" />
+    <link rel="stylesheet" href="css/index1.css" />
+</head>
+<body ng-controller="myCtrl">
+	<div class="car_posi">收藏成功</div>
+	<!--旋转加载-->
+    <div class="xuan">
+        <span class="iconfont icon-loading_ home_hide"  style="font-size: 40px;color:rgba(237,93,131,1)"></span>
+    </div>
+    <!--大盒子-->
+    <div class="tiao_boxo">
+    	<nav class="tiao_nav">
+    		<div><span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span></div>
+    		<div class="tiao_dis"><span>百款热销套装返场</span></div>
+    		<div>
+    			<span class="iconfont icon-skip"></span>
+    			<span class="iconfont icon-comments"></span>
+    		</div>
+    	</nav>
+    	<main>
+    		<div>
+    			<!--banner-->
+    			<article class="tiao_banner">
+    				<div>
+    					<img src="images/home/ny_02.png" alt="" />
+    				</div>
+    			</article>
+    			<!--banner-->
+    			<!--msg-->
+    			<article class="tiao_masg">
+    				<div>
+    					<img src="images/home/tiao_04.png" alt="" />
+    				</div>
+    			</article>
+    			<!--msg-->
+    			<!--person start-->
+    			<article class="tian_heado">
+    				<div>
+    					
+    				</div>
+    				<div>
+    					<p>
+    						<span>by</span>
+    						<span><img src="images/home/tiao_07.png" alt="" /></span>
+    						<span>小鹿姐姐</span>
+    					</p>
+    				</div>
+    			</article>
+    			<!--person end-->
+    			<!--返场-->
+    			<article class="tiao_fan">
+    				<div>
+    					<span>返场快抢，仅此一天</span>
+    					<span><img src="images/home/tiao_11.png" alt="" /></span>
+    				</div>
+    			</article>
+    			<!--返场-->
+    			<!--推荐-->
+    			<article class="tiao_tuijian">
+    				<div><span>———◆</span><span>推荐单品</span><span>◆———</span></div>
+    			</article>
+    			<!--推荐-->
+    			<!--内容-->
+    			<article class="tiao_neirong">
+    				<aside ng-repeat="item in obj" class="aso">
+    					<p><img ng-src="images/home/{{item.images}}" alt="" /></p>
+    					<p><span>{{item.hot}}</span><span>{{item.feng}}</span></p>
+    					<p><button>{{item.btn}}</button><span>{{item.price}}</span><span>{{item.price}}</span></p>
+    					<p><button>{{item.shopping}}</button></p>
+    				</aside>
+    				<!--<aside ng-repeat="item in obj">
+    					<div><img src="images/home/tiao_15.png" alt="" /></div>
+    					<div ng-repeat="item1 in item.smallnav"><span>{{item1}}</span></div>
+    					<div ng-repeat="item2 in item.smallnav1"><button>{{item2}}</button></div>
+    					<div><span>{{item.money}}</span><span>{{item.money1}}</span></div>
+    				</aside>-->
+    			</article>
+    		</div>
+    	</main>
+    	<footer class="tiao_foot">
+    		<p class="tiao_href">
+    			<span class="iconfont icon-comments "></span>
+    			<span>0</span>
+    		</p>
+    		<p>
+    			<span class="iconfont icon-favorite tiao_spano"></span>
+    			<span>已收藏</span>
+    		</p>
+    		<p class="opera" id="btn">
+    			<span class="iconfont icon-good tiao_spano1" ></span>
+    			<span ng-click="tiao_start()">{{a}}</span>
+    		</p>
+    	</footer>
+    </div>
+</body>
+<script>
+	var app=angular.module("myApp",[])
+	app.controller("myCtrl",["$scope","$http","$timeout",function($scope,$http,$timeout){
+		
+		$scope.obj={}
+		$http.get("json/jop.json").then(function(res){
+			console.log(res.data)
+			$scope.obj=res.data.jop
+			console.log($scope.obj)
+		})
+		
+		
+		
+		
+		$scope.a="0"
+		$scope.tiao_start=function(){
+			$scope.a++
+			$(".tiao_spano1").addClass("tiao_active")
+		}
+		
+	}])
+</script>
+<script>
+    var t=0;
+    setInterval(function(){
+        t+=8
+        $(".home_hide").css({"transform":"rotate("+t+"deg)"})
+    },40)
+
+    setTimeout(function(){
+    	
+        $(".home_hide").hide()
+        $(".tiao_boxo").show()
+        
+    },2000)
+
+	var flag=0
+	$(".tiao_spano").click(function(){
+		$(".tiao_spano").toggleClass("tiao_active")
+		$(".car_posi").show()
+		if($(".tiao_spano").hasClass("tiao_active")){
+			$(".car_posi").html("收藏成功")
+			setTimeout(function(){
+				$(".car_posi").hide(300)
+			},1000)
+		}else{
+			$(".car_posi").html("已取消收藏")
+			setTimeout(function(){
+				$(".car_posi").hide(300)
+			},1000)
+		}
+	})
+	$(".aso").click(function(){
+//		window.location.href=""
+	})
+	//向上滑动 变颜色
+	$(window).scroll(function(){
+		var sc = $(window).scrollTop();
+		if(sc > 150){
+			$(".tiao_nav").css("background","#fff")
+			$(".tiao_nav span").css("color","#8d8d8d")
+			$(".tiao_nav .tiao_dis span").show()
+		}else{
+			$(".tiao_nav").css("background","")
+			$(".tiao_nav span").css("color","#fff")
+			$(".tiao_nav .tiao_dis  span").hide()
+		}
+	})
+
+
+</script>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <!-- 网站上小图标-->
+    <link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+    <!--重置样式 reset.css-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--轮播swiper样式-->
+    <link rel="stylesheet" href="js/swiper.min.css">
+    <!--iconfont-->
+    <link rel="stylesheet" href="iconfont3/iconfont.css">
+    <!--二级路由 样式-->
+    <link rel="stylesheet" href="css/special.css">
+    <!--动画-->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!--特卖-->
+    <link rel="stylesheet" href="css/ss.css">
+    <!--分类-->
+    <link rel="stylesheet" href="css/classify.css" />
+    <!--自己引入的css样式-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--我的-->
+    <link rel="stylesheet" href="css/mine.css" />
+    <!--爱心-->
+    <!--<link rel="stylesheet" href="css/aixin.css" />-->
+    <!--iscroll 下拉刷新-->
+    <script src="js/iscroll-probe.js"></script>
+    <!--swiper js部分-->
+    <script src="js/swiper.min.js"></script>
+    <!--引入angular-->
+    <script src="libs/angular.min.js"></script>
+    <!--angular路由-->
+    <script src="libs/angular-ui-router.js"></script>
+    <!--rem自适应-->
+    <script src="js/rem1.js"></script>
+    <!--jquery-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <style>
+    	body{
+    		font-family: "微软雅黑";
+    	}
+    	.heart_img{ 
+			width: 20px !important;
+			height: 20px !important;
+			position: absolute;
+		    bottom: 0px; 
+		    left: -50%; 
+		    margin-left: -10px; 
+		}
+		.live{
+			width:10px;
+			height:10px;
+			position:relative;
+			left: -30px; 
+			bottom:-40px; 	
+		}
+    </style>
+</head>
+<body ng-controller="myCtrl">
+    <div class="home_box animated fadeInLeft">
+        <main>
+        	<div ui-view>
+				
+        	</div>
+        </main>
+        <footer class="home_foot" >
+            <div ui-sref="home_home" class="home_active">
+                <span class="iconfont icon-wxbzhuye"></span>
+                <span>首页</span>
+            </div>
+            <div ui-sref="home_special">
+                <span class="iconfont icon-video"></span>
+                <span>直播特卖</span>
+            </div>
+            <div ui-sref="home_classify">
+                <span class="iconfont icon-navlist"></span>
+                <span>分类</span>
+            </div>
+            <div ui-sref="home_cart">
+                <span class="iconfont icon-cart"></span>
+                <span>购物车</span>
+            </div>
+            <div ui-sref="home_mine">
+                <span class="iconfont icon-account"></span>
+                <span>我的</span>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+//angular
+    var app=angular.module("myApp",["ui.router"])
+ //控制器
+    app.controller("myCtrl",["$scope","$http","$timeout","$interval",function($scope,$http,$timeout,$interval){
+        //   数据部分
+//             $scope.obj={};
+//             $http.jsonp("http://127.0.0.1:2323?callback=JSON_CALLBACK")
+//            .then(function su(res){
+//                $scope.obj=res.data;
+//                console.log($scope.obj)
+//            })
+		//	倒计时	
+		$scope.future = new Date("2017/12/15 10:00:00").getTime();
+		djs()
+		$time = $interval(djs,1000)	
+		function djs() {
+			$scope.now = new Date().getTime();//现在的系统时间
+			$scope.date1 = $scope.future-$scope.now
+//			console.log($scope.date)
+		}
+
+
+
+
+
+        $timeout(function () {
+            //.home_main 下拉
+            var home_main=new IScroll(".home_main",{
+                probeType:3
+            })
+            //刷新
+            home_main.on("before ScrollStart",function(){
+            	home_main.refresh()
+            })
+            
+            var num=0
+            var num1=1
+            var num2=0
+            var flag=0
+            home_main.on("scroll",function(){
+                    num+=0.02
+                    num2+=0.02
+                if(num>1){
+                    num=1
+                }
+                if(num2>0.7){
+                    num2=0.7
+                }
+            // 头部导航上滑渐变
+                if(this.y>-400){
+                    $(".home_navone").css("background","rgba(255,255,255,"+num+")")
+                    $(".home_msg").css("color"," #979491")
+                    $(".home_inp").css("background"," rgba(238,238,238,"+num+")")
+                    if(num>1){
+                        num=1
+                    }
+                }
+            //头部导航下拉渐变
+                if(this.y>0){
+                    num1-=0.02
+                    if(num1<0){
+                        num1=0
+                    }
+                    $(".home_navone").css("background","rgba(255,255,255,"+num1+")")
+                    $(".home_msg").css("color","#fff")
+                    $(".home_inp").css("background"," rgba(255,255,255,"+num2+")")
+                }
+
+                //下滑出现闪图 下拉时让图片下滑 。改变样式
+                if(this.y>150){
+                    $(".home_main").css({"top":"0","transition":"1s","zIndex":"444"})
+                // 底部隐藏
+                    $(".home_foot").hide()
+                 //2s之后跳转页面
+                    setTimeout(function(){
+                        window.location.href="tiao.html"
+                        
+                    },2000)
+                }
+
+            // 如果大于100 让导航隐藏
+                if(this.y>100){
+                    $(".home_navone").hide()
+                    flag=1
+                }
+            })
+            //  结束时 再隐藏
+            home_main.on("scrollEnd",function(){
+                if(flag==1){
+                    $(".home_navone").show()
+                    flag=0
+                }
+            })
+
+			//input 聚焦
+			$scope.jujiao=function(){
+//				console.log(11)
+//				window.open("search.html")
+				window.location.href="search.html"
+			}
+
+
+                //轮播图初始化
+            var home_banner=new Swiper(".home_banner",{
+                autoplay:2000,
+                pagination:".swiper-pagination",
+                resistanceRatio:false,
+                loop:true
+            })
+            //ISC 穿搭课堂
+            var home_chuan=new IScroll(".home_both",{
+                scrollX:true
+            })
+    //      导航
+            var home_chuan=new IScroll(".home_btm",{
+                scrollX:true
+            })
+        //   今日必卖
+            var home_chuan=new IScroll(".home_bimai",{
+                scrollX:true
+            })
+            //  今日特卖
+            var home_dayr=new Swiper(".home_day",{
+//                autoplay:2000,
+                pagination:".swiper-pagination",
+                resistanceRatio:false,
+                loop:true,
+                centeredSlides : true
+            })
+            //top轮播
+            var home_chao=new Swiper(".home_top",{
+            	autoplay:2000,
+            	direction:"vertical",
+            	loop:true
+            })
+            
+            
+        },200)
+        
+        $scope.srco=["7_03.png","4_03.png","index_03.png"]
+		$scope.opt=0
+		
+//		换图 gif
+		$interval(function(){
+			$scope.opt++;
+			if($scope.opt>2){
+				$scope.opt=0
+			}
+			$(".home_src").attr("src","images/home/"+$scope.srco[$scope.opt]+"")
+		},800)
+//
+//		msg
+		$(".home_msg").click(function(){
+			window.location.href="temp/information.html"
+		})
+		
+		
+
+
+
+
+
+    }]);
+
+	//直播特卖控制器1
+	app.controller("myCtrlm",["$scope","$http","$timeout","$interval",function($scope,$http,$timeout,$interval){ 
+		$timeout(function () {
+            //.home_main 下拉
+            var home_main2=new IScroll(".home_temai",{
+                
+            })
+            
+            
+            function  run() {
+		       	 	var x = 500;       
+		     		var y = 0;  
+		       		var num = Math.floor(Math.random() * 3 + 1);
+		       		var index=$('.live').children('img').length;
+		       		var rand = parseInt(Math.random() * (x - y + 1) + y); 
+		       		
+		       		$(".live").append("<img src='' class='heart_img'>");
+		       		if($(".heart_img").length == 50){
+		       			$(".heart_img").remove()
+		       		}
+		       		$('.heart_img:eq(' + index + ')').attr('src','images/'+num+'.png')
+		       		$(".heart_img").animate({
+		       			bottom:"500px",
+		       			opacity:"0",
+		       			left: rand,
+		       		},2000)
+			    }
+            
+            var timer =$interval(run,200)
+            
+		},200)
+		$scope.arr=[{
+					  "hot":"热门",
+					  "uihot":"remen"
+				  },{
+					  "hot":"最新",
+					  "uihot":"zuixin"
+				  },{
+					  "hot":"关注",
+					  "uihot":"guanzhu"
+				  },{
+					  "hot":"美妆",
+					  "uihot":"meiz"
+				  },{
+					  "hot":"穿搭",
+					  "uihot":"chuanda"
+				  }]
+		
+		$scope.n=0
+		$scope.zhi=function(index){
+			$scope.n=index
+//			alert(1)
+//			console.log($scope.n)
+		}
+//		
+
+
+//		$(".special_navone div").click(function(){
+//			var index=$(this).index()
+//			$(".special_navone div").eq(index).addClass("special_active").siblings().removeClass("special_active")
+//		})
+		
+		
+		
+		
+	}]);
+	
+//分类控制器1
+	app.controller("myCtrlm1",["$scope","$http","$timeout",function($scope,$http,$timeout){ 
+		$timeout(function () {
+            //.home_main 下拉
+            var home_main=new IScroll(".home_main1",{
+                
+            })
+		},200)
+		
+		$scope.fenlei=function(){
+			window.location.href="search.html"
+		}
+		$scope.xiao=function(){
+			window.location.href="temp/information.html"
+		}
+	 }])
+//我的控制器
+	app.controller("mine",["$scope","$http","$timeout",function($scope,$http,$timeout){ 
+		//点击隐藏
+		$scope.myVar=function(){
+			$(".mine_header_text").hide()
+		}
+		//点击跳转到消息
+		$scope.xiao=function(){
+			window.location.href="temp/information.html"
+		}
+		//计时器初始化main
+		$timeout(function(){
+			var isc=new IScroll("main",{
+				probeType:3
+			})
+			var flag1=0
+			isc.on("scroll",function(){
+				if(this.y>100){
+					$(".mine_header_text").hide()
+					$(".shantu").css({"top":"0","transition":"1s","zIndex":"444"})
+					 // 底部隐藏
+                    $(".home_foot").hide()
+                 //2s之后跳转页面
+                    setTimeout(function(){
+                        window.location.href="tiao.html"
+                    },2000)
+					
+				}
+				
+				if(this.y<100){
+					
+					flag1=1
+				}
+			})
+			
+			isc.on("scrollEnd",function(){
+				if(flag1==1){
+					$(".mine_header_text").show()
+				}
+			})
+			
+		})
+		//点击头像跳转
+		$scope.tou=function(){
+			window.location.href="touxiang.html"
+		}
+		
+		//
+		
+   	}])
+	
+
+
+
+
+
+ // 购物车控制器
+    app.controller("cart_control",["$scope","$http","$timeout",function($scope,$http,$timeout){
+
+        $timeout(function(){
+            var croll = new IScroll(".main",{
+                scrollY:true,
+                probeType:3//关联滚动距离判断
+            })
+//            回到顶部按钮的显示隐藏
+            croll.on("scroll",function(){
+//                console.log(croll.y)
+                if(croll.y < -200){
+                    $(".backtop").show()
+                }else{
+                    $(".backtop").hide()
+                }
+            })
+//            点击按钮 回到顶部
+            $(".backtop").on("click",function(){
+                    croll.scrollTo(0,0);
+                    $(this).hide()
+            })
+//            小圆圈的选中状态切换
+            var d=2;
+            $(".dui").on("click",function(){
+                  if(d==2){
+                      $(".dui").addClass("sty");
+                      quanx()
+                      d=1;
+                      let price = Number($(".pricea:eq(0)").text())/2
+                      let xong = Number($(".zongjia").text())+price
+                      $(".zongjia").text(xong)
+                  }else{
+                      $(".dui").removeClass("sty");
+                      quanx()
+                      d=2
+                      let price = Number($(".pricea:eq(0)").text())/2
+                      let xong = Number($(".zongjia").text())-price
+                      $(".zongjia").text(xong)
+                  }
+            });
+            var b=2;
+            $(".dui1").on("click",function(){
+                if(b==2){
+                    $(".dui1").addClass("sty");
+                    quanx()
+                    b=1;
+                    let price = Number($(".pricea:eq(1)").text())/2
+                    let xong = Number($(".zongjia").text())+price
+                    $(".zongjia").text(xong)
+                }else{
+                    $(".dui1").removeClass("sty");
+                    quanx()
+                    b=2
+                    let price = Number($(".pricea:eq(1)").text())/2
+                    let xong = Number($(".zongjia").text())-price
+                    $(".zongjia").text(xong)
+                }
+            });
+//            全选
+           function quanx(){
+               if($(".dui").hasClass("sty") && $(".dui1").hasClass("sty")){
+                   $(".quanxuan").addClass("sty")
+               }else{
+                   $(".quanxuan").removeClass("sty")
+               }
+           }
+           var a = 2
+           $(".quanxuan").on("click",function(){
+               if(a==2){
+                   $(".quanxuan").addClass("sty");
+                   $(".dui").addClass("sty");
+                   $(".dui1").addClass("sty");
+                   a=1;
+               }else{
+                   $(".quanxuan").removeClass("sty");
+                   $(".dui").removeClass("sty");
+                   $(".dui1").removeClass("sty");
+                   a=2
+               }
+           })
+//            编辑
+		
+            $(".bianji").on("click",function(){
+
+                $(".fondlovely").hide()//隐藏推荐
+                croll.refresh()//    高度刷新
+                $(this).html("完成").on("click",function(){
+
+                    $(".fondlovely").show()//隐藏推荐
+                    croll.refresh()//    高度刷新
+                    $(".jiesuan").html("结算")
+                    $(".zongjia").html("0.00").css({
+                        "padding":"",
+                        "border":"",
+                        "color":"",
+                        "border-radius":""
+                    })
+                    $(this).html("编辑 <i class='iconfont icon-comments saying'></i>")
+                })
+                $(".jiesuan").html("删除")
+                $(".zongjia").html("移入收藏夹").css({
+                    "padding":"2px 5px",
+                    "border":"1px solid #FF3D62",
+                    "color":"#FF3D62",
+                    "border-radius":"5px"
+                })
+            })
+
+//            结算
+            $(".jiesuan").on("click",function(){
+//                console.log($(".dui").hasClass("sty"))
+                if($(".dui").hasClass("sty") || $(".dui1").hasClass("sty")){
+                    window.location.href="queren.html"
+                }else{
+                    $(".car_posi").fadeIn()
+                    $timeout(function(){
+                    	$(".car_posi").fadeOut()
+                    },2000)
+                }
+            })
+
+
+        },0)
+    }]);
+//路由		
+    app.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRouterProvider){
+        $urlRouterProvider.otherwise("/home_home");
+        $urlRouterProvider.when("/home_special","/home_special/remen")
+        $stateProvider
+        .state("home_home",{
+//            首页
+            url:"/home_home",
+            templateUrl:"temp/home.html",
+            controller:"myCtrl"
+        }).state("home_special",{
+//            直播特卖
+            url:"/home_special",
+            templateUrl:"temp/special.html",
+            controller:"myCtrlm"
+        }).state("home_classify",{
+//            分类
+            url:"/home_classify",
+            templateUrl:"temp/classify.html",
+            controller:"myCtrlm1"
+        }).state("home_cart",{
+//            购物车
+            url:"/home_cart",
+            templateUrl:"temp/cart.html",
+            controller:"cart_control"
+        }).state("home_mine",{
+//            我的
+            url:"/home_mine",
+            templateUrl:"temp/mine.html",
+            controller:"mine"
+        })
+        //直播特卖二级路由
+        .state("home_special.remen",{
+            url:"/remen",
+            templateUrl:"temp/special_temp/remen.html"
+        }).state("home_special.zuixin",{
+            url:"/zuixin",
+            templateUrl:"temp/special_temp/zuixin.html"
+        }).state("home_special.guanzhu",{
+            url:"/guanzhu",
+            templateUrl:"temp/special_temp/guanzhu.html"
+        }).state("home_special.meiz",{
+            url:"/meiz",
+            templateUrl:"temp/special_temp/meiz.html"
+        }).state("home_special.chuand",{
+            url:"/chuand",
+            templateUrl:"temp/special_temp/chuand.html"
+        })
+		
+
+
+
+
+    }])
+    
+    
+    
+    
+   
+</script>
+<script>
+	$(".home_foot div").click(function(){
+//		console.log(1)
+		var index=$(this).index()
+		$(".home_foot div").eq(index).addClass("home_active").siblings().removeClass("home_active")
+	})
+</script>
+</html>

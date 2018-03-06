@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>签到</title>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<!--重置样式 reset.css-->
+		<link rel="stylesheet" href="../css/normalize.css">
+		<!--轮播swiper样式-->
+		<link rel="stylesheet" href="../js/swiper.min.css">
+		<!--iscroll 下拉刷新-->
+		<script src="../js/iscroll-probe.js"></script>
+		<!--swiper js部分-->
+		<script src="../js/swiper.min.js"></script>
+		<!--引入angular-->
+		<script src="../libs/angular.min.js"></script>
+		<!--angular路由-->
+		<script src="../libs/angular-ui-router.js"></script>
+		<!--rem自适应-->
+		<script src="../js/rem1.js"></script>
+		<!--jquery-->
+		<script src="../libs/jquery-3.1.1.js"></script>
+		<!--字体图标-->
+		<link rel="stylesheet" href="../iconfont3/iconfont.css" />
+		<!--mine样式-->
+		<link rel="stylesheet" href="../css/sign.css" />
+		
+		<link rel="stylesheet" href="../css/animate.css" />
+	</head>
+
+	<body ng-controller="myCtrl"  class="animated fadeInRight">
+		<header class="sign_header">
+			<!--头部-->
+			<div class="sign_top1 sign_top">
+				<i class="iconfont icon-back" onClick="javascript :history.go(-1);"></i>
+				<span>签到</span>
+				<i>···</i>
+			</div>
+			<div class="sign_top">
+				
+			</div>
+			<div class="sign_tops">
+				<div>
+					<img src="../images/qiandao/签到_03.png" alt="" />
+					<p>魔豆乐园</p>
+				</div>
+				<div>
+					<a href="javascript:;">签到</a>
+				</div>
+				<div>
+					<img src="../images/qiandao/签到_05.png" alt="" />
+					<p>魔豆乐园</p>
+				</div>
+			</div>
+			<div class="triangle"></div>
+		</header>
+		<!--日期-->
+		<div class="sign_time">
+			<div class="sign_time_top" ng-hide="Hide">12月4日</div>
+			<div class="sign_calendar" ng-hide="Hide">
+				<div class="sign_calendar_top">
+					<span>日</span>
+					<span>一</span>
+					<span>二</span>
+					<span>三</span>
+					<span>四</span>
+					<span>五</span>
+					<span>六</span>
+				</div>
+				<table cellspacing="0" cellpadding="0" border="1px solid red" width="94%" height="2.56rem">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>1</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>4</td>
+						<td><i class="iconfont icon-gifts" style="color: deeppink;font-weight: bold;"></i></td>
+						<td>6</td>
+						<td>7</td>
+						<td>8</td>
+						<td>9</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+						<td>13</td>
+						<td>14</td>
+						<td>15</td>
+						<td>16</td>
+					</tr>
+					<tr>
+						<td>17</td>
+						<td>18</td>
+						<td>19</td>
+						<td>20</td>
+						<td>21</td>
+						<td>22</td>
+						<td>23</td>
+					</tr>
+					<tr>
+						<td>24</td>
+						<td>25</td>
+						<td>26</td>
+						<td>27</td>
+						<td>28</td>
+						<td>29</td>
+						<td>30</td>
+					</tr>
+					<tr>
+						<td>31</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<a href="javascript:;">
+				<i class="iconfont icon-less" 
+					ng-click="isHide()" 
+					ng-class="{true: 'iconfont icon-less', false: 'iconfont icon-moreunfold'}[isActive]"
+					></i>
+			</a>
+		</div>
+		<!--蘑菇任务-->
+		<div class="sign_mgrw">
+			<span></span>
+			<span>蘑菇任务</span>
+			<p>做任务领奖励</p>
+		</div>
+		<!--星座任务-->
+		<div class="sign_xzrw">
+			<img src="../images/qiandao/签到_15.png" alt="" />
+			<div class="sign_xzrw_cen">
+				<p>星座任务</p>
+				<p>GET本周星座运势，和水逆说···</p>
+			</div>
+			<span>去完成</span>
+		</div>
+		<div class="sign_xzrw_bot">
+			<p>完成所有初冬任务任务 <span>+1积分</span></p>
+			<span>0/2</span>
+		</div>
+		<!--查看全部任务-->
+		<div class="sign_xzrw_all">
+			<span>查看全部任务 <a href="javascript:;" class="iconfont icon-more"></a> </span>
+		</div>
+		<!--三张图片-->
+		<div class="sign_logo">
+			<img src="../images/qiandao/签到_18.png" alt="" class="img" />
+			<div>
+				<img src="../images/qiandao/签到_22.png" alt="" />
+				<img src="../images/qiandao/签到_23.png" alt="" />
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = angular.module("myApp", ["ui.router"])
+		app.controller("myCtrl", ["$scope", function($scope) {
+
+			$scope.Hide = false;
+			//点击隐藏日历
+			$scope.isHide = function() {
+				$scope.Hide = !$scope.Hide;
+				//切换箭头样式
+				$scope.isActive = !true
+			}
+			//向上滑动 变颜色
+			$(window).scroll(function(){
+				var sc = $(window).scrollTop();
+				if(sc > 0){
+					$(".sign_top1").css("background","#fff")
+				}else{
+					$(".sign_top1").css("background","")
+				}
+			})
+		}]);
+	</script>
+
+</html>

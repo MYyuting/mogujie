@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>母婴</title>
+		<!--引入公共样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+		<!--引入iconfont图标样式-->
+		<link rel="stylesheet" type="text/css" href="../../iconfont3/iconfont.css"/>
+		<!--引入swiper-->
+		<link rel="stylesheet" type="text/css" href="../../js/swiper.min.css"/>
+		<script src="../../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入iscroll-->
+		<script src="../../js/iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入jquery-->
+		<script src="../../libs/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入rem-->
+		<script src="../../js/rem1.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入angular-->
+		<script src="../../libs/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入自写样式-->
+		<link rel="stylesheet" type="text/css" href="../../css/home_muying.css"/>
+		<!--图标-->
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<!--爱心-->
+		<link rel="stylesheet" href="../../css/aixin.css" />
+		<link rel="stylesheet" href="../../css/animate.css" />
+		<script src="../../js/aixin.js"></script>
+	</head>
+	<body ng-app="app" ng-controller="ct1"  class="animated fadeInRight">
+		
+		<!--头部-->
+		<header>
+			<span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span>
+			<span>母婴</span>
+			<span class="">···</span>
+		</header>
+		
+		<div class="img1"><img src="../../images/iconpage/m1_02.png"/></div>
+		
+		<!--左滑     直播-->
+		<div class="underwear_live">
+			<div class="underwear_live_top">
+				<span>女装内衣购物台</span>
+				<span>更多直播   > </span>
+			</div>
+			<div class="live">
+				<ul>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+					<li><img src="../../images/iconpage/ny_05.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<!--10点快抢-->
+		<div id="nvxie_kq">
+			<div>
+				<b>22点快抢    · 距结束</b>
+				<!--倒计时部分-->
+				<span>{{date1|date:'HH':"UTC"}}</span>： 
+				<span>{{date1|date:'mm':"UTC"}}</span>：
+				<span>{{date1|date:'ss':"UTC"}}</span>
+			</div>
+			<div><a>MORE<span>▶</span></a></div>
+		</div>
+		
+		<!--左滑     上-->
+		<div class="swiper-container" id="nvxie_zuohua">
+			<div class="swiper-wrapper footbox">
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_03.png" alt="" /><p>芭芭鸭儿童冬季...</p><p>￥65.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_15.png" alt="" /><p>5片装20粒木质...</p><p>￥11.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_07.png" alt="" /><p>卡通儿童软底小...</p><p>￥39.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_13.png" alt="" /><p>女童加绒羊羔...</p><p>￥39.90</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_05.png" alt="" /><p>绣花百搭加绒靴子</p><p>￥45.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_17.png" alt="" /><p>加大绒真兔毛</p><p>￥35.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_03.png" alt="" /><p>加厚过冬款防水</p><p>￥88.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_13.png" alt="" /><p>英伦粗跟百搭</p><p>￥48.00</p></div>
+				<div class="swiper-slide"><img src="../../images/iconpage/母婴_15.png" alt="" /><p>绣花百搭靴</p><p>￥66.80</p></div>
+			</div>
+		</div>
+		
+		<!--童装-->
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>童装</span>
+				<span>为了高颜值的下一代</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/母婴_23.png"/>
+				<span>抢先加购</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>孕妇装</span>
+				<span>女孩子每时每刻都要美</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/母婴_26.png"/>
+				<span>精挑细选</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>套装</span>
+				<span>买一套，更明智</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/母婴_28.png"/>
+				<span>超宝辣妈</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>童鞋</span>
+				<span>一辈子的路从脚下开始</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/母婴_30.png"/>
+				<span>低至19元</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>清洁护肤</span>
+				<span>干净的宝贝运气不会差</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/母婴_32.png"/>
+				<span>大牌3折</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		<div id="nvxie_chudong">
+			<div class="wenzi_left">
+				<span>玩具用品</span>
+				<span>玩不好怎么好好学习</span>
+			</div>
+			<div class="wenzi_right">
+				<img src="../../images/iconpage/母婴_34.png"/>
+				<span>健康成长</span>
+				<span class="iconfont icon-more"></span>
+			</div>
+		</div>
+		
+		<!--辣妈力荐-->
+		<div id="nvxie_xianshi2">
+			<div class="xianshi">
+				<span></span>
+				<span>◆</span>
+				<span>辣妈力荐</span>
+				<span>◆</span>
+				<span></span>
+			</div>
+			<div class="fig">
+				<figure>
+					<img src="../../images/iconpage/母婴_36.png"/>
+					<figcaption>新生儿专区</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_39.png"/>
+					<figcaption>1~3岁</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_41.png"/>
+					<figcaption>4~6岁</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_44.png"/>
+					<figcaption>7~9岁</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_50.png"/>
+					<figcaption>热卖外套</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_51.png"/>
+					<figcaption>焕新棉服</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_52.png"/>
+					<figcaption>儿童套装</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_53.png"/>
+					<figcaption>童裤</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_61.png"/>
+					<figcaption>妈咪套装</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_58.png"/>
+					<figcaption>孕妇裤</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_59.png"/>
+					<figcaption>保暖外套</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_60.png"/>
+					<figcaption>靴子</figcaption>
+				</figure>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!--流行元素-->
+		<div class="liuxing">
+			<span class="iconfont icon-favoritesfilling"></span>
+			<span>流行元素</span>
+		</div>
+		<div class="nvxie_liuxing">
+			<article>
+				<!--第1排内容-->
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>儿童棉服</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>新款热卖</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>新品特惠榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>冬季新款</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>店长推荐</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>火热预定</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>火爆销售</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>2018年新款</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>上班一族</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>儿童套装</figcaption>
+				</figure>
+				
+				<!--第2排内容-->
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>爆款30元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>美丽达人</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>显高直击</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>疯抢增高</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>冬季新品</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>爆款39元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>显高美鞋</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>新品快抢榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>保暖雪地靴</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>本季必火外套</figcaption>
+				</figure>
+					
+				<!--第3排内容-->
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>明星款榜</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>热销59元抢购</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>人气疯抢</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>热卖精选</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>高颜值</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>超值特惠</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>39元保暖</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_72.png"/>
+					<figcaption>大热卖</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_66.png"/>
+					<figcaption>加厚精选</figcaption>
+				</figure>
+				<figure>
+					<img src="../../images/iconpage/母婴_69.png"/>
+					<figcaption>童年快乐</figcaption>
+				</figure>
+			</article>
+		</div>
+		
+		
+		
+		<!--回到顶部-->
+		
+		<span class="iconfont icon-up"></span>
+		
+	</body>
+	<script type="text/javascript">
+		
+		var app=angular.module("app",[])
+		    app.controller("ct1",["$scope","$timeout","$interval",function($scope,$timeout,$interval){
+		   //	倒计时	
+			$scope.future = new Date("2017/12/15 10:00:00").getTime();
+			djs()
+			$time = $interval(djs,1000)	
+			function djs() {
+				$scope.now = new Date().getTime();//现在的系统时间
+				$scope.date1 = $scope.future-$scope.now
+	//			console.log($scope.date)
+			}
+			
+			
+			$timeout(function(){
+				//轮播初始化
+				var swp = new Swiper("#nvxie_swp",{
+					autoplay:1000,
+					loop:true,
+					speed:1000,
+					pagination:".swiper-pagination",
+					paginationClickable :true
+				})	
+				
+		        //左滑初始化
+				var swp= new Swiper("#nvxie_zuohua",{
+					slidesPerView :3.5,
+					//阻止反弹
+					resistanceRatio:false
+				})
+				
+				//底部左滑
+				var liuxing_isc=new IScroll(".nvxie_liuxing",{
+					scrollX:true,
+					bounce:false
+				})
+				
+				//回到顶部
+				$(window).scroll(function(){
+					var sc = $(window).scrollTop();
+					if(sc > 0){
+						$(".icon-up").css("display","block");
+					}else{
+						$(".icon-up").css("display","none");
+					}
+				})
+				$(".icon-up").click(function(){
+					$("body,html").animate({
+						scrollTop: 0
+					},200);
+			})
+			},200)
+				
+		}])
+    </script>
+</html>

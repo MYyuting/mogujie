@@ -1,0 +1,175 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 0.16rem;
+  color: #000;
+  font-family: "微软雅黑"; }
+
+.underwear_header {
+  width: 100%;
+  height: 0.45rem;
+  border-bottom: 1px solid #F0F3F5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 33; }
+  .underwear_header i {
+    font-size: 0.26rem;
+    margin-left: 0.16rem;
+    font-weight: bold; }
+  .underwear_header span:last-child {
+    margin-right: 0.14rem; }
+  .underwear_header span {
+    font-weight: bold;
+    font-size: 0.18rem; }
+
+.underwear_logo {
+  width: 100%;
+  height: 1.8rem;
+  margin-top: .45rem; }
+  .underwear_logo img {
+    width: 100%;
+    height: 100%; }
+
+.underwear_live {
+  width: 100%;
+  height: 1.94rem;
+  background: #8C82AD;
+  border-bottom: 0.1rem solid #F0F0F0;
+  border-top: 0.1rem solid #F0F0F0; }
+  .underwear_live .underwear_live_top {
+    width: 100%;
+    height: 0.44rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .underwear_live .underwear_live_top span {
+      color: #FFF;
+      margin: 0.1rem;
+      font-size: 0.14rem; }
+  .underwear_live .live {
+    width: 100%;
+    height: 1.3rem;
+    overflow: hidden; }
+    .underwear_live .live ul {
+      width: 482%;
+      height: 100%;
+      display: flex; }
+      .underwear_live .live ul li {
+        width: 3rem;
+        height: 100%;
+        margin-left: 0.1rem; }
+        .underwear_live .live ul li img {
+          width: 100%;
+          height: 100%; }
+
+.nav {
+  width: 100%;
+  height: 4.78rem;
+  border-bottom: 0.1rem solid #EFEFEF; }
+  .nav ul {
+    width: 94%;
+    height: 100%;
+    margin: 0 auto; }
+    .nav ul li {
+      width: 100%;
+      height: 0.59rem;
+      border-bottom: 1px solid #F0F0F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .nav ul li .nav_left span:nth-child(1) {
+        font-weight: bold;
+        font-size: 0.14rem; }
+      .nav ul li .nav_left span:nth-child(2) {
+        color: #666;
+        font-size: 0.12rem;
+        margin-left: 0.08rem; }
+      .nav ul li .nav_right {
+        display: flex;
+        align-items: center;
+        width: 1.1rem;
+        height: 0.32rem;
+        background: #FFFBFF;
+        border-radius: 0.6rem;
+        padding-left: 0.08rem; }
+        .nav ul li .nav_right span {
+          font-size: 0.12rem;
+          color: #666; }
+        .nav ul li .nav_right img {
+          width: 0.24rem;
+          height: 0.24rem;
+          margin-right: 0.08rem; }
+        .nav ul li .nav_right i {
+          font-size: 0.18rem; }
+
+.underwear_lxtj {
+  width: 100%;
+  height: 1.4rem;
+  border-bottom: 0.1rem solid #EFEFEF; }
+  .underwear_lxtj .underwear_lxtj_top {
+    width: 100%;
+    height: 0.32rem;
+    text-align: center;
+    line-height: 0.32rem;
+    font-size: 0.16rem; }
+  .underwear_lxtj .underwear_lxtj_bot {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; }
+    .underwear_lxtj .underwear_lxtj_bot div {
+      width: 25%;
+      text-align: center; }
+      .underwear_lxtj .underwear_lxtj_bot div p {
+        font-size: 0.14rem; }
+      .underwear_lxtj .underwear_lxtj_bot div img {
+        width: 0.72rem;
+        height: 0.72rem; }
+
+.jacket_menu {
+  width: 100%;
+  height: 4.38rem;
+  border-bottom: 0.1rem solid #EFEFEF; }
+  .jacket_menu .jacket_menu_top {
+    width: 100%;
+    height: 0.38rem;
+    display: flex;
+    align-items: center; }
+    .jacket_menu .jacket_menu_top i {
+      display: inline-block;
+      width: 0.18rem;
+      height: 0.18rem;
+      text-align: center;
+      line-height: 0.18rem;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      font-size: 0.14rem;
+      color: #ccc;
+      margin: 0 0.08rem 0 0.12rem; }
+  .jacket_menu .jacket_menu_content {
+    width: 100%;
+    height: 4rem;
+    overflow: hidden; }
+    .jacket_menu .jacket_menu_content ul {
+      width: 320%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      .jacket_menu .jacket_menu_content ul li {
+        width: 10%;
+        text-align: center; }
+        .jacket_menu .jacket_menu_content ul li img {
+          width: 0.8rem;
+          height: 0.8rem; }
+        .jacket_menu .jacket_menu_content ul li p {
+          font-size: 0.14rem; }
+
+/*# sourceMappingURL=underwear.css.map */

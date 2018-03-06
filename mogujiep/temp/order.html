@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+    <!--轮播swiper样式-->
+    <link rel="stylesheet" href="../js/swiper.min.css">
+    <!--字体图标-->
+    <link rel="stylesheet" href="../iconfont3/iconfont.css" />
+    <!--自己引入的css样式-->
+    <link rel="stylesheet" href="../css/order.css" />
+    <!--iscroll 下拉刷新-->
+    <script src="../js/iscroll-probe.js"></script>
+    <!--swiper js部分-->
+    <script src="../js/swiper.min.js"></script>
+    <!--引入angular-->
+    <script src="../libs/angular.min.js"></script>
+    <!--angular路由-->
+    <script src="../libs/angular-ui-router.js"></script>
+    <!--rem自适应-->
+    <script src="../js/rem1.js"></script>
+    <!--jquery-->
+    <script src="../libs/jquery-3.1.1.js"></script>
+    
+	</head>
+	<body ng-controller="myCtrl">
+		<!--头部-->
+		<header class="order_header">
+			<a href="#" onClick="javascript :history.back(-1);"><i class="iconfont icon-back"></i></a>
+			<span>我的订单</span>
+			<span>售后订单</span>
+		</header>
+		<!--轮播导航-->
+		<div class="swiper-container nav">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide active">全部</div>
+				<div class="swiper-slide">待付款1</div>
+				<div class="swiper-slide">待发货</div>
+				<div class="swiper-slide">待收货</div>
+				<div class="swiper-slide">待评价</div>
+			</div>
+		</div>
+		<!--内容-->
+		<div class="swiper-container lb">
+			<ul class="swiper-wrapper"> 
+				<li class="swiper-slide"> 
+					<div class="order_conts">
+						<div class="order_conts_top">
+							<span>等待买家付款</span>
+							<span ng-cloak>
+								<i class="iconfont icon-clock"></i>
+								还剩
+								{{time1|date:"HH":"UTC"}}
+								小时
+								{{time1|date:"mm":"UTC"}}
+								分
+								{{time1|date:"ss":"UTC"}}
+								秒
+							</span>
+						</div>
+						<div class="EVE">
+							EVEA2AVE
+						</div>
+						<div class="cen">
+							<img src="../images/ny/我的订单1_03.png" alt="" />
+							<div>
+								<p>时尚套装冬季新款韩版百搭    <span>￥198.58</span></p>
+								<p>宽松学生加厚面包棉服女...<span>￥139.00</span></p>
+								<p>颜色:棉服;  尺码:M    <span>×1</span></p>
+							</div>
+						</div>
+						<div class="price">
+							<span>全国包邮  合计：</span> <span>￥139.00</span>
+						</div>
+						<button>付款</button>
+					</div>
+				</li>
+				<li class="swiper-slide">
+					<div class="order_conts">
+						<div class="order_conts_top">
+							<span>等待买家付款</span>
+							<span>
+								<i class="iconfont icon-clock"></i>
+								还剩
+								{{time1|date:"HH":"UTC"}}
+								小时
+								{{time1|date:"mm":"UTC"}}
+								分
+								{{time1|date:"ss":"UTC"}}
+								秒
+							</span>
+						</div>
+						<div class="EVE">
+							EVEA2AVE
+						</div>
+						<div class="cen">
+							<img src="../images/ny/我的订单1_03.png" alt="" />
+							<div>
+								<p>时尚套装冬季新款韩版百搭    <span>￥198.58</span></p>
+								<p>宽松学生加厚面包棉服女...<span>￥139.00</span></p>
+								<p>颜色:棉服;  尺码:M    <span>×1</span></p>
+							</div>
+						</div>
+						<div class="price">
+							<span>全国包邮  合计：</span> <span>￥139.00</span>
+						</div>
+						<button>付款</button>
+					</div>
+				</li>
+				<li class="swiper-slide"><div class="face"><i class="iconfont icon-cry"></i></div></li>
+				<li class="swiper-slide"><div class="face"><i class="iconfont icon-cry"></i></div></li>
+				<li class="swiper-slide"><div class="face"><i class="iconfont icon-cry"></i></div></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var App = angular.module("app",[]);
+		
+		App.controller("myCtrl",["$scope","$filter","$interval",function($scope,$filter,$interval){
+			//当前时间
+			var setTime = new Date("2017-12-15 24:00:00")
+			var time1 = $interval(getTime,1000)
+			getTime();
+			function getTime(){
+				var nowTime =  new Date;
+				$scope.time1 = setTime - nowTime
+			}
+			
+		}])
+		
+		//选项卡
+		var swiper1 = new Swiper(".nav",{
+			resistanceRatio:false,
+			slidesPerView:5,
+			onTap:function(){
+				var  index  = swiper1.clickedIndex;
+				$(".nav .swiper-slide").eq(index).addClass("active").siblings().removeClass("active");
+				//让swiper2运动到当前索引值 
+				swiper2.slideTo(index);
+			}
+		})
+		
+		var swiper2 = new Swiper(".lb",{
+			onSlideChangeStart:function(){
+				//当前显示项目的下标
+				var  index  = swiper2.activeIndex;
+				$(".nav .swiper-slide").eq(index).addClass("active").siblings().removeClass("active");
+				//让swiper1运动到当前下标的项目
+				swiper1.slideTo(index)
+			}
+		})
+	</script>
+</html>

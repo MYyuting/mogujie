@@ -1,0 +1,209 @@
+@charset "UTF-8";
+* {
+  font-family: "微软雅黑"; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: .14px; }
+
+.car_posi {
+  width: 1.2rem;
+  height: .4rem;
+  line-height: .4rem;
+  border-radius: .02rem;
+  background: rgba(255, 71, 100, 0.8);
+  color: #fff;
+  font-size: .16rem;
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  z-index: 444;
+  text-align: center;
+  display: none; }
+
+.colm {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.dis, .tiao_nav, .tiao_nav div:nth-child(3), .tian_heado, .tian_heado div:nth-child(2) p, .tiao_fan, .tiao_fan div, .tiao_tuijian div, .tiao_foot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+a {
+  text-decoration: none; }
+
+.dis1, .tiao_neirong {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.bo {
+  border-bottom: .08rem solid #efefef; }
+
+.bo1 {
+  border-top: .08rem solid #efefef; }
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.xuan span {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 70% 0 0 40%;
+  text-align: center;
+  line-height: .6rem; }
+
+.tiao_boxo {
+  display: none; }
+
+.tiao_nav {
+  width: 100%;
+  height: .45rem;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .tiao_nav div {
+    width: 1.06rem;
+    height: .3rem;
+    line-height: .3rem; }
+    .tiao_nav div span {
+      font-size: .24rem;
+      color: #fff; }
+  .tiao_nav div:nth-child(1) span {
+    font-size: .3rem; }
+  .tiao_nav div:nth-child(2) {
+    width: 1.76rem;
+    text-align: center; }
+    .tiao_nav div:nth-child(2) span {
+      display: none;
+      color: #000000;
+      font-size: .18rem;
+      font-weight: bold; }
+
+.tiao_banner {
+  width: 100%;
+  height: 1.74rem; }
+  .tiao_banner img {
+    width: 100%;
+    height: 1.74rem; }
+
+.tiao_masg {
+  width: 100%;
+  height: 1.56rem; }
+  .tiao_masg img {
+    width: 100%;
+    height: 1.56rem; }
+
+.tian_heado {
+  height: .64rem; }
+  .tian_heado div {
+    width: 50%; }
+  .tian_heado div:nth-child(2) {
+    padding-right: .1rem; }
+    .tian_heado div:nth-child(2) p {
+      width: 100%;
+      mragin: 0;
+      padding: 0;
+      justify-content: flex-end; }
+      .tian_heado div:nth-child(2) p span {
+        font-size: .12rem; }
+      .tian_heado div:nth-child(2) p span:nth-child(2) {
+        margin-left: .04rem;
+        margin-right: .04rem; }
+      .tian_heado div:nth-child(2) p img {
+        width: .28rem;
+        height: 0.28rem; }
+
+.tiao_fan {
+  height: .64rem; }
+  .tiao_fan div {
+    height: .3rem; }
+    .tiao_fan div span {
+      font-size: .16rem;
+      font-weight: bold; }
+    .tiao_fan div span:nth-child(1) {
+      margin-right: .06rem; }
+    .tiao_fan div img {
+      width: .34rem;
+      height: .2rem;
+      marign-top: .06rem;
+      display: block; }
+
+.tiao_tuijian div {
+  justify-content: center; }
+.tiao_tuijian span:nth-child(1), .tiao_tuijian span:nth-child(3) {
+  color: #bfbfbf; }
+.tiao_tuijian span:nth-child(2) {
+  font-size: .16rem;
+  margin-left: .08rem;
+  margin-right: .08rem; }
+
+.tiao_neirong {
+  padding: 0.14rem  .04rem  .5rem .04rem; }
+  .tiao_neirong aside {
+    width: 1.74rem;
+    height: 3.3rem; }
+    .tiao_neirong aside p {
+      line-height: .24rem; }
+      .tiao_neirong aside p img {
+        width: 100%;
+        height: 2.3rem; }
+    .tiao_neirong aside p:nth-child(2) span {
+      font-size: .16rem; }
+    .tiao_neirong aside p:nth-child(3) span:nth-of-type(1) {
+      color: #ff5876;
+      font-size: .16rem;
+      margin-left: .04rem;
+      margin-right: .26rem; }
+    .tiao_neirong aside p:nth-child(3) button {
+      width: .7rem;
+      height: .18rem;
+      border: 1px solid #ff5876;
+      color: #ff5876;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      font-size: .12rem;
+      border-radius: 0.01rem; }
+    .tiao_neirong aside p:last-child {
+      margin-top: .06rem; }
+      .tiao_neirong aside p:last-child button {
+        background: #ff4063;
+        border: none;
+        color: #fff;
+        width: 99.6%;
+        height: .26rem;
+        border-radius: .024rem; }
+
+.tiao_foot {
+  width: 100%;
+  height: .48rem;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #e9e9e9; }
+  .tiao_foot p {
+    height: .22rem;
+    line-height: .22rem;
+    flex-grow: 1;
+    text-align: center; }
+    .tiao_foot p span {
+      font-size: .16rem; }
+    .tiao_foot p span:nth-child(1) {
+      font-size: .22rem; }
+
+.tiao_active {
+  color: #f27999; }
+
+/*# sourceMappingURL=home_tiao.css.map */

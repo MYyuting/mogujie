@@ -1,0 +1,151 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑";
+}
+//头部
+.order_header{
+    width: 100%;
+    height: 0.46rem;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    i{
+        font-size: 0.28rem;
+        margin-left: 0.1rem;
+    }
+    span:nth-of-type(1){
+        font-size: 0.18rem;
+        font-weight: bold;
+    }
+    span:nth-of-type(2){
+        font-size: 0.18rem;
+        margin-right: 0.1rem;
+    }
+}
+//轮播导航
+.nav{
+    width: 100%;
+    height: 0.38rem;
+    .swiper-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .swiper-slide{
+            width: 20%;
+            height: 0.38rem;
+            line-height: 0.38rem;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .active{
+            color: #FF5879;
+            border-bottom: 1px solid red;
+        }
+    }
+}
+//内容样式
+.lb{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    .swiper-slide{
+        width: 100%;
+        height: 100%;
+        background: #EEEEEE;
+        .order_conts{
+            width: 94%;
+            height: 2.9rem;
+            background: #fff;
+            margin: 0.16rem auto;
+            position: relative;
+            .order_conts_top{
+                width: 100%;
+                height: 0.36rem;
+                background: #F5F5F5;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span:nth-of-type(1){
+                    color: red;
+                    font-size: 0.15rem;
+                    margin-left: 0.08rem;
+                }
+                span:nth-of-type(2){
+                    font-size: 0.15rem;
+                    margin-right: 0.08rem;
+                }
+            }
+            .EVE{
+                width: 94%;
+                height: 0.5rem;
+                line-height: 0.5rem;
+                font-size: 0.15rem;
+                margin: 0 auto;
+                border-bottom: 1px solid #F4F4F4;
+            }
+            .cen{
+                width: 100%;
+                height: 0.9rem;
+                border-bottom: 1px solid #F4F4F4;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                img{
+                    width: 0.6rem;
+                    height: 0.6rem;
+                }
+                p:nth-of-type(3){
+                    margin-top: 0.08rem;
+                    color: #ccc;
+                }
+            }
+            .price{
+                width: 100%;
+                height: 0.62rem;
+                border-bottom:  1px solid #F4F4F4;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                span{
+                    font-size: 0.16rem;
+                    color: #ccc;
+                }
+                span:nth-of-type(2){
+                    color: red;
+                    font-size: 0.2rem;
+                    margin-right: 0.1rem;
+                }
+            }
+            button{
+                width: 0.76rem;
+                height: 0.3rem;
+                background: #FF5879;
+                border: none;
+                border-radius: 0.03rem;
+                color: #FFF;
+                position: absolute;
+                right: 0.1rem;
+                bottom: 0.1rem;
+            }
+        }
+    }
+    .face{
+        width: 54%;
+        margin: 0.16rem auto;
+        i{
+            font-size: 2rem;
+            color: #CCC;
+            
+        }
+    }
+}

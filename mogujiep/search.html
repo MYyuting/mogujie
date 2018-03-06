@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>搜索</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+ 		<link rel="stylesheet" type="text/css" href="css/ss.css"/>
+ 		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+ 		<script type="text/javascript" src="js/app.js" ></script>
+ 		<script type="text/javascript" src="libs/jquery-3.1.1.js" ></script>
+ 		<link rel="stylesheet" href="css/animate.css" />
+	</head>
+	<body class="animated fadeInRight">
+		<div class="special_top">
+			<input type="text" id="" placeholder="短袖t恤" />
+			<a onClick="javascript :history.go(-1);">取消</a>
+		</div>
+		<div id="special_fen">
+			<ul>
+				<li class="special_acti">商品</li>
+				<li>店铺</li>
+				<li>用户</li>
+			</ul>
+			<div class="wai">
+				<p>热门搜索</p>
+				<div>
+					<a href="#">卫衣</a>
+					<a href="">小白鞋</a>
+					<a href="">口红</a>
+					<a href="">时尚套装</a>
+					<a href="">袜子</a>
+					<a href="">手机套</a>
+					<a href="">内裤</a>
+					<a href="">眉笔</a>
+					<a href="">短袖t恤</a>
+					<a href="">牛仔裤</a>
+					<a href="">打底裤</a>
+					<a href="">眼影</a>
+				</div>
+				<div>
+					<p>热门搜索</p>
+				<div>
+					<a href="#">卫衣</a>
+					<a href="">小白鞋</a>
+					<a href="">口红</a>
+					<a href="">时尚套装</a>
+					<a href="">袜子</a>
+					<a href="">手机套</a>
+					<a href="">内裤</a>
+					<a href="">眉笔</a>
+					<a href="">短袖t恤</a>
+					<a href="">牛仔裤</a>
+					<a href="">打底裤</a>
+					<a href="">眼影</a>
+				</div>
+				</div>
+				<div>
+					<p>热门搜索</p>
+				<div>
+					<a href="#">卫衣</a>
+					<a href="">小白鞋</a>
+					<a href="">口红</a>
+					<a href="">时尚套装</a>
+					<a href="">袜子</a>
+					<a href="">手机套</a>
+					<a href="">内裤</a>
+					<a href="">眉笔</a>
+					<a href="">短袖t恤</a>
+					<a href="">牛仔裤</a>
+					<a href="">打底裤</a>
+					<a href="">眼影</a>
+				</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".wai").eq(0).show().siblings("div").hide();
+		$('#special_fen li').click(function(){
+			var index = $(this).index()
+	//		$(this).css("color","#ff6600")
+			$("#special_fen li").eq(index).addClass("special_acti").siblings().removeClass("special_acti")
+			$(".wai div").eq(index).fadeIn().siblings(".wai div").fadeOut();
+			
+		})
+	</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>消息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../iconfont3/iconfont.css"/>
+		<link rel="icon" href="https://s10.mogucdn.com/new1/v1/bmisc/3ce382db3c8aaca5d07bd36711e77134/171169993508.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/xx.css"/>
+		<script type="text/javascript" src="../js/rem1.js" ></script>
+		<script type="text/javascript" src="../js/jquery-3.1.1.js" ></script>
+	</head>
+	<body>
+		<div id="xx_head">
+			<span class="iconfont icon-back" onClick="javascript :history.go(-1);"></span>
+			<h3>消息中心</h3>
+			<span class="iconfont icon-add"></span>
+		</div>
+		<div class="xx_ss">
+			<i class="iconfont icon-search"></i>
+			<input type="text"  value="搜索" />
+		</div>
+		<div id="xx_foot">
+			<div class="foot1">
+				<div><i class="iconfont icon-xiaoximobanshezhi01"></i></div>
+				<div class="ddd">
+					<h4>官方消息</h4>
+					<span>蘑菇街提醒:<i class="iconfont icon-hudiejiexian"></i>捡钱啦！签到领蘑豆...</span>
+				</div>
+				<p></p>
+			</div>
+			<div class="foot2">
+				<div><i class="iconfont icon-xiaoxi"></i></div>
+				<div class="div1">
+					<h4>通知</h4>
+					<span>有新的通知将在这里显示哦~</span>
+				</div>
+				<p class="p1">17/12/04</p>
+			</div>
+		</div>
+		<ul class="xi_ul">
+			<li><i class="iconfont icon-geren"></i> 发起聊天</li>
+			<li><i class="iconfont icon-24"></i> 创建群聊</li>
+			<li><i class="iconfont icon-message"></i> 全部群聊</li>
+		</ul>
+	</body>
+	<script>
+		$(".icon-add").click(function(){
+			$("ul").toggleClass("activ")
+			console.log(1)
+		})
+	</script>
+</html>

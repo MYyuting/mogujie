@@ -1,0 +1,247 @@
+@charset "utf-8";
+*{font-family: "微软雅黑";}
+//头部
+header{
+    width: 100%;
+    height: 0.48rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    z-index:999;
+    left: 0;
+    top:0;
+    background: #fff;
+    span:nth-of-type(1){
+        font-size: 0.26rem; color: #000;
+        margin-left: 0.17rem;
+        font-weight: bold;
+    }
+    span:nth-of-type(2){font:800 0.18rem "微软雅黑";}
+    span:nth-of-type(3){
+        margin-right: 0.17rem;
+        font-size: 0.2rem;
+        font-weight: bold;
+    }
+}
+
+//轮播内容
+#nvxie_swp{border-bottom:0.06rem solid #efefef;margin-top: 0.48rem;}
+.swiper-container img{
+    width: 100%;
+    height:1.3rem; 
+}
+.swiper-pagination-bullet{
+    width: 0.06rem;
+    height: 0.06rem;
+    border-radius:50%;
+    background: #fff;//背景小点
+    opacity:1;  
+}
+.swiper-pagination-bullet-active{
+    background:deeppink;//走动小点 
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+    left: -1.6rem;
+    bottom:0.02rem;//小圆点位置
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+   margin: 0.03rem;//小点的间距
+}
+
+//10点快抢
+#nvxie_kq{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    height: 0.5rem;
+    align-items: center;
+     padding: 0 .02rem;
+    div:nth-of-type(1){
+        display: flex;
+        text-align: center;
+        margin-left: -0.4rem;
+        b{font:600 0.14rem "微软雅黑";}
+        img{width: 40%;height:25px;}
+        span:nth-of-type(1){margin-left: 0.1rem;}
+        span{
+            color: #fff;
+            width:0.18rem;
+            height:0.2rem;
+            background:#000;
+            font-style:oblique;
+             border-radius: .02rem;
+            text-align: center;
+            line-height: .2rem;
+        }  
+    }
+    div:nth-of-type(2){
+        margin-right: -0.4rem;
+        a{
+         color:#888;  
+         display: block; 
+         font:500 0.12rem "微软雅黑";
+         text-decoration: none;
+           span{color: #888;margin-left:5px;font-size: 0.12rem;}     
+        }
+    }     
+}
+
+//左滑   上
+#nvxie_zuohua{
+    border-bottom:0.06rem solid #efefef;
+    height: 1.5rem;
+    padding-left: .1rem;
+   .footbox{
+        display: flex;
+        align-items: center;
+        border-bottom: 0.1rem #f2f2f2;
+       
+        div{
+//          margin-left: 0.03rem;
+             p:nth-of-type(1){
+                margin: 0 !important;
+                padding: 0 !important;
+                color: #555;
+                font-size: 0.14rem;
+                width: 90px;  height: 20px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            p:nth-of-type(2){
+                margin: 0 !important;
+                padding: 0 !important;
+                color:#ff3663;
+                font-size: 0.16rem;
+            }
+            img{
+                width:0.9rem;
+                height:0.9rem;
+            }
+        }
+    }
+}
+
+//面膜
+#nvxie_chudong{
+    height: 0.62rem;
+    display: flex;
+    margin-left:0.16rem;
+    border-bottom: 1px solid #efefef;
+    .wenzi_left{
+        width: 60%;
+        height: 0.62rem;
+        display: flex;
+        align-items: center;
+        span:nth-of-type(1){ font:600 0.16rem "微软雅黑";}
+        span:nth-of-type(2){
+            margin-left: 0.1rem;
+            font-size: 0.12rem;
+            color: #999;
+        }
+    }
+    .wenzi_right{
+        width: 35%;
+        margin-top: 0.16rem;
+        height: 30px;
+        background: #FFFBFF;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img{width: 25px;height: 25px;}
+        span:nth-of-type(1){
+            font-size: 0.14rem;
+            color:#888;
+        }
+    }
+}
+
+//限时折扣
+#nvxie_xianshi1,#nvxie_xianshi2,{
+    border-top:0.06rem solid #efefef;
+    .xianshi{
+        height: 0;
+        margin-left:10px;
+        padding: 0.18rem 0;
+        span{width: 0.5rem;}
+    }
+    .fig{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        figure{
+            width: 25%;
+            padding: 0.12rem 0;
+            img{
+                width: 0.6rem;
+                height: 0.6rem;
+            }
+            figcaption{
+                margin-top: 5px;
+                color: #888;
+            }
+        }
+    }  
+}
+
+//流行元素
+.liuxing{
+    display: flex;
+    align-items: center;
+    border-top:0.06rem solid #efefef;
+    padding: 10px 0;
+    span:nth-of-type(1){
+       width: 0.18rem;
+       height: 0.18rem;
+       margin-left: 0.15rem;
+       border-radius: 50%;
+       border: 1px solid;
+       display: flex; 
+       line-height: 0.17rem;
+       color: #C6D3DE;
+    }
+    span:nth-of-type(2){
+        margin-left:0.1rem;
+        font-size: 0.18rem;
+        color: #777;
+    }
+}
+
+.nvxie_liuxing{
+    height:3.6rem;
+    width:s3rem;
+    overflow: hidden;   
+    article{
+        height:100%;
+        width:1100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        figure{
+            text-align: center;
+            width:1.1rem;
+            img{
+              width:80px;
+              height:80px;  
+            }
+            figcaption{font:500 0.14rem "微软雅黑";}
+        }  
+    }
+}
+
+
+//回到顶部
+.icon-up{
+    position: fixed;
+    bottom: 90px;  right: 10px;  line-height:40px;
+    z-index: 2;  width:40px;  height:40px;
+    border-radius: 50%;
+    color:deeppink;  font-size:25px;
+    background:rgba(255,255,255,0.8);
+    text-align: center;
+}

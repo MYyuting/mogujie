@@ -1,0 +1,11 @@
+.heart_img{ 
+	width: 20px;
+	height: 20px;
+	position: absolute;
+    bottom: 20px; 
+    left: 30%; 
+    margin-left: -10px; 
+}
+.live{
+	position:relative
+}
