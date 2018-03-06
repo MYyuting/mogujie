@@ -1,0 +1,225 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+body, html {
+  width: 100%;
+  font-size: 0.14rem;
+  font-family: "microsoft yahei";
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
+/*购物车头部*/
+.gwc-header {
+  width: 100%;
+  height: 0.448rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; }
+  .gwc-header .header-left {
+    width: 8%;
+    text-align: center;
+    font-size: .2rem;
+    margin-top: 0.05rem; }
+    .gwc-header .header-left i {
+      width: 0.2rem;
+      height: 0.2rem;
+      font-size: 0.2rem; }
+  .gwc-header section {
+    width: 70%;
+    text-align: center;
+    line-height: 0.448rem;
+    color: white;
+    font-size: .16rem; }
+  .gwc-header .header-right {
+    width: 8%;
+    margin-top: 0.05rem;
+    text-align: center;
+    font-size: 0.2rem; }
+    .gwc-header .header-right i {
+      width: 0.2rem;
+      height: 0.2rem; }
+
+/*购物车头部结束*/
+/*优购优品网*/
+.you-gou {
+  width: 100%;
+  height: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem; }
+  .you-gou .yg-left {
+    display: flex;
+    font-size: .14rem;
+    align-items: center; }
+    .you-gou .yg-left a {
+      display: flex;
+      align-items: center; }
+      .you-gou .yg-left a img {
+        width: 0.22rem;
+        height: 0.22rem;
+        margin-left: 0.12rem;
+        margin-right: 0.03rem; }
+  .you-gou .yg-right {
+    display: flex;
+    align-items: center; }
+    .you-gou .yg-right a:nth-of-type(2) {
+      margin-left: 0.05rem;
+      margin-right: 0.05rem; }
+
+/*优购油品网结束*/
+/*购物车内容*/
+.gwc-content li {
+  width: 100%;
+  height: 1.2rem;
+  margin-bottom: 0.1rem;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5; }
+  .gwc-content li div {
+    width: 96%;
+    display: flex;
+    align-items: center; }
+    .gwc-content li div p input[type="checkbox"] {
+      background-color: #f5f5f5; }
+    .gwc-content li div .oImg {
+      display: block;
+      width: .9rem;
+      height: .9rem;
+      margin-left: .15rem; }
+      .gwc-content li div .oImg img {
+        width: 100%;
+        height: 100%; }
+    .gwc-content li div dl {
+      width: 2.15rem;
+      height: 0.9rem;
+      margin-left: .1rem; }
+      .gwc-content li div dl article {
+        width: 100%; }
+        .gwc-content li div dl article h2 {
+          line-height: .16rem;
+          height: 0.32rem;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .gwc-content li div dl article dt:nth-of-type(1) {
+          width: 1.5rem;
+          height: 0.2rem;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          margin-top: 0.03rem; }
+          .gwc-content li div dl article dt:nth-of-type(1) span:nth-of-type(1) {
+            margin-left: 0; }
+          .gwc-content li div dl article dt:nth-of-type(1) span {
+            color: #81838e;
+            margin-left: 0.1rem; }
+        .gwc-content li div dl article dt:nth-of-type(2) {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .gwc-content li div dl article dt:nth-of-type(2) section:nth-of-type(1) {
+            font-size: .16rem;
+            color: #da4644;
+            font-weight: bold; }
+          .gwc-content li div dl article dt:nth-of-type(2) section:nth-of-type(2) {
+            width: .75rem;
+            height: .25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #e0e0e0; }
+            .gwc-content li div dl article dt:nth-of-type(2) section:nth-of-type(2) a {
+              display: block;
+              width: .23rem;
+              height: .23rem;
+              text-align: center;
+              line-height: .23rem;
+              background: white; }
+            .gwc-content li div dl article dt:nth-of-type(2) section:nth-of-type(2) span {
+              width: .23rem;
+              height: .23rem;
+              text-align: center;
+              line-height: .23rem; }
+
+/*底部样式*/
+.gwc-footer {
+  width: 100%;
+  height: 0.5rem;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  .gwc-footer .gwc-footer-left {
+    display: flex;
+    align-items: center;
+    font-size: 0.12rem; }
+    .gwc-footer .gwc-footer-left input {
+      margin-left: 0.09rem;
+      margin-right: 0.1rem; }
+  .gwc-footer .gwc-footer-conter {
+    width: 30%; }
+    .gwc-footer .gwc-footer-conter .he-ji {
+      font-size: .16rem; }
+    .gwc-footer .gwc-footer-conter .zong-jia {
+      font-size: .17rem; }
+  .gwc-footer .gwc-footer-right {
+    width: 1.35rem;
+    height: 0.45rem;
+    background: #fc6248;
+    text-align: center; }
+    .gwc-footer .gwc-footer-right a {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      line-height: .45rem;
+      display: block;
+      color: white;
+      font-size: .16rem;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: transparent; }
+
+/*购物车本地总计*/
+.gwc-bdzj {
+  width: 100%;
+  height: 0.4rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .gwc-bdzj p {
+    margin-right: 0.2rem;
+    font-size: .16rem; }
+    .gwc-bdzj p .zong-jia {
+      color: orangered; }
+
+/*多选框样式*/
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(../../images/gwc/gwc-radio.png);
+  /*复选框的背景图，就是上图*/
+  background-size: 100% 100%;
+  height: .2rem;
+  /*高度*/
+  vertical-align: middle;
+  width: .2rem; }
+
+input[type="checkbox"]:checked {
+  background: url(../../images/gwc/gwc-radio2.png) no-repeat;
+  background-size: 100% 100%; }
+
+/*# sourceMappingURL=gou-wc.css.map */

@@ -1,0 +1,262 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	list-style: none;
+}
+
+.box {
+	width: 100%;
+}
+
+
+/*头部*/
+
+.aui-header-default {
+	height: 0.448rem;
+	line-height: 0.448rem;
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: rgba(255, 255, 255, 0.98);
+}
+
+.aui-header-title-default {
+	color: #333;
+}
+
+.aui-header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.aui-header-item {
+	height: 0.448rem;
+	line-height: 0.448rem;
+	min-width: 25%;
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 25%;
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	padding: 0 0.1rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 0.3rem;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #5C5C5C;
+}
+
+.aui-header-item:first-child {
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	margin-right: -37%
+}
+
+.aui-header-center {
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	-ms-flex-order: 2;
+	order: 2;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 0.448rem;
+	line-height: 0.448rem;
+	width: 70%;
+	margin-left: 25%;
+	font-size: 16px;
+}
+
+.aui-header-title {
+	text-align: center;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	color: #5C5C5C;
+}
+
+.aui-header-item-icon {
+	height: 0.448rem;
+	line-height: 0.448rem;
+	padding: 0 0.1rem;
+}
+
+.aui-header-search {
+	margin-left: 0.04rem;
+	width: 70%;
+}
+
+
+/*轮播*/
+
+#sybanner {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+#sybanner img {
+	width: 100%;
+}
+
+span.swiper-pagination-bullet {
+	background: #F93753;
+}
+
+
+/*导航*/
+
+.aui-grid-row-item {
+	display: table-cell;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.2rem 0;
+	width: 20%;
+	float: left;
+}
+
+.aui-icon-large {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50px;
+}
+
+.aui-grid-row-label {
+	display: block;
+	font-size: 0.144rem;
+	position: relative;
+	margin-top: 0.1rem;
+}
+
+
+/*第四部分*/
+
+.aui-avd-content {
+	background-color: #fff;
+	margin-left: 3%;
+	margin-bottom: 10px;
+}
+
+.aui-avd-content a img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: none;
+}
+
+
+/*第五部分*/
+
+.fx-active {
+	width: 100%;
+	background: white;
+	white-space: nowrap;
+	float: left;
+	overflow-y: hidden;
+}
+
+.fx-active li {
+	margin: 0.05rem 0.1rem 0;
+	display: inline-block;
+	font-size: 0.14rem;
+	padding-bottom: 0.1rem;
+}
+
+.fx-active li img {
+	width: 0.9rem;
+	height: 1.4rem;
+}
+
+.fx-active::-webkit-scrollbar {
+	height: 0;
+}
+
+
+/*第六部分*/
+.aui-slide-box .aui-slide-list {
+    margin: 10px 10px 10px 10px;
+    overflow: hidden;
+    height: 1.8rem;
+}
+.aui-slide-box .aui-slide-item-list {
+    width: auto;
+    white-space: nowrap;
+    overflow: auto;
+    height: 2rem;
+    font-size: 0;
+    -webkit-overflow-scrolling: touch;
+}
+.aui-slide-box .aui-slide-item-list .aui-slide-item-item {
+    display: inline-block;
+    width: 1rem;
+    margin-right: 12px;
+    vertical-align: top;
+}
+.aui-slide-box .aui-slide-item-list .aui-slide-item-item .aui-slide-item-title {
+	width:1rem;
+    text-align: center;
+    line-height: 0.2rem;
+    word-break: break-word;
+    height: 0.4rem;
+    white-space: normal;
+    margin: 6px 0 4px;
+    font-size: 12px;
+    color: #333;
+}
+.aui-slide-box .aui-slide-item-list .aui-slide-item-item .v-img {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: url(../img/bg/log.jpg) no-repeat center center;
+    background-size: 62px;
+}
+.aui-slide-box .aui-slide-item-list .aui-slide-item-item .aui-slide-item-info {
+	width:1rem;
+    text-align: center;
+    height: 0.373333rem;
+    line-height: 0.373333rem;
+    margin-top: 6px;
+    font-size: 12px;
+}
+/*第七部分*/
+.aui-list-product-item-text {
+    background-color: #FFF;
+    padding: 0.03rem;
+}
+.aui-comment {
+    font-size: 0.1rem;
+}
+.kong{
+	width:100%;
+	height:0.448rem;
+}

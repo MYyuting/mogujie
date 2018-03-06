@@ -1,0 +1,142 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.height {
+  height: .448rem; }
+
+/*头部*/
+header {
+  width: 100%;
+  height: 0.448rem;
+  color: white;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50; }
+
+header section {
+  font-size: 16px; }
+
+header a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  margin-left: 15px;
+  margin-right: 15px; }
+
+/*需要支付*/
+.xy-zhifu {
+  width: 100%;
+  height: 0.44rem;
+  background: #f8f8f8; }
+  .xy-zhifu section {
+    width: 95%;
+    text-align: right;
+    height: .44rem;
+    line-height: .44rem; }
+    .xy-zhifu section span {
+      font-size: .16rem;
+      color: #f23030; }
+
+/*易宜支付*/
+.yi-yi {
+  width: 100%;
+  height: .46rem;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  box-sizing: border-box; }
+  .yi-yi a {
+    display: block;
+    width: .9rem;
+    height: .36rem; }
+    .yi-yi a img {
+      width: 100%;
+      height: 100%; }
+
+.border-bottom {
+  width: 100%;
+  height: .08rem;
+  background: #f0f2f5; }
+
+/*每家银行*/
+.gs-yh {
+  width: 100%;
+  height: .53rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid #EEEEEE;
+  align-items: center; }
+  .gs-yh .yh {
+    width: 94%;
+    height: .45rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .gs-yh .yh section {
+      display: flex;
+      align-items: center; }
+      .gs-yh .yh section img {
+        width: .28rem;
+        height: .28rem; }
+      .gs-yh .yh section dl {
+        margin-left: .05rem; }
+        .gs-yh .yh section dl dd {
+          color: #888; }
+    .gs-yh .yh div {
+      width: 55%;
+      display: flex;
+      justify-content: flex-end; }
+      .gs-yh .yh div p {
+        display: inline-block;
+        border: 1px solid #f23030;
+        color: #F23030;
+        border-radius: .02rem; }
+
+/*其他支付方式*/
+.qt-fs {
+  width: 100%;
+  height: .44rem;
+  background: #f8f8f8;
+  box-sizing: border-box;
+  line-height: .44rem;
+  padding-left: .15rem; }
+
+.width {
+  width: 35% !important; }
+
+.zhi-fu-money {
+  width: 100%;
+  height: .45rem;
+  text-align: center;
+  line-height: .45rem;
+  font-size: .14rem;
+  background: #f23030;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+
+/*复选框样式*/
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  /*清除复选框默认样式*/
+  background: #fff url(../../images/gwc/gwc-radio.png);
+  /*复选框的背景图，就是上图*/
+  background-size: 100% 100%;
+  height: .2rem;
+  /*高度*/
+  vertical-align: middle;
+  width: .2rem; }
+
+input[type="checkbox"]:checked {
+  background: url(../../images/gwc/gwc-radio2.png) no-repeat;
+  background-size: 100% 100%; }
+
+/*# sourceMappingURL=jiezhang.css.map */

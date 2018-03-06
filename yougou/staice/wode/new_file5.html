@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>优惠券</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../style/new_file5/new_file5.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/icon.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/core.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/swiper.min.css"/>
+		<script src="../../js/libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-1.4.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="WD-app" ng-controller="WD-cont">
+		
+		<div id="box">
+				
+			<!--头部-->
+			<div class="WD-toubu aui-header-default aui-header-fixed aui-header-bg">
+				<div>
+					<p><a href="http://127.0.0.1:8020/yougou/staice/index.html#/my"><i class="aui-icon aui-icon-back-white"></i></a></p>
+					<p><a href="">我的优惠券</a></p>
+					<p><a href=""><i class="aui-icon aui-icon-search"></i></a></p>
+				</div>
+			</div>	
+	
+			<!--注释-->
+			<div class="WD-zhushi"></div>
+			
+			<!--身体-->
+			<div class="WD-shenti">
+				
+				<!--优惠券使用-->
+				<div class="WD-shiyong">
+					<p><a ui-sref="weishiyong">未使用</a></p>
+					<p><a ui-sref="yishiyong">已使用</a></p>
+					<p><a ui-sref="yiguoqi">已过期</a></p>
+				</div>
+				
+				<!--兑换码关闭-->
+				<div class="WD-duihuan">
+					<i class="aui-icon aui-prompt-sm"></i>
+					<p>兑换码现已关闭，请使用优惠券</p>
+				</div>
+				
+		<div ui-view></div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		//为应用添加 ui.router 依赖模块
+		var app = angular.module("WD-app", ["ui.router"]);
+
+		app.controller("WD-cont", ["$scope", function($scope) {
+
+		}])
+
+		//配置路由服务
+		app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+
+			//重定向
+						$urlRouterProvider.otherwise("weishiyong");
+
+			//			$urlRouterProvider.when("/first", "/first/b");
+			//			$urlRouterProvider.when("/list", "/list/d");
+			//			$urlRouterProvider.when("/detail", "/detail/g");
+
+			//设置路由内容
+			$stateProvider.state("weishiyong", {
+					url: "/weishiyong",
+					//				template:"<h1>这是首页</h1>",
+					templateUrl: "weishiyong.html",
+					controller: function() {
+
+					}
+				}).state("yishiyong", {
+					url: "/liyishiyongst",
+					//template:"<h1>这是列表页</h1>",
+					templateUrl: "yishiyong.html",
+
+				}).state("yiguoqi", {
+					url: "/yiguoqi",
+					//template:"<h1>这是详情页</h1>",/*放文字*/
+					templateUrl: "yiguoqi.html",/*放路径带URL*/
+
+				})
+		}]);
+	</script>
+</html>

@@ -1,0 +1,7 @@
+background: linear-gradient(to right,#ff5e3e 0,#ff1679 100%);     渐变。
+background-size: 100%;             								    背景图片占满。
+background-size: cover;                                           保持背景图片宽高。
+background-position: bottom;                                      背景图片定位：下。
+background-repeat: no-repeat;                                     背景图片不重复。
+color: inherit;                                                   继承父元素颜色。
+font-weight: normal;                                              字体加粗：正常。

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../style/gou-wc/gou-wc.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/core.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/home.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/icon.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/swiper.min.css"/>
+		<script src="../../js/libs/angular-1.4.6.min.js"></script>
+		<script src="../../js/libs/angular-ui-router.js"></script>
+		<script src="../../js/libs/rem.js"></script>
+		<script src="../../js/libs/swiper.min.js"></script>
+		<title></title>
+	</head>
+	<body ng-controller="cont">
+		
+		<div id="box">
+			<!--头部-->
+			<div class="gwc-header aui-header-fixed aui-header-bg">
+				<a href="../index.html"  class="header-left">
+					<i class="aui-icon aui-icon-back-white"></i>
+				</a>
+				<section>购物车(6)</section>
+				<a href="#" class="header-right">
+				   <i class="aui-icon aui-icon-member"></i>
+				</a>
+			</div>
+			<div style="height: 0.448rem;"></div>
+			<!--优购优品网-->
+			<div class="you-gou">
+				<section class="yg-left">
+					<input type="checkbox" ng-model="box" ng-change="toggle(box)" />
+					<a href="javascript:;">
+						<img src="../../images/gwc/gwc-demo.png"/>
+						优购优品网
+					</a>
+				</section>
+				<section class="yg-right">
+					<a href="javascript:;">领券</a>
+					<a href="javascript:;">编辑</a>
+				</section>
+			</div>
+			<!--购物车内容-->
+			<ul class="gwc-content">
+				<li ng-repeat="i in arr">
+					<div>
+						<p>
+							<input type="checkbox" ng-model="i.checked" ng-change="che()" />
+						</p>
+						<a class="oImg" href="spxq.html">    
+							<img ng-src="{{i.img}}" />
+						</a>
+						<dl>           
+							<article>      
+								<h2>{{i.title}}</h2>
+								<dt>
+									<span>{{i.kg}}</span>      
+									<span>{{i.color}}</span>   
+									<span>{{i.widhei}}</span>  
+								</dt>
+								<dt>
+									<section>{{i.money|currency:"￥"}}</section>
+									<section>
+										<a href="javascript:;" ng-click="jian($index)">-</a>
+										<span>{{i.num}}</span>
+										<a href="javascript:;" ng-click="jia($index)">+</a>
+									</section>
+								</dt>
+							</article> 
+						</dl>
+					</div>
+				</li>
+			</ul>
+			<!--本店总计-->
+			<div class="gwc-bdzj">
+				<p>本店总计：<span class="zong-jia">{{gwczj|currency:'￥'}}</span></p>
+			</div>
+			<div style="height: .5rem;"></div>
+			<!--页脚-->
+			<div class="gwc-footer">
+				<div class="gwc-footer-left">
+					<input type="checkbox" ng-model="box" ng-change="toggle(box)" />
+					全选
+				</div>
+ 				<div class="gwc-footer-conter">
+ 					<strong class="he-ji">合计:</strong>
+ 					<span class="zong-jia">{{gwczj|currency:'￥'}}</span>
+ 				</div>
+			    <div class="gwc-footer-right">
+			    	<a href="tijiao.html">结算</a>
+			    </div>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+	<script>
+	   var app=angular.module("myApp",["ui.router"]);
+	   app.controller("cont",["$scope","$http",function($scope,$http){
+	   	    
+	   	    $scope.gwczj=0.00;
+	   	    
+	   	    $scope.arr=[
+            {money:100,num:1,checked:false,img:"../../images/gwc/gwc-gw1.jpg",title:"【黑卡96折】Apple 苹果 iPhone 7（A1660）移动联通电信4G手机 国内行货",kg:"重量:3.3kg",color:"颜色:标配版",widhei:"版本:5.7英寸"},
+	   	    {money:100,num:1,checked:false,img:"../../images/gwc/gwc-gw2.jpg",title:"【黑卡96折】Apple 苹果 iPhone 7（A1660）移动联通电信4G手机 国内行货",kg:"重量:3.3kg",color:"颜色:标配版",widhei:"版本:5.7英寸"},
+	   	    {money:100,num:1,checked:false,img:"../../images/gwc/gwc-gw3.jpg",title:"【黑卡96折】Apple 苹果 iPhone 7（A1660）移动联通电信4G手机 国内行货",kg:"重量:3.3kg",color:"颜色:标配版",widhei:"版本:5.7英寸"},
+	   	    {money:100,num:1,checked:false,img:"../../images/gwc/gwc-gw4.jpg",title:"【黑卡96折】Apple 苹果 iPhone 7（A1660）移动联通电信4G手机 国内行货",kg:"重量:3.3kg",color:"颜色:标配版",widhei:"版本:5.7英寸"},
+	   	    {money:100,num:1,checked:false,img:"../../images/gwc/gwc-gw5.jpg",title:"【黑卡96折】Apple 苹果 iPhone 7（A1660）移动联通电信4G手机 国内行货",kg:"重量:3.3kg",color:"颜色:标配版",widhei:"版本:5.7英寸"},
+	   	    {money:100,num:1,checked:false,img:"../../images/gwc/gwc-gw6.jpg",title:"【黑卡96折】Apple 苹果 iPhone 7（A1660）移动联通电信4G手机 国内行货",kg:"重量:3.3kg",color:"颜色:标配版",widhei:"版本:5.7英寸"}
+	       ]
+	   	      //加的执行函数
+	   	   $scope.jia=function(index){
+	   	      $scope.arr[index].num++;
+	   	      zj()
+	   	   }
+	   	      //减的执行函数
+	   	   $scope.jian=function(index){
+	   	   	  $scope.arr[index].num--;
+	   	   	  if($scope.arr[index].num<1){
+	   	   	  	$scope.arr[index].num=1
+	   	   	  }
+	   	   	  zj()
+	   	   }
+	   	   //全选的点击事件
+	   	   $scope.toggle=function(all){  
+	   	   	  if(all){
+	   	   	  	 $scope.arr.map(function(item){
+	   	   	  	 	return item.checked=true
+	   	   	  	 })
+	   	   	  }else{
+	   	   	  	 $scope.arr.map(function(item){
+	   	   	  	 	return item.checked=false
+	   	   	  	 })
+	   	   	  }
+	   	   	  zj()
+	   	   }
+	   	   $scope.che=function(){
+	   	   			//单选
+		   		var checked = $scope.arr.every(function(item){
+		   	   	        return item.checked==true
+		   	     })
+			   	if(checked){
+			   		$scope.box=true
+			   	}else{
+			   		$scope.box=false
+			   	}
+			   	zj()
+	   	   }
+	   	   //计算总价
+	   	  
+	   	   function zj(){
+	   	   	 var num=0;
+	   	   	  $scope.arr.map(function(item,index){
+	   	   	  	  if(item.checked==true){
+	   	   	  	  	 num+=$scope.arr[index].num*$scope.arr[index].money
+	   	   	  	  }
+	   	   	  })
+	   	   	   $scope.gwczj=num;
+	   	   }
+	}])	
+	
+	
+	
+		
+	</script>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>铂金会员</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../style/new_file9/new_file9.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/icon.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/core.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/swiper.min.css"/>
+		<script src="../../js/libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-1.4.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="WD-app" ng-controller="WD-cont">
+		
+		<div id="box">
+				
+			<!--头部-->
+			<div class="WD-toubu aui-header-default aui-header-fixed aui-header-bg">
+				<div>
+					<p><a href="http://127.0.0.1:8020/yougou/staice/index.html#/my"><i class="aui-icon aui-icon-back-white"></i></a></p>
+					<p><a href="">铂金会员</a></p>
+					<p><a href=""><i class="aui-icon aui-icon-share-pd"></i></a></p>
+				</div>
+			</div>	
+	
+			<!--注释-->
+			<div class="WD-zhushi"></div>
+			
+			<!--身体-->
+			<div class="WD-shenti">
+				
+				<!--收藏-->
+				<div class="WD-huiyuan">
+					<p><a ui-sref="zhuanxiang">专享价</a></p>
+					<p><a ui-sref="mianshui">免税区</a></p>
+					<p><a ui-sref="yunfei">运费卷</a></p>
+					<p><a ui-sref="xiangshou">专享服</a></p>
+				</div>
+				
+				
+				<div ui-view></div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		//为应用添加 ui.router 依赖模块
+		var app = angular.module("WD-app", ["ui.router"]);
+
+		app.controller("WD-cont", ["$scope", function($scope) {
+
+		}])
+
+		//配置路由服务
+		app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+
+			//重定向
+						$urlRouterProvider.otherwise("zhuanxiang");
+
+			//			$urlRouterProvider.when("/first", "/first/b");
+			//			$urlRouterProvider.when("/list", "/list/d");
+			//			$urlRouterProvider.when("/detail", "/detail/g");
+
+			//设置路由内容
+			$stateProvider.state("zhuanxiang", {
+					url: "/zhuanxiang",
+					//				template:"<h1>这是首页</h1>",
+					templateUrl: "zhuanxiang.html",
+					controller: function() {
+
+					}
+				}).state("mianshui", {
+					url: "/mianshui",
+					//template:"<h1>这是列表页</h1>",
+					templateUrl: "mianshui.html",
+
+				}).state("yunfei", {
+					url: "/yunfei",
+					//template:"<h1>这是详情页</h1>",/*放文字*/
+					templateUrl: "yunfei.html",/*放路径带URL*/
+
+				}).state("xiangshou", {
+					url: "/xiangshou",
+					//template:"<h1>这是详情页</h1>",/*放文字*/
+					templateUrl: "xiangshou.html",/*放路径带URL*/
+				})
+		}]);
+	</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的拼团</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../style/new_file6/new_file6.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/icon.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/core.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/swiper.min.css"/>
+		<script src="../../js/libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-1.4.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<div id="box">
+				
+			<!--头部-->
+			<div class="WD-toubu aui-header-default aui-header-fixed aui-header-bg">
+				<div>
+					<p><a href="http://127.0.0.1:8020/yougou/staice/index.html#/my"><i class="aui-icon aui-icon-back-white"></i></a></p>
+					<p><a href="">拼团购物</a></p>
+					<p><a href=""><i class="aui-icon aui-icon-search"></i></a></p>
+				</div>
+			</div>	
+	
+			<!--注释-->
+			<div class="WD-zhushi"></div>
+			
+			<!--身体-->
+			<div class="WD-shenti">
+				<!--导航-->
+				<div class="WD-daohang">
+					<ul class="oUl">
+						<li class="active-bottom"><a href="javascript:;">精选</a></li>
+						<li><a href="javascript:;">母婴</a></li>
+						<li><a href="javascript:;">美妆</a></li>
+						<li><a href="javascript:;">保健品</a></li>
+						<li><a href="javascript:;">家居生活</a></li>
+						<li><a href="javascript:;">生鲜</a></li>
+						<li><a href="javascript:;">数码</a></li>
+						<li><a href="javascript:;">个人洗护</a></li>
+						<li><a href="javascript:;">海外直邮</a></li>
+						<li><a href="javascript:;">服饰鞋靴</a></li>
+					</ul>
+				</div>
+				
+				<!--图片文字-->
+				<div class="WD-tuwen">
+					<ul>
+						<li><a href=""><img src="../../images/wode/WD-qiandao3.jpg"/><p>KOBE LETTUCE 秋冬新款 女士日系甜美纯色半高领宽松套头毛衣针织衫</p><p>¥399.99</p><span>¥495.65</span><span>已团134件</span><p class="p">2人团</p></a></li>
+						<li><a href=""><img src="../../images/wode/WD-qiandao4.jpg"/><p>KOBE LETTUCE 秋冬新款 女士日系甜美纯色半高领宽松套头毛衣针织衫</p><p>¥399.99</p><span>¥495.65</span><span>已团134件</span><p class="p">2人团</p></a></li>
+						<li><a href=""><img src="../../images/wode/WD-qiandao5.jpg"/><p>KOBE LETTUCE 秋冬新款 女士日系甜美纯色半高领宽松套头毛衣针织衫</p><p>¥399.99</p><span>¥495.65</span><span>已团134件</span><p class="p">2人团</p></a></li>
+						<li><a href=""><img src="../../images/wode/WD-qiandao6.jpg"/><p>KOBE LETTUCE 秋冬新款 女士日系甜美纯色半高领宽松套头毛衣针织衫</p><p>¥399.99</p><span>¥495.65</span><span>已团134件</span><p class="p">2人团</p></a></li>
+						<li><a href=""><img src="../../images/wode/WD-qiandao7.jpg"/><p>KOBE LETTUCE 秋冬新款 女士日系甜美纯色半高领宽松套头毛衣针织衫</p><p>¥399.99</p><span>¥495.65</span><span>已团134件</span><p class="p">2人团</p></a></li>
+						<li><a href=""><img src="../../images/wode/WD-qiandao8.jpg"/><p>KOBE LETTUCE 秋冬新款 女士日系甜美纯色半高领宽松套头毛衣针织衫</p><p>¥399.99</p><span>¥495.65</span><span>已团134件</span><p class="p">2人团</p></a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script>
+		$(".oUl li").click(function(){
+			var index=$(this).index();
+			$(".oUl li").eq(index).addClass("active-bottom").siblings("li").removeClass("active-bottom")
+		})
+	</script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的订单</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../../style/new_file10/new_file10.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/icon.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/core.css"/>
+		<link rel="stylesheet" type="text/css" href="../../style/libs/swiper.min.css"/>
+		<script src="../../js/libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-1.4.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/libs/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="WD-app" ng-controller="WD-cont">
+		<div id="box">
+				
+			<!--头部-->
+			<div class="WD-toubu aui-header-default aui-header-fixed aui-header-bg">
+				<div>
+					<p><a href="http://127.0.0.1:8020/yougou/staice/index.html#/my"><i class="aui-icon aui-icon-back-white"></i></a></p>
+					<p><a href="">我的订单</a></p>
+					<p><a href=""><i class="aui-icon aui-icon-search"></i></a></p>
+				</div>
+			</div>	
+	
+			<!--注释-->
+			<div class="WD-zhushi"></div>
+			
+			<!--身体-->
+			<div class="WD-shenti">
+				
+				<!--收藏-->
+				<div class="WD-dingdan">
+					<p class="active-sc"><a ui-sref="quanbu">全部</a></p>
+					<p><a ui-sref="daishoukuan">代付款</a></p>
+					<p><a ui-sref="daifahuo">代发货</a></p>
+					<p><a ui-sref="daishouhuo">待收货</a></p>
+					<p><a ui-sref="pingjia">评价</a></p>
+				</div>
+				
+				<!--公告-->
+				<div class="WD-gonggao">
+					<i class="aui-icon aui-prompt-sm"></i>
+					<p>双十一期间发货及物流时效公告</p>
+				</div>
+				
+				
+				<div ui-view></div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".WD-dingdan p").click(function(){
+			var index=$(this).index();
+			$(".WD-dingdan p").eq(index).addClass("active-sc").siblings("p").removeClass("active-sc")
+		})
+		
+		
+		//为应用添加 ui.router 依赖模块
+		var app = angular.module("WD-app", ["ui.router"]);
+
+		app.controller("WD-cont", ["$scope", function($scope) {
+
+		}])
+
+		//配置路由服务
+		app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+
+			//重定向
+						$urlRouterProvider.otherwise("quanbu");
+
+			//			$urlRouterProvider.when("/first", "/first/b");
+			//			$urlRouterProvider.when("/list", "/list/d");
+			//			$urlRouterProvider.when("/detail", "/detail/g");
+
+			//设置路由内容
+			$stateProvider.state("quanbu", {
+					url: "/quanbu",
+					//				template:"<h1>这是首页</h1>",
+					templateUrl: "quanbu.html",
+					controller: function() {
+
+					}
+				}).state("daishoukuan", {
+					url: "/daishoukuan",
+					//template:"<h1>这是列表页</h1>",
+					templateUrl: "daishoukuan.html",
+
+				}).state("daifahuo", {
+					url: "/daifahuo",
+					//template:"<h1>这是详情页</h1>",/*放文字*/
+					templateUrl: "daifahuo.html",/*放路径带URL*/
+
+				}).state("daishouhuo", {
+					url: "/daishouhuo",
+					//template:"<h1>这是详情页</h1>",/*放文字*/
+					templateUrl: "daishouhuo.html",/*放路径带URL*/
+				}).state("pingjia", {
+					url: "/pingjia",
+					//template:"<h1>这是详情页</h1>",/*放文字*/
+					templateUrl: "pingjia.html",/*放路径带URL*/
+				})
+		}]);
+	</script>
+</html>

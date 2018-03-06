@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<!--<link rel="icon" type="image/x-icon" href="favicon.ico">-->
+		<!--<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">-->
+		<link rel="shortcut icon" href="iTunesArtwork@2x.png" type="image/x-icon" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../style/libs/core.css">
+		<link rel="stylesheet" type="text/css" href="../style/libs/icon.css">
+		<link rel="stylesheet" type="text/css" href="../style/libs/home.css">
+		<link rel="stylesheet" type="text/css" href="../style/libs/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/sy-style/shouye.css" />
+		<link rel="stylesheet" type="text/css" href="../style/libs/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../style/libs/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/sy-style/footer.css" />
+		<link rel="stylesheet" type="text/css" href="../style/fen-lei/fenlei.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/fa-xian/faxian.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/new_file1/new_file1.css"/>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/sy-js/iscroll-probe.js"></script>
+		<script src="../js/sy-js/rem.js"></script>
+		<script src="../js/sy-js/swiper.min.js"></script>
+		<script src="../js/sy-js/angular.min.js"></script>
+		<script src="../js/sy-js/angular-ui-router.js"></script>
+		<script src="../js/aui.js"></script>
+		<title>优购优品网</title>
+		<style type="text/css">
+			#wrapper{
+				height: .4rem;
+			}
+		</style>
+	</head>
+
+	<body ng-controller="cont">
+		<div id="wrapper"></div>
+		<ui-view></ui-view>
+		<div class="footer-index">
+			<li>
+				<a ui-sref="home" class="aui-footer-item aui-footer-active">
+					<span class="aui-footer-item-icon aui-icon aui-footer-icon-home"></span>
+					<span class="aui-footer-item-text">首页</span>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="news" class="aui-footer-item">
+					<span class="aui-footer-item-icon aui-icon aui-footer-icon-class"></span>
+					<span class="aui-footer-item-text">分类</span>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="two" class="aui-footer-item">
+					<span class="aui-footer-item-icon aui-icon aui-footer-icon-find"></span>
+					<span class="aui-footer-item-text">发现</span>
+				</a>
+			</li>
+			<li>
+				<a href="gouwuche/index.html"  class="aui-footer-item">
+					<span class="aui-footer-item-icon aui-icon aui-footer-icon-car"></span>
+					<span class="aui-footer-item-text">购物车</span>
+				</a>
+			</li>
+			<li>
+				<a ui-sref="my" class="aui-footer-item">
+					<span class="aui-footer-item-icon aui-icon aui-footer-icon-me"></span>
+					<span class="aui-footer-item-text">我的</span>
+				</a>
+			</li>
+		</div>
+
+	</body>
+	<script src="../js/fenlei.js"></script>
+	<script>
+	
+		//设置底部样式
+		$(".footer-index li").click(function(){
+			var index=$(this).index()
+			$(".footer-index li").find("a").removeClass("aui-footer-active")
+			$(this).find("a").addClass("aui-footer-active")
+		})
+		
+		
+		//底部路由
+		var app = angular.module("myApp", ["ui.router"])
+		app.controller("cont", ["$scope", "$http", "$timeout", function($scope, $http, $timeout,$location) {
+			$timeout(function() {
+				//首页第一个轮播
+				var mySwiper = new Swiper("#sybanner", {
+					autoplay: 1000,
+					pagination: ".swiper-pagination",
+					loop: true
+				})
+			})
+		}])
+		//分类控制器
+		app.controller("fenlei", ["$scope", "$http", "$timeout", function($scope, $http, $timeout,$location) {
+			   ///分类样式
+				  var arr = [0]
+				  var num = 0
+				//console.log($(".fenlei-right>div").eq(0).height())
+				
+				$(".fenlei-right>div").each(function(index){
+					
+					num += $(".fenlei-right>div").eq(index).height()+3;
+					arr.push(num);
+					
+				})
+				//console.log(arr)
+				$(".fenlei-left li").on("click",function(){
+					var index = $(this).index();
+					$("li").css({background:"#f4f5f7",color:"black"})
+					$(this).css({background:"#FFFFFF",color:"#f99296"})
+					$(".fenlei-right").animate({scrollTop:arr[index]},500)
+				//	console.log({scrollTop:arr[index]})
+				})
+		}])
+		//发现
+		app.controller("faxian", ["$scope", "$http", "$timeout", function($scope, $http, $timeout,$location) {
+			$timeout(function() {
+				//首页第一个轮播
+				var mySwiper = new Swiper(".swiper1", {
+					autoplay: 1000,
+					pagination: ".swiper-pagination",
+					loop: true
+				})
+			})
+			
+		}])
+		//我的
+		
+		app.controller("wode", ["$scope", "$http", "$timeout", function($scope, $http, $timeout,$location) {
+			$(window).scroll(function(){
+			var sc = $(window).scrollTop();
+			if (sc>=100) {
+					
+					$(".WD-toubu div:nth-child(1) p").show().addClass("flipInX");
+				} else{
+					$(".WD-toubu div:nth-child(1) p").slideUp(500);
+				}
+			})
+		}])
+		
+		
+		app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+			$urlRouterProvider.otherwise("home")
+			$stateProvider.state("home", {
+				url: "/home",
+				templateUrl: "./shouye/sy.html",
+				controller: "cont"
+			}).state("news", {
+				url: "/news",
+				templateUrl: "fenlei/fenlei.html",
+				controller:"fenlei"
+			}).state("two", {
+				url: "/two",
+				templateUrl: "faxian/faxian.html",
+				controller:"faxian"
+			}).state("my", {
+				url: "/my",
+				templateUrl: "wode/new_file1.html",
+				controller:"wode"
+			})
+
+		}])
+	</script>
+
+</html>

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+html, body {
+  font-size: 0.12rem;
+  font-family: arial,sans-serif; }
+
+#box {
+  width: 100%;
+  height: 100%; }
+
+.WD-toubu {
+  width: 100%;
+  height: 0.448rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; }
+
+.WD-toubu div {
+  width: 100%;
+  height: 100%;
+  line-height: 0.448rem;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between; }
+
+.WD-toubu div p:nth-child(1) a, .WD-toubu div p:nth-child(3) a {
+  width: 100%;
+  height: 100%;
+  margin: 0.05rem;
+  display: block; }
+
+.WD-toubu div p:nth-child(2) a {
+  font-size: 16px; }
+
+.WD-toubu div p:nth-child(3) a {
+  margin: 0.08rem; }
+
+.WD-zhushi {
+  width: 100%;
+  height: 0.448rem; }
+
+.WD-shenti {
+  width: 100%;
+  height: 100%;
+  background: #F0F0F0; }
+
+.WD-shenti .suoyou {
+  width: 100%;
+  height: 2.6rem;
+  background: #FFFFFF; }
+
+.WD-shenti .suoyou div {
+  width: 100%;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.01rem solid #EEEEEE;
+  padding: 0 0.15rem; }
+
+.WD-shenti .suoyou div p:nth-child(2) {
+  width: 0.2rem;
+  height: 0.2rem;
+  text-align: center;
+  line-height: 0.2rem;
+  margin-top: 0.08rem;
+  font-size: 0.16rem; }
+
+.WD-shenti .guanyu {
+  width: 100%;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.01rem solid #EEEEEE;
+  padding: 0 0.15rem;
+  background: #FFFFFF;
+  margin-top: 0.09rem; }
+
+.WD-shenti .guanyu p:nth-child(2) span {
+  width: 0.2rem;
+  height: 0.2rem;
+  text-align: center;
+  line-height: 0.2rem;
+  margin-top: 0.08rem;
+  font-size: 0.12rem;
+  padding-right: 0.05rem; }
+
+.WD-shenti .guanyu p:nth-child(2) span:nth-child(2) {
+  font-size: 0.16rem; }
+
+.WD-shenti .tuichu {
+  width: 100%;
+  height: 0.78rem;
+  text-align: center; }
+
+.WD-shenti .tuichu p {
+  width: 1.75rem;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  margin: 0.2rem auto;
+  border: 0.01rem solid #DA4644;
+  color: #DA4644; }
+
+/*# sourceMappingURL=shezhi.css.map */

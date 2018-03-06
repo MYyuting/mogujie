@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html, body {
+  font-size: 0.12rem;
+  font-family: arial,sans-serif; }
+
+#box {
+  width: 100%;
+  height: 100%; }
+
+.WD-toubu {
+  width: 100%;
+  height: 0.448rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  color: #FFFFFF; }
+
+.WD-toubu div {
+  width: 100%;
+  height: 100%;
+  line-height: 0.448rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.1rem; }
+
+.WD-toubu div p:nth-child(1) a, .WD-toubu div p:nth-child(3) a {
+  width: 100%;
+  height: 100%;
+  margin: 0.05rem;
+  display: block; }
+
+.WD-toubu div p:nth-child(2) a {
+  font-size: 16px; }
+
+.WD-toubu div p:nth-child(3) a {
+  margin: 0.08rem; }
+
+.WD-zhushi {
+  width: 100%;
+  height: 0.448rem; }
+
+.WD-shenti {
+  width: 100%;
+  height: 100%; }
+
+.WD-shiyong {
+  width: 100%;
+  height: 0.4rem;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.01rem solid #D9D9D9; }
+
+.WD-shiyong p {
+  width: 100%;
+  height: 0.4rem;
+  text-align: center;
+  line-height: 0.4rem;
+  color: #585858;
+  font-size: 0.14rem; }
+
+.WD-shiyong p:hover {
+  color: red;
+  border-bottom: 0.01rem solid red; }
+
+.WD-duihuan {
+  width: 100%;
+  height: 0.35rem;
+  line-height: 0.35rem;
+  color: #F23030;
+  background: #FFF3DC;
+  display: flex;
+  margin-bottom: 0.1rem; }
+
+.WD-duihuan i {
+  margin-top: 0.07rem;
+  margin-left: 0.1rem; }
+
+.WD-youhuijuan {
+  width: 100%;
+  height: 1.0989rem;
+  padding: 0.05rem 0.1rem; }
+
+.WD-youhuijuan img {
+  width: 100%;
+  height: 100%; }
+
+/*# sourceMappingURL=new_file5.css.map */
